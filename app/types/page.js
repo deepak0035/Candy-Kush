@@ -14,7 +14,9 @@ const page = () => {
     <div className="relative bg-texture bg-no-repeat bg-cover overflow-hidden w-full max-w-lg min-h-screen space-y-6 px-4 py-8">
       <StepIndicator totalSteps={totalSteps} activeStep={activeStep} />
       <LogoSection cart={true} />
-      <SwipeableProductCarousel/>
+      <div className="">
+        <SwipeableProductCarousel />
+      </div>
     </div>
   );
 };

@@ -41,13 +41,13 @@ const LanguagesDropdown = () => {
     <div className="flex justify-center items-center py-4"> 
       <div className="inline-block text-left">
         <div>
-          <span className="rounded-lg w-96 text-lg border shadow-md bg-white px-8 py-4 inline-flex justify-between items-center relative">
+          <span className="rounded-xl w-96 text-lg border shadow-md bg-white px-8 py-4 inline-flex justify-between items-center relative">
             Select Language
             <IoIosArrowDown className="text-xl" />
           </span>
         </div>
 
-        <div className="mt-2 max-h-[19rem] shadow-lg overflow-y-auto backdrop-blur-xl bg-blurred	rounded-lg">
+        <div className="mt-2 max-h-[19rem] shadow-lg overflow-y-auto backdrop-blur-xl bg-blurred	rounded-xl">
           {options.map((option) => (
             <div
               key={option.language}
