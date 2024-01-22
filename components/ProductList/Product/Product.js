@@ -11,25 +11,25 @@ const Product = () => {
       </div>
       <div className="col-span-3 relative w-full h-24 overflow-hidden  ">
         <Image
-          src={"/images/bag1.png"}
-          width={120}
-          height={120}
+          src={"/images/ProductPage/simpleInd.png"}
+          width={40}
+          height={40}
           alt="Picture of the author"
-          className="absolute -top-12 left-1 transform origin-bottom z-10"
+          className="absolute top-2 left-12 transform origin-bottom z-10"
         />
         <Image
-          src={"/images/bag2.png"}
-          width={120}
-          height={120}
+          src={"/images/ProductPage/simpleHyd.png"}
+          width={40}
+          height={40}
           alt="Picture of the author"
-          className="absolute -top-12 left-1 transform -rotate-[16deg] origin-bottom"
+          className="absolute top-2 left-12 transform -rotate-[20deg] origin-bottom"
         />
         <Image
-          src={"/images/bag3.png"}
-          width={120}
-          height={120}
+          src={"/images/ProductPage/simpleSat.png"}
+          width={40}
+          height={40}
           alt="Picture of the author"
-          className="absolute -top-12 left-1 transform rotate-[16deg] origin-bottom"
+          className="absolute top-2 left-12 transform rotate-[20deg] origin-bottom"
         />
       </div>
       <div className="col-span-2 flex justify-between items-center">
