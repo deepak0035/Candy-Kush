@@ -34,10 +34,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} ${westcoast.variable}  ${westcoastline.variable}  ${krakens.variable}`}
+        className={`${poppins.className} ${westcoast.variable}  ${westcoastline.variable}  ${krakens.variable} flex justify-center items-center`}
       >
-        <div className="min-h-screen flex justify-center items-center">
-            {children}
+        <div className="min-h-screen w-full max-w-lg flex justify-center items-center">
+          {children}
         </div>
       </body>
     </html>

@@ -33,13 +33,13 @@ const CustomNextArrow = ({ currentSlide, slideCount, onClick }) => (
     >
       <FaChevronRight
         onClick={() => console.log("hello")}
-        className="absolute text-4xl opacity-30 z-20 inset-0 m-auto"
+        className="absolute text-4xl opacity-30 z-10 inset-0 m-auto"
       />
     </div>
   </div>
 );
 
-const SwipeableProductCarousel = () =>
+const SwipeableProductCarousel = ({onOpen}) =>
 {
       
     
@@ -77,7 +77,8 @@ const SwipeableProductCarousel = () =>
                   src={image}
                   width={150}
                   height={150}
-                  className="object-cover my-2"
+                  className="object-cover cursor-pointer my-2"
+                  onClick={onOpen}
                   alt={`Slide ${index + 1}`}
                 />
               </div>

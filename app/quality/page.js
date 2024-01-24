@@ -6,39 +6,37 @@ import NextButton from "@/components/buttons/NextButton";
 import MainHeading from "@/components/Headings/MainHeading";
 import ProductList from "@/components/ProductList/ProductList";
 import SwipeableProductCarousel2 from "@/components/SwipeableProductCarousel/SwipeableProductCarousel2";
-import CustomPopup from '@/components/Popup/customPopup';
+import CustomModal from '@/components/Popup/CustomModal';
+
 
 const page = () => {
   const totalSteps = 6;
-  const activeStep = 2;
+  const activeStep = 3;
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
+const [open, setOpen] = useState(false);
 
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
+const onOpenModal = () => setOpen(true);
+const onCloseModal = () => setOpen(false);
 
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
+
 
 
   return (
-    <div className="relative bg-texture bg-no-repeat bg-cover overflow-hidden w-full max-w-lg min-h-screen space-y-6 px-4 py-8">
-      <StepIndicator totalSteps={totalSteps} activeStep={activeStep} />
-      <LogoSection cart={true} />
-      <div className="">
-        <SwipeableProductCarousel2 />
+    <>
+      <div
+        className={`relative bg-texture bg-no-repeat bg-cover overflow-hidden w-full max-w-lg min-h-screen space-y-6 px-4 py-8 ${
+          open ? "blur-sm transition duration-300 ease-out" : " "
+        }`}
+      >
+        <StepIndicator totalSteps={totalSteps} activeStep={activeStep} />
+        <LogoSection cart={true} />
+        <div className="">
+          <SwipeableProductCarousel2 onOpen={onOpenModal} />
+        </div>
       </div>
-      <div>
-        <button onClick={openModal}>Open Modal</button>
 
-        <CustomPopup isOpen={isModalOpen} onClose={closeModal}>
-          {/* Your custom content goes here */}
-          <h1>Hello, this is your custom modal content!</h1>
-        </CustomPopup>
-      </div>
-    </div>
+      <CustomModal open={open} onClose={onCloseModal} parentWidth={"100%"} />
+    </>
   );
 };
 

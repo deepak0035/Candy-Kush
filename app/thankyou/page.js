@@ -1,0 +1,54 @@
+"use client";
+import { useState } from "react";
+import LogoSection from "@/components/logoSection/LogoSection";
+import StepIndicator from "@/components/Indicators/StepIndicator";
+import { HiCheck } from "react-icons/hi2";
+import Image from "next/image";
+
+const Page = () => {
+  const totalSteps = 6;
+  const activeStep = 5;
+
+  return (
+    <div className="relative bg-texture bg-no-repeat bg-cover overflow-hidden w-full max-w-lg min-h-screen space-y-6 px-4 py-8">
+      <StepIndicator totalSteps={totalSteps} activeStep={activeStep} />
+      <LogoSection cart={true} />
+      <div className="flex flex-col justify-center items-center space-y-6">
+        <div className="bg-white p-1 border-solid border-2 border-carpetMoss shadow-[0_1px_2px_rgb(0,0,0,0.3)] rounded-full flex justify-center items-center">
+          <HiCheck className="text-7xl font-bold text-carpetMoss" />
+        </div>
+        <div className="flex flex-col justify-center items-center text-8xl font-extrabold text-carpetMoss">
+          <h1 className="stroke drop-shadow-[0_1px_2px_rgb(0,0,0,0.5)] tracking-wide">
+            THANK
+          </h1>
+          <h1 className="stroke flex justify-center items-center drop-shadow-[0_1px_2px_rgb(0,0,0,0.5)] ">
+            Y
+            <div className="relative m-1">
+              <div className="w-20 h-20 overflow-hidden rounded-full border-2 border-white">
+                <Image
+                  src={"/images/logo.png"}
+                  width={100}
+                  height={100}
+                  alt="Picture of the author"
+                  className=" object-cover w-full h-full"
+                />
+              </div>
+            </div>
+            U
+          </h1>
+          <p className="text-lg text-gray-500 font-normal">
+            for purchasing from us!
+          </p>
+        </div>
+        <div className="flex justify-start items-center py-2">
+          <button className="relative px-4 py-2 line-clamp-3 border-solid border-2 border-carpetMoss  rounded-full  text-carpetMoss text-center w-44 h-12  font-semibold">
+            GO HOME
+          </button>
+        </div>
+      </div>
+
+    </div>
+  );
+};
+
+export default Page;

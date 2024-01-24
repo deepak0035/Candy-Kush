@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.stroke {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+}
+
+.image-with-stroke {
+    filter: url(#outline);
+}
+
+/* SVG filter definition for the stroke effect */
+defs {
+    filter: url(#outline);
+}
+
+filter {
+    id: outline;
+    color-interpolation-filters: sRGB;
+    filter-type: grayscale;
+    stroke: white;
+    stroke-width: 2px;
+}
