@@ -2,9 +2,8 @@
 import LogoSection from "@/components/logoSection/LogoSection";
 import StepIndicator from "@/components/Indicators/StepIndicator"; // Assuming the path is correct
 import LanguagesDropdown from "@/components/Dropdown/LanguagesDropdown";
-import NextButton from "@/components/Buttons/NextButton";
 import MainHeading from "@/components/Headings/MainHeading";
-
+import NextButton from "@/components/Buttons/NextButton";
 const page = () => {
   const totalSteps = 6;
   const activeStep = 0;
