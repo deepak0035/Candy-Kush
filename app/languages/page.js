@@ -3,7 +3,9 @@ import LogoSection from "@/components/logoSection/LogoSection";
 import StepIndicator from "@/components/Indicators/StepIndicator"; // Assuming the path is correct
 import LanguagesDropdown from "@/components/Dropdown/LanguagesDropdown";
 import MainHeading from "@/components/Headings/MainHeading";
-import NextButton from "@/components/Buttons/NextButton";
+import Button from "@/components/Buttons/Button";
+
+
 const page = () => {
   const totalSteps = 6;
   const activeStep = 0;
@@ -14,7 +16,7 @@ const page = () => {
       <LogoSection cart={false} />
       <MainHeading heading={"LANGUAGES"} />
       <LanguagesDropdown />
-      <NextButton title={"Next"} />
+      <Button title={"Next"} />
     </div>
   );
 };

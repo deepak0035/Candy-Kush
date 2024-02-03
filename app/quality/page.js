@@ -2,9 +2,6 @@
 import { useState } from "react";
 import LogoSection from "@/components/logoSection/LogoSection";
 import StepIndicator from "@/components/Indicators/StepIndicator"; // Assuming the path is correct
-import NextButton from "@/components/Buttons/NextButton";
-import MainHeading from "@/components/Headings/MainHeading";
-import ProductList from "@/components/ProductList/ProductList";
 import SwipeableProductCarousel2 from "@/components/SwipeableProductCarousel/SwipeableProductCarousel2";
 import CustomModal from "@/components/Popup/CustomModal";
 
@@ -32,7 +29,12 @@ const page = () => {
         </div>
       </div>
 
-      <CustomModal open={open} sizes={sizes} onClose={onCloseModal} parentWidth={"100%"} />
+      <CustomModal
+        open={open}
+        sizes={sizes}
+        onClose={onCloseModal}
+        parentWidth={"100%"}
+      />
     </>
   );
 };

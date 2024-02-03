@@ -2,7 +2,7 @@ import React from "react";
 import { BsArrowRight } from "react-icons/bs";
 
 
-const NextButton = ({title}) => {
+const Button = ({title}) => {
     return (
       <div className="flex justify-center items-center py-2">
         <button className="relative px-4 py-2 line-clamp-3 rounded-full bg-gradient-to-r from-carpetMoss to-carpetMoss via-green-500 text-white text-center h-12 w-4/5 md:h-16 md:w-96 font-semibold">
@@ -15,4 +15,4 @@ const NextButton = ({title}) => {
     );
 };
 
-export default NextButton;
+export default Button;
