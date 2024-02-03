@@ -2,7 +2,7 @@
 import { useState } from "react";
 import LogoSection from "@/components/logoSection/LogoSection";
 import StepIndicator from "@/components/Indicators/StepIndicator";
-import { HiCheck } from "react-icons/hi2";
+import { FaCheck } from "react-icons/fa6";
 import Image from "next/image";
 
 const Page = () => {
@@ -15,7 +15,7 @@ const Page = () => {
       <LogoSection cart={true} />
       <div className="flex flex-col justify-center items-center space-y-6">
         <div className="bg-white p-1 border-solid border-2 border-carpetMoss shadow-[0_1px_2px_rgb(0,0,0,0.3)] rounded-full flex justify-center items-center">
-          <HiCheck className="text-7xl font-bold text-carpetMoss" />
+          <FaCheck className="text-7xl font-normal text-carpetMoss" />
         </div>
         <div className="flex flex-col justify-center items-center text-8xl font-extrabold text-carpetMoss">
           <h1 className="stroke drop-shadow-[0_1px_2px_rgb(0,0,0,0.5)] tracking-wide">
@@ -36,7 +36,7 @@ const Page = () => {
             </div>
             U
           </h1>
-          <p className="text-lg text-gray-500 font-normal">
+          <p className="text-lg text-gray-500 font-normal mt-4">
             for purchasing from us!
           </p>
         </div>

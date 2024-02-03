@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -10,9 +10,16 @@ import {
   FaChevronCircleRight,
   FaChevronRight,
 } from "react-icons/fa";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  selectProductName,
+  selectSelectedType,
+  selectTypeImages,
+  setSelectedQuality,
+} from "@/Redux/Slices/productDetailsSlice";
+import { useRouter } from "next/navigation";
 
 const CustomPrevArrow = ({ currentSlide, slideCount, onClick }) => (
-  
   <div
     className={` py-6 relative cursor-pointer ${
       currentSlide === 0 ? "invisible" : ""
@@ -35,12 +42,10 @@ const CustomNextArrow = ({ currentSlide, slideCount, onClick }) => (
 );
 
 const SwipeableProductCarousel = () => {
-  const images = [
-    "/images/ProductPage/simpleSat.png",
-    "/images/ProductPage/simpleInd.png",
-    "/images/ProductPage/simpleHyd.png",
-    // Add more image paths as needed
-  ];
+  const dispatch = useDispatch();
+  const router = useRouter();
+  const productName = useSelector(selectProductName);
+  const productTypes = useSelector(selectSelectedType);
 
   const sliderRef = useRef(null);
 
@@ -57,6 +62,15 @@ const SwipeableProductCarousel = () => {
     nextArrow: <CustomNextArrow />,
   };
 
+  const handleUpdateData = (type) => {
+    // Assuming you want to set the first quality as the selected quality
+
+    dispatch(setSelectedQuality(type.qualities));
+
+    // Redirect to "/quality" after updating the reducers
+    router.push("/quality");
+  };
+
   return (
     <div className=" rounded-xl  mx-4 bg-yellow-300 bg-opacity-90">
       <h2 className="text-center py-2 px-4 font-bold text-3xl rounded-t-xl bg-white text-carpetMoss">
@@ -64,19 +78,19 @@ const SwipeableProductCarousel = () => {
       </h2>
       <div className="">
         <Slider {...settings} ref={sliderRef}>
-          {images.map((image, index) => (
+          {productTypes?.map((type, index) => (
             <div
               key={index}
               className="relative items-center slide-item h-full"
             >
-
               <div className="slide-content flex items-center justify-center h-full mx-2">
                 <Image
-                  src={image}
+                  src={type.typeImage}
                   width={150}
                   height={150}
-                  className="object-cover my-2"
+                  className="object-cover cursor-pointer my-2"
                   alt={`Slide ${index + 1}`}
+                  onClick={() => handleUpdateData(type)}
                 />
               </div>
             </div>

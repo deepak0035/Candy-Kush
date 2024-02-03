@@ -1,7 +1,9 @@
 import { Poppins } from "next/font/google";
-
 import localFont from "next/font/local";
 import "./globals.css";
+import Provider from "@/Redux/Provider/ReduxProvider";
+import ReactQuery from "@/components/Providers/ReactQuery";
+
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -32,14 +34,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${poppins.className} ${westcoast.variable}  ${westcoastline.variable}  ${krakens.variable} flex justify-center items-center`}
-      >
-        <div className="min-h-screen w-full max-w-lg flex justify-center items-center">
-          {children}
-        </div>
-      </body>
-    </html>
+    <ReactQuery>
+      <html lang="en">
+        <body
+          className={`${poppins.className} ${westcoast.variable}  ${westcoastline.variable}  ${krakens.variable} flex justify-center items-center`}
+        >
+          <div className="min-h-screen w-full max-w-lg flex justify-center items-center">
+            <Provider>{children}</Provider>
+          </div>
+        </body>
+      </html>
+    </ReactQuery>
   );
 }

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ImageSize from "./ImageSize";
 import "./CustomModal.css"; // Create a CSS file for styling
 
-const CustomModal = ({ open, onClose, parentWidth, children }) => {
+const CustomModal = ({ open, onClose, parentWidth, children, sizes }) => {
   const images = [
     {
       image: "/images/Size/outdoorSativa-s.png",
@@ -30,6 +30,8 @@ const CustomModal = ({ open, onClose, parentWidth, children }) => {
     },
   ];
 
+  console.log(sizes)
+
   const modalStyle = {
     width: parentWidth || "auto", // Set the width based on the prop or default to "auto"
   };
@@ -45,9 +47,9 @@ const CustomModal = ({ open, onClose, parentWidth, children }) => {
           SIZE
         </h2>
         <div className="bg-white flex justify-evenly items-end py-2">
-          {images.map(({ i, image, width, height, name, price, size }) => (
+          {sizes.map(({ i, imgUrl, width, height, name, price, size }) => (
             <ImageSize
-              image={image}
+              image={imgUrl}
               width={width}
               height={height}
               name={name}

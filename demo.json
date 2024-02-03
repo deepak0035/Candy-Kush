@@ -1,0 +1,213 @@
+{
+  "SlideShow": [
+    "/images/welcome1.png",
+    "/images/welcome2.png",
+    "/images/welcome3.png"
+  ],
+  "Products": [
+    {
+      "name": "Pre-rolled",
+      "productImage": [
+        "/images/ProductPage/simpleInd.png",
+        "/images/ProductPage/simpleHyd.png",
+        "/images/ProductPage/simpleSat.png"
+      ],
+      "types": [
+        {
+          "type": "Sativa",
+          "typeImage": "/images/ProductPage/simpleSat.png",
+
+          "qualities": [
+            {
+              "quality": "Top",
+              "qualityImage": "/images/Sizes/topSativa-n.png",
+              "sizes": [
+                {
+                  "size": "Normal",
+                  "price": 25,
+                  "imgUrl": "/images/Sizes/topSativa-n.png"
+                },
+                {
+                  "type": "King",
+                  "price": 30,
+                  "imgUrl": "/images/Sizes/topSativa-k.png"
+                }
+              ]
+            },
+            {
+              "quality": "Indoor",
+              "qualityImage": "/images/Sizes/indoorSativa-n.png",
+              "sizes": [
+                {
+                  "size": "Small",
+                  "price": 20,
+                  "imgUrl": "/images/Sizes/indoorSativa-s.png"
+                },
+                {
+                  "size": "Normal",
+                  "price": 25,
+                  "imgUrl": "/images/Sizes/indoorSativa-n.png"
+                },
+                {
+                  "type": "King",
+                  "price": 30,
+                  "imgUrl": "/images/Sizes/indoorSativa-k.png"
+                }
+              ]
+            },
+            {
+              "quality": "Outdoor",
+              "qualityImage": "/images/Sizes/outdoorSativa-n.png",
+              "sizes": [
+                {
+                  "size": "Small",
+                  "price": 20,
+                  "imgUrl": "/images/Sizes/outdoorSativa-s.png"
+                },
+                {
+                  "size": "Normal",
+                  "price": 25,
+                  "imgUrl": "/images/Sizes/outdoorSativa-s.png"
+                },
+                {
+                  "type": "King",
+                  "price": 30,
+                  "imgUrl": "/images/Sizes/outdoorSativa-s.png"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Indiga",
+          "typeImage": "/images/ProductPage/simpleInd.png",
+
+          "qualities": [
+            {
+              "quality": "Top",
+              "qualityImage": "/images/Sizes/topIndiga-n.png",
+              "sizes": [
+                {
+                  "size": "Normal",
+                  "price": 25,
+                  "imgUrl": "/images/Sizes/topIndiga-n.png"
+                },
+                {
+                  "type": "King",
+                  "price": 30,
+                  "imgUrl": "/images/Sizes/topIndiga-k.png"
+                }
+              ]
+            },
+            {
+              "quality": "Indoor",
+              "qualityImage": "/images/Sizes/indoorIndiga-n.png",
+              "sizes": [
+                {
+                  "size": "Small",
+                  "price": 20,
+                  "imgUrl": "/images/Sizes/indoorIndiga-s.png"
+                },
+                {
+                  "size": "Normal",
+                  "price": 25,
+                  "imgUrl": "/images/Sizes/indoorIndiga-n.png"
+                },
+                {
+                  "type": "King",
+                  "price": 30,
+                  "imgUrl": "/images/Sizes/indoorIndiga-k.png"
+                }
+              ]
+            },
+            {
+              "quality": "Outdoor",
+              "qualityImage": "/images/Sizes/outdoorIndiga-n.png",
+              "sizes": [
+                {
+                  "size": "Small",
+                  "price": 20,
+                  "imgUrl": "/images/Sizes/outdoorIndiga-s.png"
+                },
+                {
+                  "size": "Normal",
+                  "price": 25,
+                  "imgUrl": "/images/Sizes/outdoorIndiga-n.png"
+                },
+                {
+                  "type": "King",
+                  "price": 30,
+                  "imgUrl": "/images/Sizes/outdoorIndiga-s.png"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Hybrid",
+          "typeImage": "/images/ProductPage/simpleHyd.png",
+          "qualities": [
+            {
+              "quality": "Top",
+              "qualityImage": "/images/Sizes/topHybrid-n.png",
+              "sizes": [
+                {
+                  "size": "Normal",
+                  "price": 25,
+                  "imgUrl": "/images/Sizes/topHybrid-n.png"
+                },
+                {
+                  "type": "King",
+                  "price": 30,
+                  "imgUrl": "/images/Sizes/topHybrid-k.png"
+                }
+              ]
+            },
+            {
+              "quality": "Indoor",
+              "qualityImage": "/images/Sizes/indoorHybrid-n.png",
+              "sizes": [
+                {
+                  "size": "Small",
+                  "price": 20,
+                  "imgUrl": "/images/Sizes/indoorHybrid-s.png"
+                },
+                {
+                  "size": "Normal",
+                  "price": 25,
+                  "imgUrl": "/images/Sizes/indoorHybrid-n.png"
+                },
+                {
+                  "type": "King",
+                  "price": 30,
+                  "imgUrl": "/images/Sizes/indoorHybrid-k.png"
+                }
+              ]
+            },
+            {
+              "quality": "Outdoor",
+              "qualityImage": "/images/Sizes/outdoorHybrid-n.png",
+              "sizes": [
+                {
+                  "size": "Small",
+                  "price": 20,
+                  "imgUrl": "/images/Sizes/outdoorHybrid-s.png"
+                },
+                {
+                  "size": "Normal",
+                  "price": 25,
+                  "imgUrl": "/images/Sizes/outdoorHybrid-n.png"
+                },
+                {
+                  "type": "King",
+                  "price": 30,
+                  "imgUrl": "/images/Sizes/outdoorHybrid-s.png"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

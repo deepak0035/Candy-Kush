@@ -7,6 +7,9 @@ import {
   FaChevronLeft,
   FaChevronRight,
 } from "react-icons/fa";
+import { useSelector, useDispatch } from "react-redux";
+import { selectedQuality, setSelectedQuality } from "@/Redux/Slices/productDetailsSlice";
+
 
 const CustomPrevArrow = ({ currentSlide, slideCount, onClick }) => (
   <div className="absolute left-1 top-0 h-full w-6">
@@ -39,7 +42,7 @@ const CustomNextArrow = ({ currentSlide, slideCount, onClick }) => (
   </div>
 );
 
-const SwipeableProductCarousel = ({onOpen}) =>
+const SwipeableProductCarousel = ({onOpen, setSizes}) =>
 {
       
     
@@ -49,6 +52,13 @@ const SwipeableProductCarousel = ({onOpen}) =>
     "/images/NormalSize/indoorSativa-n.png",
     // Add more image paths as needed
   ];
+
+  const productQuality = useSelector(selectedQuality);
+  
+    const handleUpdateData = (quality) => {
+      setSizes(quality.sizes)
+      onOpen()
+    };
 
   const sliderRef = useRef(null);
 
@@ -69,16 +79,16 @@ const SwipeableProductCarousel = ({onOpen}) =>
       </h2>
       <div className="py-2">
         <Slider {...settings} ref={sliderRef}>
-          {images.map((image, index) => (
+          {productQuality.map((quality, index) => (
             <div key={index} className="relative slide-item h-full">
               <div className="py-5" />
               <div className="slide-content flex items-center justify-center h-full">
                 <Image
-                  src={image}
+                  src={quality.qualityImage}
                   width={150}
                   height={150}
                   className="object-cover cursor-pointer my-2"
-                  onClick={onOpen}
+                  onClick={() => handleUpdateData(quality)}
                   alt={`Slide ${index + 1}`}
                 />
               </div>

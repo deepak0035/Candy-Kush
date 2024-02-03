@@ -1,25 +1,22 @@
 "use client";
-import {useState} from 'react'
+import { useState } from "react";
 import LogoSection from "@/components/logoSection/LogoSection";
 import StepIndicator from "@/components/Indicators/StepIndicator"; // Assuming the path is correct
-import NextButton from "@/components/buttons/NextButton";
+import NextButton from "@/components/Buttons/NextButton";
 import MainHeading from "@/components/Headings/MainHeading";
 import ProductList from "@/components/ProductList/ProductList";
 import SwipeableProductCarousel2 from "@/components/SwipeableProductCarousel/SwipeableProductCarousel2";
-import CustomModal from '@/components/Popup/CustomModal';
-
+import CustomModal from "@/components/Popup/CustomModal";
 
 const page = () => {
   const totalSteps = 6;
   const activeStep = 3;
 
-const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
-const onOpenModal = () => setOpen(true);
-const onCloseModal = () => setOpen(false);
-
-
-
+  const onOpenModal = () => setOpen(true);
+  const onCloseModal = () => setOpen(false);
+  const [sizes, setSizes] = useState([]);
 
   return (
     <>
@@ -31,11 +28,11 @@ const onCloseModal = () => setOpen(false);
         <StepIndicator totalSteps={totalSteps} activeStep={activeStep} />
         <LogoSection cart={true} />
         <div className="">
-          <SwipeableProductCarousel2 onOpen={onOpenModal} />
+          <SwipeableProductCarousel2 onOpen={onOpenModal} setSizes={setSizes} />
         </div>
       </div>
 
-      <CustomModal open={open} onClose={onCloseModal} parentWidth={"100%"} />
+      <CustomModal open={open} sizes={sizes} onClose={onCloseModal} parentWidth={"100%"} />
     </>
   );
 };

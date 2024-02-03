@@ -1,7 +1,6 @@
 "use client";
 import LogoSection from "@/components/logoSection/LogoSection";
 import StepIndicator from "@/components/Indicators/StepIndicator"; // Assuming the path is correct
-import NextButton from "@/components/buttons/NextButton";
 import MainHeading from "@/components/Headings/MainHeading";
 import ProductList from "@/components/ProductList/ProductList";
 
