@@ -20,7 +20,7 @@ const Slideshow = ({ images }) => {
   return (
     <div className="slideshow-wrapper">
       <Slider {...settings}>
-        {images.map((image, index) => (
+        {images?.map((image, index) => (
           <div key={index} className="slide-item">
             <div className="slide-content">
               <Image

@@ -1,36 +1,67 @@
 import React, { useState } from "react";
 import ImageSize from "./ImageSize";
 import "./CustomModal.css"; // Create a CSS file for styling
+import { useSelector, useDispatch } from "react-redux";
+import {
+  addToCart,
+  addToCheckout,
+  selectCartItems,
+  selectProductName,
+  selectProductType,
+  selectedProductQuality,
+} from "@/Redux/Slices/cartSlice";
+import { useRouter } from "next/navigation";
 
-const CustomModal = ({ open, onClose, parentWidth, children, sizes }) => {
-  const images = [
-    {
-      image: "/images/Size/outdoorSativa-s.png",
-      width: 60,
-      height: 60,
-      name: "OutdoorSativa",
-      price: "20$",
-      size: "Small",
-    },
-    {
-      image: "/images/Size/outdoorSativa-n.png",
-      width: 65,
-      height: 65,
-      name: "OutdoorSativa",
-      price: "25$",
-      size: "Normal",
-    },
-    {
-      image: "/images/Size/outdoorSativa-k.png",
-      width: 70,
-      height: 70,
-      name: "OutdoorSativa",
-      price: "30$",
-      size: "King",
-    },
-  ];
+const generateRandomId = () => {
+  return Math.random().toString(36).substr(2, 10);
+};
 
-  console.log(sizes)
+const CustomModal = ({ open, onClose, parentWidth, sizes }) => {
+  const [selectedSize, setSelectedSize] = useState(null);
+  const [productPrice, setProductPrice] = useState(null);
+  const [productImage, setProductImage] = useState(null);
+  const [productSize, setProductSize] = useState(null);
+
+  const dispatch = useDispatch();
+  const router = useRouter();
+
+  const productName = useSelector(selectProductName);
+  const productType = useSelector(selectProductType);
+  const productQuality = useSelector(selectedProductQuality);
+
+
+  
+  const handleSetData = (size, price, image) => {
+    setProductImage(image);
+    setProductPrice(price);
+    setProductSize(size);
+    setSelectedSize(size); // Update the selectedSize in the modal
+  };
+
+  const handleUpdateData = () =>
+  {
+    const productId = generateRandomId();
+
+
+    const item = {
+      productId: productId,
+      productName: productName,
+      productType: productType,
+      productQuality: productQuality,
+      productPrice: productPrice,
+      productSize: productSize,
+      productImage: productImage,
+      productQuantity: 1,
+    };
+    dispatch(addToCart(item));
+
+
+    // Use the cartItems directly without useSelector inside this function
+
+    onClose();
+    // Redirect to "/quality" after updating the reducers
+    router.push("/check-out");
+  };
 
   const modalStyle = {
     width: parentWidth || "auto", // Set the width based on the prop or default to "auto"
@@ -49,19 +80,23 @@ const CustomModal = ({ open, onClose, parentWidth, children, sizes }) => {
         <div className="bg-white flex justify-evenly items-end py-2">
           {sizes.map(({ i, imgUrl, width, height, name, price, size }) => (
             <ImageSize
+              key={i}
               image={imgUrl}
               width={width}
               height={height}
               name={name}
               price={price}
               size={size}
+              isSelected={selectedSize === size}
+              handleSetData={handleSetData}
             />
           ))}
         </div>
         <div className="flex justify-center items-center h-full">
           <button
-          onClick={onClose}
-            className="relative px-4 py-2 line-clamp-3 rounded-full bg-gradient-to-r from-carpetMoss to-carpetMoss via-green-500 text-white text-center h-12 w-4/5 md:h-16 md:w-96 font-semibold">
+            onClick={handleUpdateData}
+            className="relative px-4 py-2 line-clamp-3 rounded-full bg-gradient-to-r from-carpetMoss to-carpetMoss via-green-500 text-white text-center h-12 w-4/5 md:h-16 md:w-96 font-semibold"
+          >
             ADD TO CART
           </button>
         </div>

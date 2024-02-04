@@ -4,6 +4,7 @@ import LogoSection from "@/components/logoSection/LogoSection";
 import StepIndicator from "@/components/Indicators/StepIndicator";
 import { FaCheck } from "react-icons/fa6";
 import Image from "next/image";
+import Link from "next/link";
 
 const Page = () => {
   const totalSteps = 6;
@@ -12,7 +13,7 @@ const Page = () => {
   return (
     <div className="relative bg-texture bg-no-repeat bg-cover overflow-hidden w-full max-w-lg min-h-screen space-y-6 px-4 py-8">
       <StepIndicator totalSteps={totalSteps} activeStep={activeStep} />
-      <LogoSection cart={true} />
+      <LogoSection cart={false} back={true}/>
       <div className="flex flex-col justify-center items-center space-y-6">
         <div className="bg-white p-1 border-solid border-2 border-carpetMoss shadow-[0_1px_2px_rgb(0,0,0,0.3)] rounded-full flex justify-center items-center">
           <FaCheck className="text-7xl font-normal text-carpetMoss" />
@@ -41,9 +42,9 @@ const Page = () => {
           </p>
         </div>
         <div className="flex justify-start items-center py-2">
-          <button className="relative px-4 py-2 line-clamp-3 border-solid border-2 border-carpetMoss  rounded-full  text-carpetMoss text-center w-44 h-12  font-semibold">
+          <Link href={'/'} className="relative px-4 py-2 line-clamp-3 border-solid border-2 border-carpetMoss  rounded-full  text-carpetMoss text-center w-44 h-12  font-semibold">
             GO HOME
-          </button>
+          </Link>
         </div>
       </div>
 

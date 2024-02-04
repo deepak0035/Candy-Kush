@@ -13,11 +13,14 @@ import {
 import { useSelector, useDispatch } from "react-redux";
 import {
   selectProductName,
+  selectProductTypes,
   selectSelectedType,
   selectTypeImages,
+  setProductQualities,
   setSelectedQuality,
 } from "@/Redux/Slices/productDetailsSlice";
 import { useRouter } from "next/navigation";
+import { addToCart, setProductType } from "@/Redux/Slices/cartSlice";
 
 const CustomPrevArrow = ({ currentSlide, slideCount, onClick }) => (
   <div
@@ -44,8 +47,7 @@ const CustomNextArrow = ({ currentSlide, slideCount, onClick }) => (
 const SwipeableProductCarousel = () => {
   const dispatch = useDispatch();
   const router = useRouter();
-  const productName = useSelector(selectProductName);
-  const productTypes = useSelector(selectSelectedType);
+  const productTypes = useSelector(selectProductTypes);
 
   const sliderRef = useRef(null);
 
@@ -65,7 +67,8 @@ const SwipeableProductCarousel = () => {
   const handleUpdateData = (type) => {
     // Assuming you want to set the first quality as the selected quality
 
-    dispatch(setSelectedQuality(type.qualities));
+    dispatch(setProductQualities(type.qualities));
+    dispatch(setProductType(type.type));
 
     // Redirect to "/quality" after updating the reducers
     router.push("/quality");

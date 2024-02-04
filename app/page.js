@@ -1,16 +1,17 @@
 "use client";
 import Slideshow from "@/components/Welcome-SlideShow/SlideShow";
+import { getSliderImages } from "@/lib/helper";
 import Link from "next/link";
 import { CiGlobe } from "react-icons/ci";
+import { useQuery, useMutation } from "react-query";
+
 
 
 const page = () => {
-  const images = [
-    "/images/welcome1.png",
-    "/images/welcome2.png",
-    "/images/welcome3.png",
-    // Add more image paths as needed
-  ];
+
+
+    const { data: images } = useQuery("images", getSliderImages);
+
 
   return (
     <div className="w-full max-w-lg min-h-screen">

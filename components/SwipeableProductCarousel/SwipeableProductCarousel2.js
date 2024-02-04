@@ -8,7 +8,8 @@ import {
   FaChevronRight,
 } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
-import { selectedQuality, setSelectedQuality } from "@/Redux/Slices/productDetailsSlice";
+import { selectProductQualities, selectedQuality, setSelectedQuality } from "@/Redux/Slices/productDetailsSlice";
+import { addToCart, setProductQuality } from "@/Redux/Slices/cartSlice";
 
 
 const CustomPrevArrow = ({ currentSlide, slideCount, onClick }) => (
@@ -44,7 +45,8 @@ const CustomNextArrow = ({ currentSlide, slideCount, onClick }) => (
 
 const SwipeableProductCarousel = ({onOpen, setSizes}) =>
 {
-      
+        const dispatch = useDispatch();
+
     
   const images = [
     "/images/NormalSize/topSativa-n.png",
@@ -53,10 +55,12 @@ const SwipeableProductCarousel = ({onOpen, setSizes}) =>
     // Add more image paths as needed
   ];
 
-  const productQuality = useSelector(selectedQuality);
+  const productQuality = useSelector(selectProductQualities);
   
     const handleUpdateData = (quality) => {
       setSizes(quality.sizes)
+    dispatch(setProductQuality(quality.quality));
+
       onOpen()
     };
 

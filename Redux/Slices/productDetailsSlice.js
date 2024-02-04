@@ -2,44 +2,29 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  productName: "",
-  selectedType: [],
-  selectedQuality: [],
-  productImages: [],
-  typeImages: [],
+  productTypes: [],
+  productQualities: [],
 };
 
 export const productDetailsSlice = createSlice({
   name: "productDetails",
   initialState,
   reducers: {
-    setProductName: (state, action) => {
-      state.productName = action.payload;
+    setProductTypes: (state, action) => {
+      state.productTypes = action.payload;
     },
-    setProductImages: (state, action) => {
-      state.productImages = action.payload;
-    },
-    setSelectedQuality: (state, action) => {
-      state.selectedQuality = action.payload;
-    },
-    setSelectedType: (state, action) => {
-      state.selectedType = action.payload;
+    setProductQualities: (state, action) => {
+      state.productQualities = action.payload;
     },
   },
 });
 
-export const {
-  setProductName,
-  setSelectedType,
-  setProductImages,
-  setSelectedQuality,
-} = productDetailsSlice.actions;
+export const { setProductTypes, setProductQualities } =
+  productDetailsSlice.actions;
 
 // Selectors
-export const selectProductName = (state) => state.productDetails?.productName;
-export const selectProductImages = (state) => state.productDetails?.productImages;
-export const selectedQuality = (state) => state.productDetails?.selectedQuality;
-
-export const selectSelectedType = (state) => state.productDetails?.selectedType;
+export const selectProductTypes = (state) => state.productDetails.productTypes;
+export const selectProductQualities = (state) =>
+  state.productDetails.productQualities;
 
 export default productDetailsSlice.reducer;

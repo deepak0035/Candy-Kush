@@ -3,7 +3,12 @@ import Image from "next/image";
 import { IoIosArrowForward } from "react-icons/io";
 import { useRouter } from "next/navigation";
 import { useDispatch } from "react-redux";
-import { setProductName, setSelectedType, setTypeImages} from "@/Redux/Slices/productDetailsSlice"; 
+import {
+ 
+  setProductTypes,
+  setTypeImages,
+} from "@/Redux/Slices/productDetailsSlice";
+import { addToCart, setProductName } from "@/Redux/Slices/cartSlice";
 
 const Product = ({ product }) => {
   const { name, productImage, types } = product;
@@ -12,10 +17,9 @@ const Product = ({ product }) => {
   const router = useRouter();
 
   const handleUpdateData = () => {
-    dispatch(setProductName(product.name));
-    dispatch(setSelectedType(product.types));
+    dispatch(setProductTypes(product.types));
 
-
+    dispatch(setProductName(product.name ));
     // Redirect to "/types" after updating the reducers
     router.push("/types");
   };
@@ -29,7 +33,10 @@ const Product = ({ product }) => {
           </h1>
         </div>
       ) : (
-        <div className="grid grid-cols-7 text-carpetMoss gap-4 bg-white rounded-2xl shadow-xl h-24 px-4 place-items-center cursor-pointer" onClick={handleUpdateData}>
+        <div
+          className="grid grid-cols-7 text-carpetMoss gap-4 bg-white rounded-2xl shadow-xl h-24 px-4 place-items-center cursor-pointer"
+          onClick={handleUpdateData}
+        >
           <div className="col-span-2">
             <h2 className="text-base">{name}</h2>
           </div>
