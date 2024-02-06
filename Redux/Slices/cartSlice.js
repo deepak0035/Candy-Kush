@@ -3,7 +3,6 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   items: [],
-  checkoutBucket: [],
   productName: '',
   productType: '',
   productQuality: '',
@@ -54,10 +53,17 @@ export const cartSlice = createSlice({
         );
       }
     },
+    clearCart: (state) => {
+      // Reset the cart state to its initial values
+      state.items = [];
+      state.productName = "";
+      state.productType = "";
+      state.productQuality = "";
+    },
   },
 });
 
-export const { addToCart, removeFromCart, setProductName, setProductType, setProductQuality, incrementQuantity, decrementQuantity } = cartSlice.actions;
+export const { addToCart, removeFromCart, clearCart, setProductName, setProductType, setProductQuality, incrementQuantity, decrementQuantity } = cartSlice.actions;
 
 // Selector
 export const selectCartItems = (state) => state.cart.items;

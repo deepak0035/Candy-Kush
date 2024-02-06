@@ -25,23 +25,23 @@ const Product = ({ product }) => {
   };
 
   return (
-    <>
+    <div>
       {!name ? (
-        <div className="grid grid-cols-7 text-carpetMoss gap-4 bg-white rounded-2xl shadow-xl h-24 px-4 place-items-center	">
+        <div className="grid grid-cols-7 text-gray-400 gap-4 bg-white rounded-2xl border-2 border-gray-300 h-24  px-4 place-items-center	">
           <h1 className="col-span-full text-2xl font-semibold tracking-widest">
             COMING SOON
           </h1>
         </div>
       ) : (
         <div
-          className="grid grid-cols-7 text-carpetMoss gap-4 bg-white rounded-2xl shadow-xl h-24 px-4 place-items-center cursor-pointer"
+          className="grid grid-cols-7 text-carpetMoss gap-4 bg-white rounded-2xl shadow-xl h-24 px-4 place-items-center cursor-pointer border-2 border-carpetMoss"
           onClick={handleUpdateData}
         >
           <div className="col-span-2">
             <h2 className="text-base">{name}</h2>
           </div>
           {imageLenth > 1 ? (
-            <div className="col-span-3 relative w-full h-24 overflow-hidden">
+            <div className="col-span-3 relative w-full h-24 overflow-hidden ">
               <Image
                 src={productImage[0]}
                 width={40}
@@ -83,7 +83,7 @@ const Product = ({ product }) => {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

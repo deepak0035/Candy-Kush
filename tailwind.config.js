@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
+    "/.index.html",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -19,6 +20,9 @@ module.exports = {
         chiGong: "#D32929",
         selected: "#76CE91",
         blurred: "#DDF2E3",
+        sativa: "#E2B62C",
+        indiga: "#3D438B",
+        hybrid: "#44632E",
       },
       backgroundImage: {
         base: "url('/images/Bg/bg.png')",

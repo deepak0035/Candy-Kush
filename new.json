@@ -16,11 +16,14 @@
         {
           "type": "Sativa",
           "typeImage": "/images/ProductPage/simpleSat.png",
+          "typeColor": "/images/Bg/demo.png",
 
           "qualities": [
             {
               "quality": "Top",
               "qualityImage": "/images/Sizes/topSativa-n.png",
+              "qualityColor": "/images/Bg/topSativaColor.png",
+
               "sizes": [
                 {
                   "size": "Normal",
@@ -37,6 +40,8 @@
             {
               "quality": "Indoor",
               "qualityImage": "/images/Sizes/indoorSativa-n.png",
+              "typeColor": "/images/Bg/indoorSativaColor.png",
+
               "sizes": [
                 {
                   "size": "Small",
@@ -58,6 +63,7 @@
             {
               "quality": "Outdoor",
               "qualityImage": "/images/Sizes/outdoorSativa-n.png",
+              "typeColor": "/images/Bg/outdoorSativaColor.png",
               "sizes": [
                 {
                   "size": "Small",
@@ -81,11 +87,14 @@
         {
           "type": "Indiga",
           "typeImage": "/images/ProductPage/simpleInd.png",
+          "typeColor": "/images/Bg/indigaColor.png",
 
           "qualities": [
             {
               "quality": "Top",
               "qualityImage": "/images/Sizes/topIndiga-n.png",
+              "typeColor": "/images/Bg/topIndigaColor.png",
+
               "sizes": [
                 {
                   "size": "Normal",
@@ -102,6 +111,8 @@
             {
               "quality": "Indoor",
               "qualityImage": "/images/Sizes/indoorIndiga-n.png",
+              "typeColor": "/images/Bg/indoorIndigaColor.png",
+
               "sizes": [
                 {
                   "size": "Small",
@@ -123,6 +134,8 @@
             {
               "quality": "Outdoor",
               "qualityImage": "/images/Sizes/outdoorIndiga-n.png",
+              "typeColor": "/images/Bg/outdoorIndigaColor.png",
+
               "sizes": [
                 {
                   "size": "Small",
@@ -146,10 +159,14 @@
         {
           "type": "Hybrid",
           "typeImage": "/images/ProductPage/simpleHyd.png",
+          "typeColor": "/images/Bg/hybridColor.png",
+
           "qualities": [
             {
               "quality": "Top",
               "qualityImage": "/images/Sizes/topHybrid-n.png",
+              "typeColor": "/images/Bg/topHybridColor.png",
+
               "sizes": [
                 {
                   "size": "Normal",
@@ -166,6 +183,8 @@
             {
               "quality": "Indoor",
               "qualityImage": "/images/Sizes/indoorHybrid-n.png",
+              "typeColor": "/images/Bg/indoorHybridColor.png",
+
               "sizes": [
                 {
                   "size": "Small",
@@ -187,6 +206,8 @@
             {
               "quality": "Outdoor",
               "qualityImage": "/images/Sizes/outdoorHybrid-n.png",
+              "typeColor": "/images/Bg/outdoorHybridColor.png",
+
               "sizes": [
                 {
                   "size": "Small",

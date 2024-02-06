@@ -66,32 +66,35 @@ const SwipeableProductCarousel = () => {
 
   return (
     <div className="rounded-xl mx-4 shadow-[0_0px_5px_rgb(0,0,0.5,0.3)] ">
-      <h2 className="text-center py-2 px-4 font-bold text-3xl rounded-t-xl bg-carpetMoss text-white">
+      <h2 className="text-center py-2 px-4 font-bold text-3xl rounded-t-xl bg-white text-carpetMoss">
         TYPES
       </h2>
-      <div className=" bg-gradient-to-t from-carpetMoss/40 to-white/30 bg-opacity-50 backdrop-blur-md rounded-b-xl">
-        <Slider {...settings} ref={sliderRef}>
-          {productTypes?.map((type, index) => (
-            <div
-              key={index}
-              className="relative items-center slide-item h-full"
-            >
-              <div className="py-5" />
-              <div className="slide-content flex items-center justify-center h-full mx-2">
-                <Image
-                  src={type.typeImage}
-                  width={150}
-                  height={150}
-                  className="object-cover cursor-pointer z-10 my-2"
-                  alt={`Slide ${index + 1}`}
-                  onClick={() => handleUpdateData(type)}
-                />
-              </div>
-              <div className="py-5" />
+      <Slider {...settings} ref={sliderRef}>
+        {productTypes?.map((type, index) => (
+          <div key={index} className="relative h-full">
+            <Image
+              src={type.typeColor}
+              width={200}
+              height={200}
+              className=" absolute  h-full w-full bg-opacity-50 backdrop-blur-md rounded-b-xl"
+              alt={`Slide ${index + 1}`}
+            />
+            <div className="py-5" />
+
+            <div className="slide-content flex items-center justify-center h-full px-2">
+              <Image
+                src={type.typeImage}
+                width={150}
+                height={150}
+                className="object-cover cursor-pointer z-10 my-2"
+                alt={`Slide ${index + 1}`}
+                onClick={() => handleUpdateData(type)}
+              />
             </div>
-          ))}
-        </Slider>
-      </div>
+            <div className="py-5" />
+          </div>
+        ))}
+      </Slider>
     </div>
   );
 };

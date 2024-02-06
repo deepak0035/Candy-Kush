@@ -27,16 +27,18 @@ const ImageSize = ({ image, name, price, size, handleSetData, isSelected }) => {
   return (
     <div className={`relative h-64 w-32 flex justify-center items-end`}>
       {isSelected && (
-        <div className="absolute top-0 right-0 p-2">
-          <div className="bg-white p-1 shadow-[0_1px_2px_rgb(0,0,0,0.3)] rounded-full flex justify-center items-center">
-            <HiCheck className="text-3xl font-bold text-carpetMoss" />
+        <div className="absolute top-0 right-0 p-2 z-10">
+          <div className="bg-white border-solid border-4  p-1  rounded-full flex justify-center items-center">
+            <HiCheck className="text-2xl font-bold text-carpetMoss " />
           </div>
         </div>
       )}
 
       <div
         className={`flex flex-col items-center justify-end ${
-          isSelected ? "bg-carpetMoss shadow-lg rounded-xl h-full w-full" : ""
+          isSelected
+            ? "w-full h-full rounded-xl border-solid border-2 border-opacity-50 border-carpetMoss backdrop-blur-md "
+            : ""
         }`}
       >
         <Image
@@ -47,8 +49,8 @@ const ImageSize = ({ image, name, price, size, handleSetData, isSelected }) => {
           onClick={handleClick}
         />
         <h2
-          className={`text-center px-4 text-carpetMoss ${
-            isSelected ? "text-white font-medium" : ""
+          className={`text-center px-4 pt-1 text-carpetMoss ${
+            isSelected ? "text-black font-medium" : ""
           }`}
         >
           {size}
@@ -59,7 +61,7 @@ const ImageSize = ({ image, name, price, size, handleSetData, isSelected }) => {
           thousandSeparator={true}
           prefix={"$"}
           className="text-pottBlack px-1 font-medium"
-        />{" "}
+        />
       </div>
     </div>
   );
