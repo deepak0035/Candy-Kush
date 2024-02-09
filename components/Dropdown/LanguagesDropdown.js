@@ -5,40 +5,59 @@ import { HiCheck } from "react-icons/hi2";
 import { IoIosArrowDown } from "react-icons/io";
 import Image from "next/image";
 
-
-const LanguagesDropdown = () => {
+const LanguagesDropdown = ({ setNewLang }) => {
   const [selectedOption, setSelectedOption] = useState("English");
-
   const options = [
-    { language: "English", flag: "US", country: "United States" },
-    { language: "Thai", flag: "TH", country: "Thailand" },
-    { language: "Spanish", flag: "ES", country: "Spain" },
-    { language: "French", flag: "FR", country: "France" },
-    { language: "German", flag: "DE", country: "Germany" },
-    { language: "Italian", flag: "IT", country: "Italy" },
-    { language: "Japanese", flag: "JP", country: "Japan" },
-    { language: "Chinese", flag: "CN", country: "China" },
-    { language: "Russian", flag: "RU", country: "Russia" },
-    { language: "Arabic", flag: "SA", country: "Saudi Arabia" },
-    { language: "Portuguese", flag: "PT", country: "Portugal" },
-    { language: "Hindi", flag: "IN", country: "India" },
-    { language: "Korean", flag: "KR", country: "South Korea" },
-    { language: "Dutch", flag: "NL", country: "Netherlands" },
-    { language: "Turkish", flag: "TR", country: "Turkey" },
-    { language: "Swedish", flag: "SE", country: "Sweden" },
-    { language: "Greek", flag: "GR", country: "Greece" },
-    { language: "Hebrew", flag: "IL", country: "Israel" },
-    { language: "Polish", flag: "PL", country: "Poland" },
-    { language: "Czech", flag: "CZ", country: "Czech Republic" },
+    {
+      language: "English",
+      flag: "US",
+      country: "United States",
+      shorthand: "en",
+    },
+    { language: "Thai", flag: "TH", country: "Thailand", shorthand: "th" },
+    { language: "Spanish", flag: "ES", country: "Spain", shorthand: "es" },
+    { language: "French", flag: "FR", country: "France", shorthand: "fr" },
+    { language: "German", flag: "DE", country: "Germany", shorthand: "de" },
+    { language: "Italian", flag: "IT", country: "Italy", shorthand: "it" },
+    { language: "Japanese", flag: "JP", country: "Japan", shorthand: "ja" },
+    { language: "Chinese", flag: "CN", country: "China", shorthand: "zh" },
+    { language: "Russian", flag: "RU", country: "Russia", shorthand: "ru" },
+    {
+      language: "Arabic",
+      flag: "SA",
+      country: "Saudi Arabia",
+      shorthand: "ar",
+    },
+    {
+      language: "Portuguese",
+      flag: "PT",
+      country: "Portugal",
+      shorthand: "pt",
+    },
+    { language: "Hindi", flag: "IN", country: "India", shorthand: "hi" },
+    { language: "Korean", flag: "KR", country: "South Korea", shorthand: "ko" },
+    { language: "Dutch", flag: "NL", country: "Netherlands", shorthand: "nl" },
+    { language: "Turkish", flag: "TR", country: "Turkey", shorthand: "tr" },
+    { language: "Swedish", flag: "SE", country: "Sweden", shorthand: "sv" },
+    { language: "Greek", flag: "GR", country: "Greece", shorthand: "el" },
+    { language: "Hebrew", flag: "IL", country: "Israel", shorthand: "he" },
+    { language: "Polish", flag: "PL", country: "Poland", shorthand: "pl" },
+    {
+      language: "Czech",
+      flag: "CZ",
+      country: "Czech Republic",
+      shorthand: "cs",
+    },
     // Add more languages as needed
   ];
 
   const handleOptionClick = (option) => {
-    setSelectedOption(option);
+    setSelectedOption(option.language);
+    setNewLang(option.shorthand)
   };
 
   return (
-    <div className="flex justify-center items-center py-4"> 
+    <div className="flex justify-center items-center py-4">
       <div className="inline-block text-left">
         <div>
           <span className="rounded-xl w-96 text-lg border shadow-md bg-white px-8 py-4 inline-flex justify-between items-center relative">
@@ -54,7 +73,7 @@ const LanguagesDropdown = () => {
               className={`block px-4 py-2 cursor-pointer text-lg ${
                 selectedOption === option.language ? "bg-selected " : ""
               }`}
-              onClick={() => handleOptionClick(option.language)}
+              onClick={() => handleOptionClick(option)}
             >
               <div className=" flex justify-between items-center py-2 px-2">
                 <div className="flex items-center px-2">

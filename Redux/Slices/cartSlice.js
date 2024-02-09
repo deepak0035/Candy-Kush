@@ -6,6 +6,7 @@ const initialState = {
   productName: '',
   productType: '',
   productQuality: '',
+  lang: '',
 };
 
 export const cartSlice = createSlice({
@@ -17,6 +18,9 @@ export const cartSlice = createSlice({
     },
     setProductName: (state, action) => {
       state.productName = action.payload;
+    },
+    setLang: (state, action) => {
+      state.lang = action.payload;
     },
     setProductType: (state, action) => {
       state.productType = action.payload;
@@ -63,11 +67,13 @@ export const cartSlice = createSlice({
   },
 });
 
-export const { addToCart, removeFromCart, clearCart, setProductName, setProductType, setProductQuality, incrementQuantity, decrementQuantity } = cartSlice.actions;
+export const { addToCart,setLang, removeFromCart, clearCart, setProductName, setProductType, setProductQuality, incrementQuantity, decrementQuantity } = cartSlice.actions;
 
 // Selector
 export const selectCartItems = (state) => state.cart.items;
 export const selectProductName = (state) => state.cart.productName;
+export const selectLang = (state) => state.cart.lang;
+
 export const selectProductType = (state) => state.cart.productType;
 export const selectedProductQuality = (state) => state.cart.productQuality;
 export const selectTotal = (state) =>

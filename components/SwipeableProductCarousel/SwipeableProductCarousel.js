@@ -1,3 +1,4 @@
+'use client'
 import React, { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
@@ -38,7 +39,7 @@ const CustomNextArrow = ({ currentSlide, slideCount, onClick }) => (
   </div>
 );
 
-const SwipeableProductCarousel = () => {
+const SwipeableProductCarousel = ({types}) => {
   const dispatch = useDispatch();
   const router = useRouter();
   const productTypes = useSelector(selectProductTypes);
@@ -67,7 +68,7 @@ const SwipeableProductCarousel = () => {
   return (
     <div className="rounded-xl mx-4 shadow-[0_0px_5px_rgb(0,0,0.5,0.3)] ">
       <h2 className="text-center py-2 px-4 font-bold text-3xl rounded-t-xl bg-carpetMoss text-white">
-        TYPES
+        {types}
       </h2>
       <div className=" bg-gradient-to-t from-carpetMoss/40 to-white/30 bg-opacity-50 backdrop-blur-md rounded-b-xl">
         <Slider {...settings} ref={sliderRef}>

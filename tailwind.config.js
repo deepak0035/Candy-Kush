@@ -32,7 +32,7 @@ module.exports = {
         smoke1: "url('/images/SmokePng/smoke1.png')",
         smoke2: "url('/images/SmokePng/smoke2.png')",
         smoke3: "url('/images/SmokePng/smoke3.png')",
-        texture: "url('/images/Bg/texture.png')",
+        texture: "url('../public/images/Bg/texture.png')",
       },
     },
   },

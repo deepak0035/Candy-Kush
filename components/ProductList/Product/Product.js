@@ -4,13 +4,12 @@ import { IoIosArrowForward } from "react-icons/io";
 import { useRouter } from "next/navigation";
 import { useDispatch } from "react-redux";
 import {
- 
   setProductTypes,
   setTypeImages,
 } from "@/Redux/Slices/productDetailsSlice";
 import { addToCart, setProductName } from "@/Redux/Slices/cartSlice";
 
-const Product = ({ product }) => {
+const Product = ({ product, comingsoon }) => {
   const { name, productImage, types } = product;
   const imageLenth = productImage?.length;
   const dispatch = useDispatch();
@@ -19,7 +18,7 @@ const Product = ({ product }) => {
   const handleUpdateData = () => {
     dispatch(setProductTypes(product.types));
 
-    dispatch(setProductName(product.name ));
+    dispatch(setProductName(product.name));
     // Redirect to "/types" after updating the reducers
     router.push("/types");
   };
@@ -29,7 +28,7 @@ const Product = ({ product }) => {
       {!name ? (
         <div className="grid grid-cols-7 text-gray-400 gap-4 bg-white rounded-2xl border-2 border-gray-300 h-24  px-4 place-items-center	">
           <h1 className="col-span-full text-2xl font-semibold tracking-widest">
-            COMING SOON
+            {comingsoon}
           </h1>
         </div>
       ) : (

@@ -1,4 +1,5 @@
- import { useRouter } from "next/navigation";
+'use client'
+import { useRouter } from "next/navigation";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoCartOutline } from "react-icons/io5";
 import { IoHomeOutline } from "react-icons/io5";

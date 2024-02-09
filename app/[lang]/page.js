@@ -7,10 +7,11 @@ import { useQuery, useMutation } from "react-query";
 
 
 
-const page = () => {
+const page =  () => {
 
 
-    const { data: images } = useQuery("images", getSliderImages);
+  const { data: images } = useQuery("images", getSliderImages);
+  
 
 
   return (
