@@ -59,7 +59,7 @@ const ImageSize = ({ image, name, price, size, handleSetData, isSelected }) => {
           value={price}
           displayType={"text"}
           thousandSeparator={true}
-          prefix={"$"}
+          prefix={"฿"}
           className="text-pottBlack px-1 font-medium"
         />
       </div>

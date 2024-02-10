@@ -1,9 +1,29 @@
 {
-  "products": "製品",
-  "comingsoon": "近日公開",
-  "types": "タイプ",
-  "quality": "品質",
-  "price": "価格",
-  "next": "次へ",
-  "totalprice": "合計金額"
+  "products": {
+    "heading": "商品",
+    "comingsoon": "近日公開"
+  },
+  "types": {
+    "heading": "種類"
+  },
+  "quality": {
+    "heading": "品質"
+  },
+  "size": {
+    "heading": "サイズ",
+    "addtocart": "カートに追加"
+  },
+  "checkout": {
+    "type": "タイプ",
+    "quality": "品質",
+    "size": "サイズ",
+    "price": "価格",
+    "buymore": "さらに購入",
+    "totalprice": "合計金額",
+    "checkoutbtn": "チェックアウト"
+  },
+  "thankyou": {
+    "gohome": "ホームに戻る",
+    "thankyoumsg": "ご購入ありがとうございます！"
+  }
 }

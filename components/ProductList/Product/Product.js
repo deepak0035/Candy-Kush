@@ -9,7 +9,7 @@ import {
 } from "@/Redux/Slices/productDetailsSlice";
 import { addToCart, setProductName } from "@/Redux/Slices/cartSlice";
 
-const Product = ({ product, comingsoon }) => {
+const Product = ({ product, comingsoon, lang }) => {
   const { name, productImage, types } = product;
   const imageLenth = productImage?.length;
   const dispatch = useDispatch();
@@ -20,7 +20,12 @@ const Product = ({ product, comingsoon }) => {
 
     dispatch(setProductName(product.name));
     // Redirect to "/types" after updating the reducers
-    router.push("/types");
+    const route = `/${lang}/types`; // Assuming "products" is a dynamic segment
+
+    // Push the updated route to the router
+    router.push(route, undefined, {
+      locale: lang,
+    });
   };
 
   return (

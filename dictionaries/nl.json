@@ -1,9 +1,29 @@
 {
-  "products": "Producten",
-  "comingsoon": "Binnenkort beschikbaar",
-  "types": "Typen",
-  "quality": "Kwaliteit",
-  "price": "Prijs",
-  "next": "Volgende",
-  "totalprice": "Totale prijs"
+  "products": {
+    "heading": "PRODUCTEN",
+    "comingsoon": "BINNENKORT VERKRIJGBAAR"
+  },
+  "types": {
+    "heading": "SOORTEN"
+  },
+  "quality": {
+    "heading": "KWALITEIT"
+  },
+  "size": {
+    "heading": "MAAT",
+    "addtocart": "TOEVOEGEN AAN WINKELWAGEN"
+  },
+  "checkout": {
+    "type": "Type",
+    "quality": "Kwaliteit",
+    "size": "Maat",
+    "price": "Prijs",
+    "buymore": "Meer kopen",
+    "totalprice": "Totale prijs",
+    "checkoutbtn": "AFREKENEN"
+  },
+  "thankyou": {
+    "gohome": "NAAR HUIS",
+    "thankyoumsg": "voor uw aankoop bij ons!"
+  }
 }

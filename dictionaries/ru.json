@@ -1,9 +1,29 @@
 {
-  "products": "Продукты",
-  "comingsoon": "Скоро",
-  "types": "Типы",
-  "quality": "Качество",
-  "price": "Цена",
-  "next": "Следующий",
-  "totalprice": "Общая стоимость"
+  "products": {
+    "heading": "ТОВАРЫ",
+    "comingsoon": "СКОРО В ПРОДАЖЕ"
+  },
+  "types": {
+    "heading": "ТИПЫ"
+  },
+  "quality": {
+    "heading": "КАЧЕСТВО"
+  },
+  "size": {
+    "heading": "РАЗМЕР",
+    "addtocart": "ДОБАВИТЬ В КОРЗИНУ"
+  },
+  "checkout": {
+    "type": "Тип",
+    "quality": "Качество",
+    "size": "Размер",
+    "price": "Цена",
+    "buymore": "Купить еще",
+    "totalprice": "Итоговая цена",
+    "checkoutbtn": "ОФОРМИТЬ ЗАКАЗ"
+  },
+  "thankyou": {
+    "gohome": "ВЕРНУТЬСЯ НА ГЛАВНУЮ",
+    "thankyoumsg": "за покупку у нас!"
+  }
 }

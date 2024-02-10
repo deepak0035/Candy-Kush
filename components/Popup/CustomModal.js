@@ -16,7 +16,7 @@ const generateRandomId = () => {
   return Math.random().toString(36).substr(2, 10);
 };
 
-const CustomModal = ({ open, onClose, parentWidth, sizes }) => {
+const CustomModal = ({ open, onClose, parentWidth, sizes, size, addtocart, lang }) => {
   const [selectedSize, setSelectedSize] = useState(null);
   const [productPrice, setProductPrice] = useState(null);
   const [productImage, setProductImage] = useState(null);
@@ -60,8 +60,12 @@ const CustomModal = ({ open, onClose, parentWidth, sizes }) => {
 
     onClose();
     // Redirect to "/quality" after updating the reducers
-    router.push("/check-out");
-  };
+    const route = `/${lang}/check-out`; // Assuming "products" is a dynamic segment
+
+    // Push the updated route to the router
+    router.push(route, undefined, {
+      locale: lang,
+    });  };
 
   const modalStyle = {
     width: parentWidth || "auto", // Set the width based on the prop or default to "auto"
@@ -75,7 +79,7 @@ const CustomModal = ({ open, onClose, parentWidth, sizes }) => {
     >
       <div className="custom-modal" style={modalStyle}>
         <h2 className="text-center py-3 px-4 font-bold text-3xl rounded-t-[3rem]  text-white bg-carpetMoss">
-          SIZE
+          {size}
         </h2>
         <div className="bg-white flex justify-evenly items-end py-2">
           {sizes.map(({ i, imgUrl, width, height, name, price, size }) => (
@@ -97,7 +101,7 @@ const CustomModal = ({ open, onClose, parentWidth, sizes }) => {
             onClick={handleUpdateData}
             className="relative px-4 py-2 line-clamp-3 rounded-full bg-gradient-to-r from-carpetMoss to-carpetMoss via-green-500 text-white text-center h-12 w-4/5 md:h-16 md:w-96 font-semibold"
           >
-            ADD TO CART
+            {addtocart}
           </button>
         </div>
       </div>

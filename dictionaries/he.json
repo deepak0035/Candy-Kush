@@ -1,9 +1,29 @@
 {
-  "products": "מוצרים",
-  "comingsoon": "מגיע בקרוב",
-  "types": "סוגים",
-  "quality": "איכות",
-  "price": "מחיר",
-  "next": "הבא",
-  "totalprice": "מחיר כולל"
+  "products": {
+    "heading": "מוצרים",
+    "comingsoon": "בקרוב זמין"
+  },
+  "types": {
+    "heading": "סוגים"
+  },
+  "quality": {
+    "heading": "איכות"
+  },
+  "size": {
+    "heading": "גודל",
+    "addtocart": "הוסף לסל"
+  },
+  "checkout": {
+    "type": "סוג",
+    "quality": "איכות",
+    "size": "גודל",
+    "price": "מחיר",
+    "buymore": "קנה עוד",
+    "totalprice": "מחיר כולל",
+    "checkoutbtn": "לתשלום"
+  },
+  "thankyou": {
+    "gohome": "חזרה לדף הבית",
+    "thankyoumsg": "על הרכישה אצלנו!"
+  }
 }

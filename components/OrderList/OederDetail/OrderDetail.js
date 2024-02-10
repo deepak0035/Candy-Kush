@@ -12,7 +12,7 @@ import {
   decrementQuantity,
 } from "@/Redux/Slices/cartSlice";
 
-const Product = ({ product }) => {
+const Product = ({ product, quality, size, price, type }) => {
   const dispatch = useDispatch();
 
   
@@ -67,22 +67,22 @@ const Product = ({ product }) => {
         <div>
           <h2 className="text-xl font-medium text-carpetMoss">{productName}</h2>
         </div>
-        <div className="flex justify-evenly space-x-2 items-center text-xs">
+        <div className="flex justify-evenly space-x-1 items-center text-xs">
           <p className="text-gray-500">
-            Type: <span className="text-pottBlack">{productType}</span>
+            {type}: <span className="text-pottBlack">{productType}</span>
           </p>
           <p className="text-gray-500">
-            Quality: <span className="text-pottBlack">{productQuality}</span>
+            {quality}: <span className="text-pottBlack">{productQuality}</span>
           </p>
           <p className="text-gray-500">
-            Size:
+            {size}:
             <span className="text-pottBlack">
               {sizeAbbreviation[productSize]}
             </span>
           </p>
         </div>
-        <div className="flex justify-evenly items-center space-x-6 text-base">
-          <div className="flex justify-evenly items-center space-x-3">
+        <div className="flex justify-evenly items-center space-x-3 text-base">
+          <div className="flex justify-evenly items-center space-x-2">
             <span
               className="bg-white p-1 shadow-[0_1px_2px_rgb(0,0,0,0.3)] rounded-full flex justify-center items-center"
               onClick={handleDecrement}
@@ -104,12 +104,12 @@ const Product = ({ product }) => {
             </span>
           </div>
           <p className="text-gray-500">
-            Price:
+            {price}:
             <CurrencyFormat
               value={totalPrice}
               displayType={"text"}
               thousandSeparator={true}
-              prefix={"$"}
+              prefix={"฿"}
               className="text-pottBlack px-1"
             />
           </p>

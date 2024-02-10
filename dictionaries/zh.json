@@ -1,9 +1,29 @@
 {
-  "products": "产品",
-  "comingsoon": "即将推出",
-  "types": "类型",
-  "quality": "质量",
-  "price": "价格",
-  "next": "下一个",
-  "totalprice": "总价格"
+  "products": {
+    "heading": "产品",
+    "comingsoon": "即将推出"
+  },
+  "types": {
+    "heading": "类型"
+  },
+  "quality": {
+    "heading": "质量"
+  },
+  "size": {
+    "heading": "尺寸",
+    "addtocart": "加入购物车"
+  },
+  "checkout": {
+    "type": "类型",
+    "quality": "质量",
+    "size": "尺寸",
+    "price": "价格",
+    "buymore": "继续购买",
+    "totalprice": "总价格",
+    "checkoutbtn": "结账"
+  },
+  "thankyou": {
+    "gohome": "返回主页",
+    "thankyoumsg": "感谢您购物！"
+  }
 }

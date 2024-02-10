@@ -1,9 +1,29 @@
 {
-  "products": "제품",
-  "comingsoon": "곧 출시 예정",
-  "types": "유형",
-  "quality": "품질",
-  "price": "가격",
-  "next": "다음",
-  "totalprice": "총 가격"
+  "products": {
+    "heading": "제품",
+    "comingsoon": "곧 출시 예정"
+  },
+  "types": {
+    "heading": "유형"
+  },
+  "quality": {
+    "heading": "품질"
+  },
+  "size": {
+    "heading": "크기",
+    "addtocart": "장바구니에 추가"
+  },
+  "checkout": {
+    "type": "유형",
+    "quality": "품질",
+    "size": "크기",
+    "price": "가격",
+    "buymore": "더 구매하기",
+    "totalprice": "총 가격",
+    "checkoutbtn": "체크 아웃"
+  },
+  "thankyou": {
+    "gohome": "홈으로 이동",
+    "thankyoumsg": "구매해 주셔서 감사합니다!"
+  }
 }

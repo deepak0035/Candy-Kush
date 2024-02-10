@@ -18,27 +18,16 @@ const Page = () => {
   const [newLang, setNewLang] = useState("");
   const router = useRouter();
 
-    const currentLocale = i18n.language;
-    const currentPathname = usePathname();
+
+const handleSetLang = () => {
 
 
-const handleSetLang = (lang) => {
-  const newLocale = newLang;
-
-  // Set cookie for next-i18n-router
-  const days = 30;
-  const expires = new Date();
-  expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
-  Cookies.set("NEXT_LOCALE", newLocale, { expires, path: "/" });
-  const { pathname } = router;
 
   // Construct the new route with the updated language parameter
   const route = `/${newLang}/products`; // Assuming "products" is a dynamic segment
 
   // Push the updated route to the router
-  router.push(route, undefined, {
-    locale: newLocale
-  });
+  router.push(route);
 
 };
 

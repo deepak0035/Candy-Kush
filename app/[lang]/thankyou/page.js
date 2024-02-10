@@ -1,14 +1,16 @@
-"use client";
-import { useState } from "react";
 import LogoSection from "@/components/logoSection/LogoSection";
 import StepIndicator from "@/components/Indicators/StepIndicator";
 import { FaCheck } from "react-icons/fa6";
 import Image from "next/image";
 import Link from "next/link";
+import { getDictionary } from "@/getDictionary";
 
-const Page = () => {
+const Page = async ({params}) => {
   const totalSteps = 6;
   const activeStep = 5;
+
+    const lang = await getDictionary(params.lang);
+
 
   return (
     <div className="relative bg-texture bg-no-repeat bg-cover overflow-hidden w-full max-w-lg min-h-screen space-y-6 px-4 py-8">
@@ -38,12 +40,12 @@ const Page = () => {
             U
           </h1>
           <p className="text-lg text-gray-500 font-normal mt-4">
-            for purchasing from us!
+            {lang.thankyou.thankyoumsg}
           </p>
         </div>
         <div className="flex justify-start items-center py-2">
-          <Link href={'/'} className="relative px-4 py-2 line-clamp-3 border-solid border-2 border-carpetMoss  rounded-full  text-carpetMoss text-center w-44 h-12  font-semibold">
-            GO HOME
+          <Link href={'/'} className="relative px-4 py-2 line-clamp-3 border-solid border-2 border-carpetMoss  rounded-full  text-carpetMoss text-center  h-12  font-semibold">
+            {lang.thankyou.gohome}
           </Link>
         </div>
       </div>

@@ -1,9 +1,29 @@
 {
-  "products": "PRODUKTY",
-  "comingsoon": "BRZY",
-  "types": "TYPY",
-  "quality": "KVALITA",
-  "price": "CENA",
-  "next": "DALŠÍ",
-  "totalprice": "Celková cena"
+  "products": {
+    "heading": "PRODUKTY",
+    "comingsoon": "BRZY"
+  },
+  "types": {
+    "heading": "TYPY"
+  },
+  "quality": {
+    "heading": "KVALITA"
+  },
+  "size": {
+    "heading": "VELIKOST",
+    "addtocart": "PŘIDAT DO KOŠÍKU"
+  },
+  "checkout": {
+    "type": "Typ",
+    "quality": "Kvalita",
+    "size": "Velikost",
+    "price": "Cena",
+    "buymore": "Kup více",
+    "totalprice": "Celková cena",
+    "checkoutbtn": "DOKONČIT NÁKUP"
+  },
+  "thankyou": {
+    "gohome": "JÍT DOMŮ",
+    "thankyoumsg": "za nákup u nás!"
+  }
 }

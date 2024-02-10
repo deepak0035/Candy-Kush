@@ -1,9 +1,29 @@
 {
-  "products": "PRODUCTOS",
-  "comingsoon": "PRÓXIMAMENTE",
-  "types": "TIPOS",
-  "quality": "CALIDAD",
-  "price": "PRECIO",
-  "next": "SIGUIENTE",
-  "totalprice": "Precio Total"
+  "products": {
+    "heading": "PRODUCTOS",
+    "comingsoon": "PRÓXIMAMENTE"
+  },
+  "types": {
+    "heading": "TIPOS"
+  },
+  "quality": {
+    "heading": "CALIDAD"
+  },
+  "size": {
+    "heading": "TAMAÑO",
+    "addtocart": "AGREGAR AL CARRITO"
+  },
+  "checkout": {
+    "type": "Tipo",
+    "quality": "Calidad",
+    "size": "Tamaño",
+    "price": "Precio",
+    "buymore": "COMPRAR MÁS",
+    "totalprice": "PRECIO TOTAL",
+    "checkoutbtn": "FINALIZAR COMPRA"
+  },
+  "thankyou": {
+    "gohome": "IR A INICIO",
+    "thankyoumsg": "¡por comprar con nosotros!"
+  }
 }

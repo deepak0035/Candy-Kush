@@ -1,9 +1,29 @@
 {
-  "products": "Ürünler",
-  "comingsoon": "Yakında",
-  "types": "Türler",
-  "quality": "Kalite",
-  "price": "Fiyat",
-  "next": "Sonraki",
-  "totalprice": "Toplam Fiyat"
+  "products": {
+    "heading": "ÜRÜNLER",
+    "comingsoon": "YAKINDA"
+  },
+  "types": {
+    "heading": "TÜRLER"
+  },
+  "quality": {
+    "heading": "KALİTE"
+  },
+  "size": {
+    "heading": "BOYUT",
+    "addtocart": "SEPETE EKLE"
+  },
+  "checkout": {
+    "type": "Tür",
+    "quality": "Kalite",
+    "size": "Boyut",
+    "price": "Fiyat",
+    "buymore": "Daha Fazla Satın Al",
+    "totalprice": "Toplam Fiyat",
+    "checkoutbtn": "SATIN AL"
+  },
+  "thankyou": {
+    "gohome": "ANA SAYFAYA DÖN",
+    "thankyoumsg": "bizden alışveriş yaptığınız için teşekkür ederiz!"
+  }
 }

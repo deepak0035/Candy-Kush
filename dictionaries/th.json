@@ -1,9 +1,29 @@
 {
-  "products": "สินค้า",
-  "comingsoon": "เร็ว ๆ นี้",
-  "types": "ประเภท",
-  "quality": "คุณภาพ",
-  "price": "ราคา",
-  "next": "ถัดไป",
-  "totalprice": "ราคาทั้งหมด"
+  "products": {
+    "heading": "สินค้า",
+    "comingsoon": "เร็ว ๆ นี้"
+  },
+  "types": {
+    "heading": "ประเภท"
+  },
+  "quality": {
+    "heading": "คุณภาพ"
+  },
+  "size": {
+    "heading": "ขนาด",
+    "addtocart": "เพิ่มลงในตะกร้า"
+  },
+  "checkout": {
+    "type": "ประเภท",
+    "quality": "คุณภาพ",
+    "size": "ขนาด",
+    "price": "ราคา",
+    "buymore": "ซื้อเพิ่ม",
+    "totalprice": "ราคาทั้งหมด",
+    "checkoutbtn": "ชำระเงิน"
+  },
+  "thankyou": {
+    "gohome": "กลับไปที่หน้าแรก",
+    "thankyoumsg": "สำหรับการซื้อสินค้าจากเรา!"
+  }
 }

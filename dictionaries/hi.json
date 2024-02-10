@@ -1,9 +1,29 @@
 {
-  "products": "उत्पाद",
-  "comingsoon": "जल्द ही आ रहा है",
-  "types": "प्रकार",
-  "quality": "गुणवत्ता",
-  "price": "मूल्य",
-  "next": "अगला",
-  "totalprice": "कुल मूल्य"
+  "products": {
+    "heading": "उत्पाद",
+    "comingsoon": "जल्द ही आ रहा है"
+  },
+  "types": {
+    "heading": "प्रकार"
+  },
+  "quality": {
+    "heading": "गुणवत्ता"
+  },
+  "size": {
+    "heading": "आकार",
+    "addtocart": "कार्ट में जोड़ें"
+  },
+  "checkout": {
+    "type": "प्रकार",
+    "quality": "गुणवत्ता",
+    "size": "आकार",
+    "price": "मूल्य",
+    "buymore": "और खरीदें",
+    "totalprice": "कुल मूल्य",
+    "checkoutbtn": "चेकआउट"
+  },
+  "thankyou": {
+    "gohome": "होम पेज पर जाएं",
+    "thankyoumsg": "हमारे साथ खरीदने के लिए धन्यवाद!"
+  }
 }

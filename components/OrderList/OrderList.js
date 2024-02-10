@@ -10,16 +10,26 @@ import {
 } from "@/Redux/Slices/cartSlice";
 import { useRouter } from "next/navigation";
 
-const ProductList = () => {
+const ProductList = ({
+  type,
+  quality,
+  size,
+  price,
+  buymore,
+  lang
+}) => {
   const dispatch = useDispatch();
   const router = useRouter();
   const cartItems = useSelector(selectCartItems);
 
-
   const handleUpdateData = () => {
     // Redirect to "/types" after updating the reducers
-    router.push("/products");
-  };
+    const route = `/${lang}/products`; // Assuming "products" is a dynamic segment
+
+    // Push the updated route to the router
+    router.push(route, undefined, {
+      locale: lang,
+    });  };
 
   return (
     <>
@@ -29,6 +39,10 @@ const ProductList = () => {
             key={index}
             // Pass the necessary properties from the cartItem to OrderDetail
             product={product}
+            quality={quality}
+            size={size}
+            price={price}
+            type={type}
           />
         ))}
       </div>
@@ -37,7 +51,7 @@ const ProductList = () => {
           className="relative px-4 py-2 line-clamp-3 backdrop-blur-lg bg-white bg-opacity-40  rounded-full shadow-[0_1px_2px_rgb(0,0,0,0.5)]  text-carpetMoss text-center w-44 h-12  font-semibold"
           onClick={handleUpdateData}
         >
-          Buy More
+          {buymore}
         </button>
       </div>
     </>

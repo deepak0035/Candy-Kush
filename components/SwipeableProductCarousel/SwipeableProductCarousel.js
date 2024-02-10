@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
@@ -39,7 +39,7 @@ const CustomNextArrow = ({ currentSlide, slideCount, onClick }) => (
   </div>
 );
 
-const SwipeableProductCarousel = ({types}) => {
+const SwipeableProductCarousel = ({ types, lang }) => {
   const dispatch = useDispatch();
   const router = useRouter();
   const productTypes = useSelector(selectProductTypes);
@@ -62,7 +62,12 @@ const SwipeableProductCarousel = ({types}) => {
   const handleUpdateData = (type) => {
     dispatch(setProductQualities(type.qualities));
     dispatch(setProductType(type.type));
-    router.push("/quality");
+    const route = `/${lang}/quality`; // Assuming "products" is a dynamic segment
+
+    // Push the updated route to the router
+    router.push(route, undefined, {
+      locale: lang,
+    });
   };
 
   return (

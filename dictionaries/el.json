@@ -1,9 +1,29 @@
 {
-  "products": "ΠΡΟΪΟΝΤΑ",
-  "comingsoon": "ΣΥΝΤΟΜΑ ΔΙΑΘΕΣΙΜΟ",
-  "types": "ΤΥΠΟΙ",
-  "quality": "ΠΟΙΟΤΗΤΑ",
-  "price": "ΤΙΜΗ",
-  "next": "ΕΠΟΜΕΝΟ",
-  "totalprice": "Συνολική τιμή"
+  "products": {
+    "heading": "ΠΡΟΪΟΝΤΑ",
+    "comingsoon": "ΣΥΝΤΟΜΑ ΔΙΑΘΕΣΙΜΑ"
+  },
+  "types": {
+    "heading": "ΤΥΠΟΙ"
+  },
+  "quality": {
+    "heading": "ΠΟΙΟΤΗΤΑ"
+  },
+  "size": {
+    "heading": "ΜΕΓΕΘΟΣ",
+    "addtocart": "ΠΡΟΣΘΗΚΗ ΣΤΟ ΚΑΛΑΘΙ"
+  },
+  "checkout": {
+    "type": "Τύπος",
+    "quality": "Ποιότητα",
+    "size": "Μέγεθος",
+    "price": "Τιμή",
+    "buymore": "ΑΓΟΡΑΣΤΕ ΠΕΡΙΣΣΟΤΕΡΑ",
+    "totalprice": "ΣΥΝΟΛΙΚΗ ΤΙΜΗ",
+    "checkoutbtn": "ΟΛΟΚΛΗΡΩΣΗ ΑΓΟΡΩΝ"
+  },
+  "thankyou": {
+    "gohome": "ΠΗΓΑΙΝΕ ΣΤΗΝ ΑΡΧΙΚΗ",
+    "thankyoumsg": "για την αγορά από εμάς!"
+  }
 }

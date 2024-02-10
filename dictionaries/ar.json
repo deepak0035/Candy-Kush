@@ -1,9 +1,29 @@
 {
-  "products": "المنتجات",
-  "comingsoon": "قريباً",
-  "types": "الأنواع",
-  "quality": "الجودة",
-  "price": "السعر",
-  "next": "التالي",
-  "totalprice": "السعر الإجمالي"
+  "products": {
+    "heading": "المنتجات",
+    "comingsoon": "قريباً"
+  },
+  "types": {
+    "heading": "الأنواع"
+  },
+  "quality": {
+    "heading": "الجودة"
+  },
+  "size": {
+    "heading": "الحجم",
+    "addtocart": "أضف إلى السلة"
+  },
+  "checkout": {
+    "type": "النوع",
+    "quality": "الجودة",
+    "size": "الحجم",
+    "price": "السعر",
+    "buymore": "اشترِ المزيد",
+    "totalprice": "السعر الإجمالي",
+    "checkoutbtn": "تسجيل الخروج"
+  },
+  "thankyou": {
+    "gohome": "العودة للصفحة الرئيسية",
+    "thankyoumsg": "لشرائك منا!"
+  }
 }
