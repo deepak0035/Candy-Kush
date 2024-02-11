@@ -2,6 +2,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
+import { motion } from "framer-motion";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
@@ -13,36 +14,57 @@ import {
 import { useRouter } from "next/navigation";
 import { addToCart, setProductType } from "@/Redux/Slices/cartSlice";
 
+
 const CustomPrevArrow = ({ currentSlide, slideCount, onClick }) => (
-  <div className="absolute h-8 w-full ">
+  <div
+    className="absolute -top-1 h-8 w-full "
+    style={{ animation: "moveUpDown 1.5s infinite", zIndex: 1 }} // Apply the animation
+  >
     <div
-      className={` py-6 relative cursor-pointer ${
+      className={`py-6 relative cursor-pointer ${
         currentSlide === 0 ? "invisible" : ""
       }`}
-      onClick={() => onClick()}
     >
-      <FaChevronUp className="absolute text-4xl opacity-30 z-10 inset-0 m-auto" />
+      <FaChevronUp
+        className="absolute text-4xl opacity-30 z-10 inset-0 m-auto"
+        onClick={() => {
+          if (currentSlide !== 0) {
+            onClick();
+          }
+        }}
+      />
     </div>
   </div>
 );
 
 const CustomNextArrow = ({ currentSlide, slideCount, onClick }) => (
-  <div className="absolute bottom-4 h-8 w-full">
+  <div
+    className="absolute bottom-3 h-8 w-full "
+    style={{ animation: "moveUpDown 1.5s infinite" }} // Apply the animation
+  >
     <div
-      className={` relative py-6 cursor-pointer ${
+      className={`relative py-6 cursor-pointer ${
         currentSlide === slideCount - 1 ? "invisible" : ""
       }`}
-      onClick={() => onClick()}
     >
-      <FaChevronDown className="absolute text-4xl opacity-30 z-10 inset-0 m-auto" />
+      <FaChevronDown
+        className="absolute text-4xl opacity-30 z-10 inset-0 m-auto"
+        onClick={() => {
+          if (currentSlide !== slideCount - 1) {
+            onClick();
+          }
+        }}
+      />
     </div>
   </div>
 );
+
 
 const SwipeableProductCarousel = ({ types, lang }) => {
   const dispatch = useDispatch();
   const router = useRouter();
   const productTypes = useSelector(selectProductTypes);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const sliderRef = useRef(null);
 
@@ -57,6 +79,7 @@ const SwipeableProductCarousel = ({ types, lang }) => {
     fade: false,
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />,
+    beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex),
   };
 
   const handleUpdateData = (type) => {
@@ -71,11 +94,11 @@ const SwipeableProductCarousel = ({ types, lang }) => {
   };
 
   return (
-    <div className="rounded-xl mx-4 shadow-[0_0px_5px_rgb(0,0,0.5,0.3)] ">
+    <div className="rounded-xl mx-4 shadow-[0_0px_5px_rgb(0,0,0.5,0.3)]">
       <h2 className="text-center py-2 px-4 font-bold text-3xl rounded-t-xl bg-carpetMoss text-white">
         {types}
       </h2>
-      <div className=" bg-gradient-to-t from-carpetMoss/40 to-white/30 bg-opacity-50 backdrop-blur-md rounded-b-xl">
+      <div className=" min-h-[33rem] max-h-[33rem] bg-gradient-to-t from-carpetMoss/40 to-white/30 bg-opacity-50 backdrop-blur-md rounded-b-xl">
         <Slider {...settings} ref={sliderRef}>
           {productTypes?.map((type, index) => (
             <div
@@ -84,14 +107,24 @@ const SwipeableProductCarousel = ({ types, lang }) => {
             >
               <div className="py-5" />
               <div className="slide-content flex items-center justify-center h-full mx-2">
-                <Image
-                  src={type.typeImage}
-                  width={150}
-                  height={150}
-                  className="object-cover cursor-pointer z-10 my-2"
-                  alt={`Slide ${index + 1}`}
-                  onClick={() => handleUpdateData(type)}
-                />
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{
+                    opacity: currentSlide === index ? 1 : 0,
+                    scale: currentSlide === index ? 1 : 0.6,
+                  }}
+                  transition={{ duration: 0.8 }}
+                >
+                  <Image
+                    src={type.typeImage}
+                    width={150}
+                    height={150}
+                    className="object-cover cursor-pointer z-10 my-2"
+                    alt={`Slide ${index + 1}`}
+                    onClick={() => handleUpdateData(type)}
+                    loading="lazy" // Adding lazy loading
+                  />
+                </motion.div>
               </div>
               <div className="py-5" />
             </div>

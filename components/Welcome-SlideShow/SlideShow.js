@@ -29,6 +29,7 @@ const Slideshow = ({ images }) => {
                 height={500}
                 className="object-fit"
                 alt={`Slide ${index + 1}`}
+                loading="lazy" // Adding lazy loading
               />
             </div>
           </div>
