@@ -79,7 +79,7 @@
           ]
         },
         {
-          "type": "Indiga",
+          "type": "Indica",
           "typeImage": "/images/ProductPage/simpleInd.png",
 
           "qualities": [
@@ -90,54 +90,54 @@
                 {
                   "size": "Normal",
                   "price": 25,
-                  "imgUrl": "/images/Sizes/topIndiga-n.png"
+                  "imgUrl": "/images/Sizes/topIndica-n.png"
                 },
                 {
                   "size": "King",
                   "price": 30,
-                  "imgUrl": "/images/Sizes/topIndiga-k.png"
+                  "imgUrl": "/images/Sizes/topIndica-k.png"
                 }
               ]
             },
             {
               "quality": "Indoor",
-              "qualityImage": "/images/Sizes/indoorIndiga-n.png",
+              "qualityImage": "/images/Sizes/indoorIndica-n.png",
               "sizes": [
                 {
                   "size": "Small",
                   "price": 20,
-                  "imgUrl": "/images/Sizes/indoorIndiga-s.png"
+                  "imgUrl": "/images/Sizes/indoorIndica-s.png"
                 },
                 {
                   "size": "Normal",
                   "price": 25,
-                  "imgUrl": "/images/Sizes/indoorIndiga-n.png"
+                  "imgUrl": "/images/Sizes/indoorIndica-n.png"
                 },
                 {
                   "size": "King",
                   "price": 30,
-                  "imgUrl": "/images/Sizes/indoorIndiga-k.png"
+                  "imgUrl": "/images/Sizes/indoorIndica-k.png"
                 }
               ]
             },
             {
               "quality": "Outdoor",
-              "qualityImage": "/images/Sizes/outdoorIndiga-n.png",
+              "qualityImage": "/images/Sizes/outdoorIndica-n.png",
               "sizes": [
                 {
                   "size": "Small",
                   "price": 20,
-                  "imgUrl": "/images/Sizes/outdoorIndiga-s.png"
+                  "imgUrl": "/images/Sizes/outdoorIndica-s.png"
                 },
                 {
                   "size": "Normal",
                   "price": 25,
-                  "imgUrl": "/images/Sizes/outdoorIndiga-n.png"
+                  "imgUrl": "/images/Sizes/outdoorIndica-n.png"
                 },
                 {
                   "size": "King",
                   "price": 30,
-                  "imgUrl": "/images/Sizes/outdoorIndiga-s.png"
+                  "imgUrl": "/images/Sizes/outdoorIndica-k.png"
                 }
               ]
             }

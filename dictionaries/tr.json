@@ -1,13 +1,25 @@
 {
   "products": {
     "heading": "ÜRÜNLER",
-    "comingsoon": "YAKINDA"
+    "comingsoon": "YAKINDA",
+    "gotocategory": "Kategoriye Git",
+    "prerolled": "Önceden sarılmış içgüdüler, sorunsuz bir duyusal maceraya giden altın biletleriniz olarak hizmet eder. Titizlikle sarılmışlar, küçük parçalar halinde gevşeme ve zevk sunarlar. Tercihinizi seçin, ateşleyin ve lezzet ve huzur dünyasında kendinizi kaybedin!"
   },
   "types": {
-    "heading": "TÜRLER"
+    "heading": "TÜRLER",
+    "prerolled": {
+      "sativa": "Sativa, sizi koltuktan kalkmaya ve yaşamın parlaklığına dans etmeye teşvik eden canlı bir arkadaştır. Canlandırıcı ve hayalperesttir, yeni zihinsel alanları keşfetmek istediğiniz anlarda yüzünüzde bir gülümsemeyle kalmanız için mükemmeldir.",
+      "indica": "Eğer sıcacık bir koltuğun sığınmacı kucaklamasını arıyorsanız, o zaman İndica ideal arkadaşınızdır. Rahatlamanın Kraliçesi olarak bilinen, endişelerinizi eriten ve sizi huzurlu bir mutluluğa gömülen bir kucakla sarar.",
+      "hybrid": "Melez çeşitler, doğanın en iyi çalma listesine benzer. Sativa'nın canlandırıcı zihinsel etkileri ile Indica'nın fiziksel rahatlamasını birleştirirler. Bulutlar arasında yüzmeyi ve gerçeklikte ayakta kalmanızı sağlayan çok yönlü bir seçenektir."
+    }
   },
   "quality": {
-    "heading": "KALİTE"
+    "heading": "KALİTE",
+    "prerolled": {
+      "topquality": "En Kaliteli önceden sarılmış içgüdülerimiz, kenevir mükemmelliğinin özeti niteliğindedir. Hidroponik olarak yetiştirilen kenevir, Cali çeşitleri ve THC oranı %30'u aşan bir potansiyel ile müşteri tarafından doğrudan seçilir. Her çiçek, maksimum şeffaflık ve kaliteyi sağlamak için THC ve CBD içeriğini doğrulayan bir test sertifikası ile birlikte gelir.",
+      "outdoor": "Açık hava önceden sarılmış içgüdülerimiz, kaliteyi riske atmadan piyasadaki en rekabetçi fiyatları sunar. Her ürün, güvenliği ve memnuniyeti tehlikeye atmadan erişilebilir bir deneyim sağlamak için titiz manuel kontrollerden geçer. En yüksek kalite standartlarını korumak için ürünlerimizi periyodik denetimlere düzenli olarak tabi tutarız.",
+      "indoor": "İç mekan önceden sarılmış içgüdülerimiz, piyasadaki en iyi kalite-fiyat oranı ile mükemmelliği temsil eder. En yüksek standartlara sahip kapalı sera ortamlarında yetiştirilen ürünlerimiz, titiz bakım ve detaylı dikkatin bir sonucu olarak yüksek kaliteli bir içme deneyimi sunar. En yüksek kalite standartlarını korumak için ürünlerimizi periyodik denetimlere düzenli olarak tabi tutarız."
+    }
   },
   "size": {
     "heading": "BOYUT",
@@ -19,11 +31,12 @@
     "size": "Boyut",
     "price": "Fiyat",
     "buymore": "Daha Fazla Satın Al",
+    "buynow": "Şimdi Satın Al",
     "totalprice": "Toplam Fiyat",
     "checkoutbtn": "SATIN AL"
   },
   "thankyou": {
-    "gohome": "ANA SAYFAYA DÖN",
-    "thankyoumsg": "bizden alışveriş yaptığınız için teşekkür ederiz!"
+    "gohome": "ANA SAYFA",
+    "thankyoumsg": "bizden satın aldığınız için teşekkür ederiz!"
   }
 }

@@ -10,10 +10,14 @@ const page = async ({ params }) => {
   const lang = await getDictionary(params.lang);
 
   return (
-    <div className="relative bg-texture bg-no-repeat bg-cover overflow-hidden w-full max-w-lg min-h-screen space-y-6 px-4 py-8">
+    <div className="relative bg-texture bg-no-repeat bg-cover overflow-hidden w-full max-w-md min-h-screen space-y-6 px-4 py-8">
       <StepIndicator totalSteps={totalSteps} activeStep={activeStep} />
       <LogoSection cart={true} />
-      <SwipeableProductCarousel types={lang.types.heading} lang={params.lang} />
+      <SwipeableProductCarousel
+        types={lang.types.heading}
+        lang={params.lang}
+        details={lang.types.prerolled}
+      />
     </div>
   );
 };

@@ -1,13 +1,25 @@
 {
   "products": {
     "heading": "PRODOTTI",
-    "comingsoon": "PRESTO DISPONIBILE"
+    "comingsoon": "PRESTO DISPONIBILE",
+    "gotocategory": "Vai alla categoria",
+    "prerolled": "I joint pre-rolled fungono da biglietti d'oro per un'avventura sensoriale senza intoppi. Arrotolati con cura meticolosa, offrono piccoli pacchetti di relax e piacere. Seleziona la tua preferenza, accendi e immergiti in un mondo di sapore e serenità!"
   },
   "types": {
-    "heading": "TIPI"
+    "heading": "TIPI",
+    "prerolled": {
+      "sativa": "La Sativa è l'amica vibrante che ti ispira a lasciare il divano e ballare nella luminosità della vita. Energizzante e fantasiosa, è perfetta per quei momenti in cui desideri esplorare nuovi mondi mentali mantenendo un sorriso sul viso.",
+      "indica": "Se cerchi l'abbraccio confortante di una poltrona accogliente, allora l'Indica è la tua compagna ideale. Conosciuta come la Regina del Relax, ti avvolge in un abbraccio che scioglie le preoccupazioni e ti immerge in una beatitudine serena.",
+      "hybrid": "Le varietà ibride sono come la migliore playlist della natura. Offrono il meglio di entrambi i mondi: gli effetti cerebrali stimolanti della Sativa combinati con il rilassamento fisico dell'Indica. È l'opzione versatile che ti permette di fluttuare tra le nuvole rimanendo ancorato alla realtà."
+    }
   },
   "quality": {
-    "heading": "QUALITÀ"
+    "heading": "QUALITÀ",
+    "prerolled": {
+      "topquality": "I nostri joint pre-rolled di alta qualità sono l'epitome dell'eccellenza della cannabis. Coltivata idroponicamente, varietà Cali, e con una potenza che supera il 30% di THC, il fiore è scelto direttamente dal cliente. Ogni fiore è accompagnato da un certificato di test che verifica il contenuto di THC e CBD, così come l'assenza di pesticidi, garantendo massima trasparenza e qualità.",
+      "outdoor": "I nostri joint pre-rolled all'aperto offrono i prezzi più competitivi sul mercato senza compromettere la qualità. Ogni prodotto subisce meticolose verifiche manuali, garantendo un'esperienza accessibile senza sacrificare sicurezza e soddisfazione. Sottoponiamo regolarmente i nostri prodotti a ispezioni periodiche per mantenere gli standard di qualità più elevati.",
+      "indoor": "I nostri joint pre-rolled indoor rappresentano l'eccellenza con il miglior rapporto qualità-prezzo sul mercato. Coltivati in serre chiuse secondo gli standard più elevati, i nostri prodotti offrono un'esperienza di fumatura di alta qualità, risultato di una cura meticolosa e attenzione ai dettagli. Sottoponiamo regolarmente i nostri prodotti a ispezioni periodiche per mantenere gli standard di qualità più elevati."
+    }
   },
   "size": {
     "heading": "DIMENSIONE",
@@ -18,9 +30,10 @@
     "quality": "Qualità",
     "size": "Dimensione",
     "price": "Prezzo",
-    "buymore": "ACQUISTA ALTRO",
+    "buymore": "Acquista di più",
+    "buynow": "Acquista ora",
     "totalprice": "Prezzo Totale",
-    "checkoutbtn": "PROCEDI ALL'ACQUISTO"
+    "checkoutbtn": "CHECKOUT"
   },
   "thankyou": {
     "gohome": "TORNA ALLA HOME",

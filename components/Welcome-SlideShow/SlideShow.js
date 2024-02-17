@@ -17,6 +17,7 @@ const Slideshow = ({ images }) => {
     fade: true,
   };
 
+
   return (
     <div className="slideshow-wrapper">
       <Slider {...settings}>
@@ -30,6 +31,7 @@ const Slideshow = ({ images }) => {
                 className="object-fit"
                 alt={`Slide ${index + 1}`}
                 loading="lazy" // Adding lazy loading
+                preload
               />
             </div>
           </div>
@@ -40,7 +42,7 @@ const Slideshow = ({ images }) => {
 };
 
 Slideshow.propTypes = {
-  images: PropTypes.array.isRequired,
+  images: PropTypes.array,
 };
 
 export default Slideshow;

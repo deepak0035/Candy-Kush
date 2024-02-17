@@ -2,22 +2,34 @@
 // Page.js
 import { Suspense } from 'react';
 import Slideshow from "@/components/Welcome-SlideShow/SlideShow";
-import { getSliderImages } from "@/lib/helper";
 import Link from "next/link";
 import { CiGlobe } from "react-icons/ci";
-import { useQuery } from "react-query";
 import { motion } from "framer-motion";
 import Spinner from './loading'; // Adjust the path accordingly
+import productData from "/data.json";
+import Image from 'next/image';
+import { useQuery } from 'react-query';
+import { getSliderImages } from "@/lib/helper";
 
-const Page = () => {
-  const { data: images } = useQuery("images", getSliderImages);
+const Page = () =>
+{
+    const { data: images } = useQuery("images", getSliderImages);
+
 
   return (
     <Suspense fallback={<Spinner />}>
-      <div className="w-full max-w-lg min-h-screen overflow-x-hidden">
-        <div className="flex flex-col h-screen justify-between">
-          <Slideshow images={images} />
-          <div className="grid grid-cols-6 h-full items-center justify-center py-2 px-2 gap-2">
+      <div className="w-full min-h-screen max-w-md overflow-x-hidden flex flex-col backdrop-blur-xl bg-gray-100">
+        <Image
+          src={"/welcome1.png"}
+          width={500}
+          height={500}
+          className="object-fit"
+          loading="lazy" // Adding lazy loading
+          unoptimized={true}
+        />
+        <Slideshow images={images} />
+        <div className="flex-grow flex items-center justify-center  px-6  ">
+          <div className="grid grid-cols-6 w-full gap-x-2">
             <motion.div
               className="col-span-4 flex items-center justify-center"
               initial={{ x: -100, opacity: 0 }}
@@ -57,5 +69,4 @@ const Page = () => {
 };
 
 export default Page;
-
 

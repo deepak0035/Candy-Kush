@@ -1,29 +1,42 @@
 {
   "products": {
     "heading": "PRODUCTEN",
-    "comingsoon": "BINNENKORT VERKRIJGBAAR"
+    "comingsoon": "BINNENKORT VERKRIJGBAAR",
+    "gotocategory": "Ga naar categorie",
+    "prerolled": "Voorgedraaide joints dienen als jouw gouden tickets voor een naadloos zintuiglijk avontuur. Met zorgvuldige precisie gerold, bieden ze kleine pakketjes ontspanning en plezier. Kies jouw voorkeur, steek aan en dompel jezelf onder in een wereld van smaak en sereniteit!"
   },
   "types": {
-    "heading": "SOORTEN"
+    "heading": "SOORTEN",
+    "prerolled": {
+      "sativa": "Sativa is de levendige vriend die je inspireert om van de bank af te komen en in het heldere leven te dansen. Opwekkend en fantasierijk, perfect voor die momenten waarop je nieuwe mentale rijken wilt verkennen terwijl je een glimlach op je gezicht houdt.",
+      "indica": "Als je verlangt naar de geruststellende omhelzing van een comfortabele stoel, dan is Indica jouw ideale metgezel. Bekend als de Koningin van Ontspanning, omhult het je in een knuffel die zorgen wegsmelt en je onderdompelt in serene zaligheid.",
+      "hybrid": "Hybride strains zijn als de beste afspeellijst van de natuur. Ze bieden het beste van twee werelden: de opbeurende cerebrale effecten van Sativa gecombineerd met de fysieke ontspanning van Indica. Het is de veelzijdige optie die je laat zweven tussen de wolken terwijl je met beide benen op de grond blijft staan in de realiteit."
+    }
   },
   "quality": {
-    "heading": "KWALITEIT"
+    "heading": "KWALITEIT",
+    "prerolled": {
+      "topquality": "Onze Topkwaliteit voorgedraaide joints zijn het toppunt van cannabis excellentie. Hydrocultuur gekweekte cannabis, Cali-variëteiten, en met een potentie van meer dan 30% THC, wordt de bloem rechtstreeks door de klant gekozen. Elke bloem wordt vergezeld van een testcertificaat dat het THC- en CBD-gehalte verifieert, evenals de afwezigheid van pesticiden, waardoor maximale transparantie en kwaliteit worden gegarandeerd.",
+      "outdoor": "Onze Outdoor voorgedraaide joints bieden de meest concurrerende prijzen op de markt zonder concessies te doen aan kwaliteit. Elk product ondergaat zorgvuldige handmatige controles, zodat een toegankelijke ervaring wordt geboden zonder veiligheid en tevredenheid in gevaar te brengen. We onderwerpen onze producten regelmatig aan periodieke inspecties om de hoogste kwaliteitsnormen te handhaven.",
+      "indoor": "Onze Indoor voorgedraaide joints staan voor uitmuntendheid met de beste kwaliteit-prijsverhouding op de markt. Geteeld in gesloten kassen volgens de hoogste normen, leveren onze producten een rookervaring van hoge kwaliteit, het resultaat van zorgvuldige zorg en aandacht voor detail. We onderwerpen onze producten regelmatig aan periodieke inspecties om de hoogste kwaliteitsnormen te handhaven."
+    }
   },
   "size": {
-    "heading": "MAAT",
+    "heading": "AFMETING",
     "addtocart": "TOEVOEGEN AAN WINKELWAGEN"
   },
   "checkout": {
     "type": "Type",
     "quality": "Kwaliteit",
-    "size": "Maat",
+    "size": "Afmeting",
     "price": "Prijs",
-    "buymore": "Meer kopen",
-    "totalprice": "Totale prijs",
+    "buymore": "Meer Kopen",
+    "buynow": "Nu Kopen",
+    "totalprice": "Totaalprijs",
     "checkoutbtn": "AFREKENEN"
   },
   "thankyou": {
     "gohome": "NAAR HUIS",
-    "thankyoumsg": "voor uw aankoop bij ons!"
+    "thankyoumsg": "voor het kopen bij ons!"
   }
 }

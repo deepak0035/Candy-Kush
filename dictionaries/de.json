@@ -1,26 +1,39 @@
 {
   "products": {
     "heading": "PRODUKTE",
-    "comingsoon": "BALD VERFÜGBAR"
+    "comingsoon": "BALD VERFÜGBAR",
+    "gotocategory": "Zur Kategorie gehen",
+    "prerolled": "Vorgefertigte Joints dienen als Ihre goldenen Tickets zu einem nahtlosen sensorischen Abenteuer. Mit akribischer Sorgfalt gerollt, bieten sie kleine Parzellen Entspannung und Vergnügen. Wählen Sie Ihre Vorliebe, entzünden Sie sie und tauchen Sie ein in eine Welt voller Geschmack und Gelassenheit!"
   },
   "types": {
-    "heading": "TYPEN"
+    "heading": "TYPEN",
+    "prerolled": {
+      "sativa": "Sativa ist der lebendige Freund, der Sie inspiriert, die Couch zu verlassen und sich ins Helle des Lebens zu tanzen. Belebend und fantasievoll, ist es perfekt für die Momente, in denen Sie neue geistige Bereiche erkunden möchten, während Sie ein Lächeln im Gesicht behalten.",
+      "indica": "Wenn Sie die tröstliche Umarmung eines gemütlichen Stuhls suchen, dann ist Indica Ihr idealer Begleiter. Bekannt als die Königin der Entspannung, hüllt sie Sie in eine Umarmung ein, die Sorgen schmelzen lässt und Sie in eine ruhige Glückseligkeit taucht.",
+      "hybrid": "Hybride Sorten sind wie die feinste Playlist der Natur. Sie bieten das Beste aus beiden Welten: die anregenden zerebralen Effekte von Sativa in Kombination mit der körperlichen Entspannung von Indica. Es ist die vielseitige Option, die es Ihnen ermöglicht, unter den Wolken zu schweben, während Sie mit der Realität verbunden bleiben."
+    }
   },
   "quality": {
-    "heading": "QUALITÄT"
+    "heading": "QUALITÄT",
+    "prerolled": {
+      "topquality": "Unsere vorgefertigten Joints von höchster Qualität sind der Inbegriff von Cannabis-Exzellenz. Hydroponisch angebautes Cannabis, Cali-Sorten und eine Potenz von mehr als 30% THC, die Blume wird direkt vom Kunden ausgewählt. Jede Blume wird von einem Testzertifikat begleitet, das den THC- und CBD-Gehalt sowie das Fehlen von Pestiziden bestätigt und maximale Transparenz und Qualität gewährleistet.",
+      "outdoor": "Unsere Outdoor-vorgefertigten Joints bieten die wettbewerbsfähigsten Preise auf dem Markt, ohne die Qualität zu beeinträchtigen. Jedes Produkt unterliegt sorgfältigen manuellen Überprüfungen, um eine zugängliche Erfahrung ohne Kompromisse bei Sicherheit und Zufriedenheit zu gewährleisten. Wir unterziehen unsere Produkte regelmäßig periodischen Inspektionen, um die höchsten Qualitätsstandards aufrechtzuerhalten.",
+      "indoor": "Unsere Indoor-vorgefertigten Joints repräsentieren Exzellenz mit dem besten Preis-Leistungs-Verhältnis auf dem Markt. Angebaut in geschlossenen Gewächshäusern nach höchsten Standards, bieten unsere Produkte ein hochwertiges Raucherlebnis, das das Ergebnis sorgfältiger Pflege und Aufmerksamkeit zum Detail ist. Wir unterziehen unsere Produkte regelmäßig periodischen Inspektionen, um die höchsten Qualitätsstandards aufrechtzuerhalten."
+    }
   },
   "size": {
     "heading": "GRÖSSE",
-    "addtocart": "IN DEN WARENKORB"
+    "addtocart": "IN DEN WARENKORB LEGEN"
   },
   "checkout": {
     "type": "Typ",
     "quality": "Qualität",
     "size": "Größe",
     "price": "Preis",
-    "buymore": "MEHR KAUFEN",
-    "totalprice": "GESAMTPREIS",
-    "checkoutbtn": "ZUM WARENKORB"
+    "buymore": "Mehr kaufen",
+    "buynow": "Jetzt kaufen",
+    "totalprice": "Gesamtpreis",
+    "checkoutbtn": "ZUR KASSE"
   },
   "thankyou": {
     "gohome": "ZUR STARTSEITE",

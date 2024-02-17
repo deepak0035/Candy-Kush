@@ -11,6 +11,7 @@ const page = async ({ params }) => {
       quality={lang.quality.heading}
       size={lang.size.heading}
       addtocart={lang.size.addtocart}
+      details={lang.quality.prerolled}
     />
   );
 };

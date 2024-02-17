@@ -3,6 +3,8 @@ import StepIndicator from "@/components/Indicators/StepIndicator"; // Assuming t
 import MainHeading from "@/components/Headings/MainHeading";
 import ProductList from "@/components/ProductList/ProductList";
 import { getDictionary } from "@/getDictionary";
+import productData from "/data.json";
+
 
 const page = async ({params}) => {
   const totalSteps = 6;
@@ -12,11 +14,17 @@ const page = async ({params}) => {
 
 
   return (
-    <div className="relative bg-texture bg-no-repeat bg-cover overflow-hidden w-full max-w-lg min-h-screen space-y-4 px-4 py-8">
+    <div className="relative bg-texture bg-no-repeat bg-cover overflow-hidden w-full max-w-md min-h-screen space-y-4 px-4 py-8">
       <StepIndicator totalSteps={totalSteps} activeStep={activeStep} />
       <LogoSection cart={false} />
       <MainHeading heading={lang.products.heading} />
-      <ProductList comingsoon={lang.products.comingsoon} lang={ params.lang} />
+      <ProductList
+        products={productData.Products}
+        comingsoon={lang.products.comingsoon}
+        lang={params.lang}
+        gotocategory={lang.products.gotocategory}
+        prerolled={lang.products.prerolled}
+      />
     </div>
   );
 };

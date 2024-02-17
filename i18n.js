@@ -12,16 +12,10 @@ export const i18n = {
     "ja", // Japanese
     "zh", // Chinese
     "ru", // Russian
-    "ar", // Arabic
     "pt", // Portuguese
     "hi", // Hindi
     "ko", // Korean
     "nl", // Dutch
     "tr", // Turkish
-    "sv", // Swedish
-    "el", // Greek
-    "he", // Hebrew
-    "pl", // Polish
-    "cs", // Czech
   ],
 };

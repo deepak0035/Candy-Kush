@@ -6,7 +6,7 @@ import SwipeableProductCarousel2 from "@/components/SwipeableProductCarousel/Swi
 import CustomModal from "@/components/Popup/CustomModal";
 
 
-const Page = ({ lang, quality, size, addtocart }) => {
+const Page = ({ lang, quality, size, addtocart, details }) => {
   const totalSteps = 6;
   const activeStep = 3;
 
@@ -26,7 +26,7 @@ const Page = ({ lang, quality, size, addtocart }) => {
     <>
       <div
         onClick={handleMainDivClick}
-        className={`relative bg-texture bg-no-repeat bg-cover overflow-hidden w-full max-w-lg min-h-screen space-y-6 px-4 py-8 ${
+        className={`relative bg-texture bg-no-repeat bg-cover overflow-hidden w-full max-w-md min-h-screen space-y-6 px-4 py-8 ${
           open ? "blur-sm transition duration-200 ease-out" : ""
         }`}
       >
@@ -37,6 +37,7 @@ const Page = ({ lang, quality, size, addtocart }) => {
             onOpen={onOpenModal}
             setSizes={setSizes}
             quality={quality}
+            details={details}
           />
         </div>
       </div>

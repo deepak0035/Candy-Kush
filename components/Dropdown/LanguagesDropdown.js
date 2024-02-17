@@ -6,49 +6,28 @@ import Image from "next/image";
 
 const LanguagesDropdown = ({ setNewLang }) => {
   const [selectedOption, setSelectedOption] = useState("English");
-  const options = [
-    {
-      language: "English",
-      flag: "US",
-      country: "United States",
-      shorthand: "en",
-    },
-    { language: "Thai", flag: "TH", country: "Thailand", shorthand: "th" },
-    { language: "Spanish", flag: "ES", country: "Spain", shorthand: "es" },
-    { language: "French", flag: "FR", country: "France", shorthand: "fr" },
-    { language: "German", flag: "DE", country: "Germany", shorthand: "de" },
-    { language: "Italian", flag: "IT", country: "Italy", shorthand: "it" },
-    { language: "Japanese", flag: "JP", country: "Japan", shorthand: "ja" },
-    { language: "Chinese", flag: "CN", country: "China", shorthand: "zh" },
-    { language: "Russian", flag: "RU", country: "Russia", shorthand: "ru" },
-    {
-      language: "Arabic",
-      flag: "SA",
-      country: "Saudi Arabia",
-      shorthand: "ar",
-    },
-    {
-      language: "Portuguese",
-      flag: "PT",
-      country: "Portugal",
-      shorthand: "pt",
-    },
-    { language: "Hindi", flag: "IN", country: "India", shorthand: "hi" },
-    { language: "Korean", flag: "KR", country: "South Korea", shorthand: "ko" },
-    { language: "Dutch", flag: "NL", country: "Netherlands", shorthand: "nl" },
-    { language: "Turkish", flag: "TR", country: "Turkey", shorthand: "tr" },
-    { language: "Swedish", flag: "SE", country: "Sweden", shorthand: "sv" },
-    { language: "Greek", flag: "GR", country: "Greece", shorthand: "el" },
-    { language: "Hebrew", flag: "IL", country: "Israel", shorthand: "he" },
-    { language: "Polish", flag: "PL", country: "Poland", shorthand: "pl" },
-    {
-      language: "Czech",
-      flag: "CZ",
-      country: "Czech Republic",
-      shorthand: "cs",
-    },
-    // Add more languages as needed
-  ];
+const options = [
+  {
+    language: "English",
+    flag: "US",
+    country: "United States",
+    shorthand: "en",
+  },
+  { language: "Thai", flag: "TH", country: "Thailand", shorthand: "th" },
+  { language: "Spanish", flag: "ES", country: "Spain", shorthand: "es" },
+  { language: "French", flag: "FR", country: "France", shorthand: "fr" },
+  { language: "German", flag: "DE", country: "Germany", shorthand: "de" },
+  { language: "Italian", flag: "IT", country: "Italy", shorthand: "it" },
+  { language: "Japanese", flag: "JP", country: "Japan", shorthand: "ja" },
+  { language: "Chinese", flag: "CN", country: "China", shorthand: "zh" },
+  { language: "Russian", flag: "RU", country: "Russia", shorthand: "ru" },
+  { language: "Portuguese", flag: "PT", country: "Portugal", shorthand: "pt" },
+  { language: "Hindi", flag: "IN", country: "India", shorthand: "hi" },
+  { language: "Korean", flag: "KR", country: "South Korea", shorthand: "ko" },
+  { language: "Dutch", flag: "NL", country: "Netherlands", shorthand: "nl" },
+  { language: "Turkish", flag: "TR", country: "Turkey", shorthand: "tr" },
+];
+
 
   const handleOptionClick = (option) => {
     setSelectedOption(option.language);

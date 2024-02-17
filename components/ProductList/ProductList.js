@@ -1,12 +1,9 @@
 'use client'
 import { motion, useAnimation } from "framer-motion";
 import Product from "./Product/Product";
-import { useQuery, useMutation } from "react-query";
-import { getProducts } from "@/lib/helper";
 import { useEffect } from "react";
 
-const ProductList = ({ comingsoon, lang }) => {
-  const { data: products } = useQuery("products", getProducts);
+const ProductList = ({ comingsoon, lang, gotocategory, prerolled, products }) => {
   const controls = useAnimation();
   useEffect(() => {
     if (products) {
@@ -37,6 +34,8 @@ const ProductList = ({ comingsoon, lang }) => {
             product={product}
             comingsoon={comingsoon}
             lang={lang}
+            gotocategory={gotocategory}
+            prerolled={prerolled}
           />
         </motion.div>
       ))}

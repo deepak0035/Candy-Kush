@@ -2,10 +2,8 @@
 import { motion, useCycle } from "framer-motion";
 import LogoSection from "@/components/logoSection/LogoSection";
 import StepIndicator from "@/components/Indicators/StepIndicator";
-import { FaCheck } from "react-icons/fa6";
 import Image from "next/image";
 import Link from "next/link";
-import { getDictionary } from "@/getDictionary";
 
 const Page = ({ lang, thankyoumsg, gohome }) => {
   const totalSteps = 6;
@@ -15,7 +13,7 @@ const Page = ({ lang, thankyoumsg, gohome }) => {
   const [scale, cycleScale] = useCycle(1, 1.2); // Using useCycle hook to cycle between 1 and 1.2 for scaling
 
   return (
-    <div className="relative bg-texture bg-no-repeat bg-cover overflow-hidden w-full max-w-lg min-h-screen space-y-6 px-4 py-8">
+    <div className="relative bg-texture bg-no-repeat bg-cover overflow-hidden w-full max-w-md min-h-screen space-y-6 px-4 py-8">
       {/* Step Indicator */}
       <StepIndicator totalSteps={totalSteps} activeStep={activeStep} />
 
@@ -23,16 +21,39 @@ const Page = ({ lang, thankyoumsg, gohome }) => {
       <LogoSection cart={false} back={true} />
 
       <div className="flex flex-col justify-center items-center space-y-6">
-        {/* Checkmark Icon */}
-        <motion.div
+        {/* Checkmark SVG Animation */}
+        <motion.svg
           initial={{ scale: 0.8 }} // Initial scale of 0.8 for animation
           animate={{ scale: scale }} // Scale up smoothly
           transition={{ type: "spring", stiffness: 300, damping: 20 }} // Spring animation
-          className="bg-white p-1 border-solid border-2 border-carpetMoss shadow-[0_1px_2px_rgb(0,0,0,0.3)] rounded-full flex justify-center items-center"
+          xmlns="http://www.w3.org/2000/svg"
+          width="100"
+          height="100"
+          viewBox="0 0 24 24"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="bg-white p-1 border-solid border-2 border-carpetMoss shadow-[0_1px_2px_rgb(0,0,0,0.3)] rounded-full"
           onClick={() => cycleScale()} // Trigger cycleScale function onClick to change scale
         >
-          <FaCheck className="text-7xl font-normal text-carpetMoss" />
-        </motion.div>
+          <motion.circle
+            cx="12"
+            cy="12"
+            r="10"
+            fill="transparent"
+            initial={{ strokeDasharray: "78.54", strokeDashoffset: "78.54" }}
+            animate={{ strokeDashoffset: "0" }}
+            transition={{ ease: "easeInOut", duration: 1.5 }}
+          />
+          <motion.path
+            d="M2 12 L10 18 L24 2"
+            stroke="#02A633"
+            fill="transparent"
+            initial={{ pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={{ ease: "easeInOut", duration: 0.5 }}
+          />
+        </motion.svg>
 
         <div className="flex flex-col justify-center items-center text-8xl font-extrabold text-carpetMoss">
           <h1 className="stroke drop-shadow-[0_1px_2px_rgb(0,0,0,0.5)] tracking-wide">
@@ -81,4 +102,3 @@ const Page = ({ lang, thankyoumsg, gohome }) => {
 };
 
 export default Page;
-

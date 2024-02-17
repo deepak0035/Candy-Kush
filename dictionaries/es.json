@@ -1,13 +1,25 @@
 {
   "products": {
     "heading": "PRODUCTOS",
-    "comingsoon": "PRÓXIMAMENTE"
+    "comingsoon": "PRÓXIMAMENTE",
+    "gotocategory": "Ir a la categoría",
+    "prerolled": "Los porros pre-enrollados sirven como sus boletos dorados a una aventura sensorial sin problemas. Enrollados con cuidado meticuloso, ofrecen pequeños paquetes de relajación y placer. ¡Seleccione su preferencia, enciéndalo e immerse en un reino de sabor y serenidad!"
   },
   "types": {
-    "heading": "TIPOS"
+    "heading": "TIPOS",
+    "prerolled": {
+      "sativa": "Sativa es el amigo vibrante que te inspira a dejar el sofá y bailar hacia la luminosidad de la vida. Energizante e imaginativo, es perfecto para esos momentos en los que ansías explorar nuevos reinos mentales mientras mantienes una sonrisa en tu rostro.",
+      "indica": "Si buscas el abrazo reconfortante de una silla acogedora, entonces Indica es tu compañero ideal. Conocido como la Reina de la Relajación, te envuelve en un abrazo que disuelve las preocupaciones y te sumerge en una serena felicidad.",
+      "hybrid": "Las cepas híbridas son como la mejor lista de reproducción de la naturaleza. Ofrecen lo mejor de ambos mundos: los efectos cerebrales estimulantes de Sativa combinados con la relajación física de Indica. Es la opción versátil que te permite flotar entre las nubes mientras te mantienes conectado a la realidad."
+    }
   },
   "quality": {
-    "heading": "CALIDAD"
+    "heading": "CALIDAD",
+    "prerolled": {
+      "topquality": "Nuestros porros pre-enrollados de alta calidad son el epítome de la excelencia del cannabis. Cultivados hidropónicamente, variedades Cali, y con una potencia que supera el 30% de THC, la flor es elegida directamente por el cliente. Cada flor está acompañada de un certificado de prueba que verifica el contenido de THC y CBD, así como la ausencia de pesticidas, garantizando máxima transparencia y calidad.",
+      "outdoor": "Nuestros porros pre-enrollados al aire libre ofrecen los precios más competitivos en el mercado sin comprometer la calidad. Cada producto pasa por meticulosas verificaciones manuales, asegurando una experiencia accesible sin sacrificar la seguridad y la satisfacción. Regularmente sometemos nuestros productos a inspecciones periódicas para mantener los más altos estándares de calidad.",
+      "indoor": "Nuestros porros pre-enrollados de interior representan la excelencia con la mejor relación calidad-precio en el mercado. Cultivados en invernaderos cerrados con los más altos estándares, nuestros productos ofrecen una experiencia de fumado de alta calidad, resultado de un cuidado meticuloso y atención al detalle. Regularmente sometemos nuestros productos a inspecciones periódicas para mantener los más altos estándares de calidad."
+    }
   },
   "size": {
     "heading": "TAMAÑO",
@@ -18,9 +30,10 @@
     "quality": "Calidad",
     "size": "Tamaño",
     "price": "Precio",
-    "buymore": "COMPRAR MÁS",
-    "totalprice": "PRECIO TOTAL",
-    "checkoutbtn": "FINALIZAR COMPRA"
+    "buymore": "Comprar Más",
+    "buynow": "Comprar Ahora",
+    "totalprice": "Precio Total",
+    "checkoutbtn": "PAGAR"
   },
   "thankyou": {
     "gohome": "IR A INICIO",

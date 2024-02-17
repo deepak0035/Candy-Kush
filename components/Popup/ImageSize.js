@@ -51,6 +51,8 @@ const ImageSize = ({ image, name, price, size, handleSetData, isSelected }) => {
           width={width}
           height={height}
           className="object-cover cursor-pointer"
+          preload
+          loading="lazy"
         />
         <h2
           className={`text-center px-4 pt-1 text-carpetMoss ${

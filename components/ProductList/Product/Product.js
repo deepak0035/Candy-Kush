@@ -1,37 +1,65 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowForward, IoMdClose, IoMdHelpCircle } from "react-icons/io";
 import { useRouter } from "next/navigation";
 import { useDispatch } from "react-redux";
-import {
-  setProductTypes,
-  setTypeImages,
-} from "@/Redux/Slices/productDetailsSlice";
-import { addToCart, setProductName } from "@/Redux/Slices/cartSlice";
+import { setProductTypes } from "@/Redux/Slices/productDetailsSlice";
+import { setProductName } from "@/Redux/Slices/cartSlice";
 
-const Product = ({ product, comingsoon, lang }) => {
+const Product = ({ product, comingsoon, lang, gotocategory, prerolled }) => {
   const { name, productImage, types } = product;
-  const imageLenth = productImage?.length;
+  const [showDetails, setShowDetails] = useState(false);
   const dispatch = useDispatch();
   const router = useRouter();
+  const modalRef = useRef(null);
 
   const handleUpdateData = () => {
-    dispatch(setProductTypes(product.types));
-
-    dispatch(setProductName(product.name));
-    // Redirect to "/types" after updating the reducers
-    const route = `/${lang}/types`; // Assuming "products" is a dynamic segment
-
-    // Push the updated route to the router
-    router.push(route, undefined, {
-      locale: lang,
-    });
+    if (name) {
+      dispatch(setProductTypes(types));
+      dispatch(setProductName(name));
+      const route = `/${lang}/types`;
+      router.push(route, undefined, { locale: lang });
+    }
   };
 
+  const toggleDetailsModal = () => {
+    setShowDetails((prev) => !prev);
+  };
+
+  const openDetailsModal = (event) => {
+    event.stopPropagation(); // Prevent the click event from propagating to the parent div
+    setShowDetails(true);
+  };
+
+  const closeDetailsModal = () => {
+    setShowDetails(false);
+  };
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (modalRef.current && !modalRef.current.contains(event.target)) {
+        closeDetailsModal();
+      }
+    }
+
+    // Add event listener when modal is shown
+    if (showDetails) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      // Remove event listener when modal is hidden
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    // Clean up
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [showDetails]);
+
   return (
-    <div>
+    <div className="relative">
       {!name ? (
-        <div className="grid grid-cols-7 text-gray-400 gap-4 bg-white rounded-2xl border-2 border-gray-300 h-24  px-4 place-items-center	">
+        <div className="grid grid-cols-7 text-gray-400 gap-4 bg-white rounded-2xl border-2 border-gray-300 h-24 px-4 place-items-center">
           <h1 className="col-span-full text-2xl font-semibold tracking-widest">
             {comingsoon}
           </h1>
@@ -44,46 +72,58 @@ const Product = ({ product, comingsoon, lang }) => {
           <div className="col-span-2">
             <h2 className="text-base">{name}</h2>
           </div>
-          {imageLenth > 1 ? (
-            <div className="col-span-3 relative w-full h-24 overflow-hidden ">
+          <div className="col-span-3 relative w-full h-24 overflow-hidden">
+            {productImage.map((image, index) => (
               <Image
-                src={productImage[0]}
+                key={index}
+                src={image}
                 width={40}
                 height={40}
-                alt="Picture of the author"
-                className="absolute top-2 left-12 transform origin-bottom z-10"
+                alt={`Image ${index}`}
+                className={`absolute top-1.5 left-12 transform origin-bottom ${
+                  index === 0
+                    ? "z-10"
+                    : index % 2 === 0
+                    ? "-rotate-[20deg]"
+                    : "rotate-[20deg]"
+                }`}
+                preload
+                loading="lazy"
               />
-              <Image
-                src={productImage[1]}
-                width={40}
-                height={40}
-                alt="Picture of the author"
-                className="absolute top-2 left-12 transform -rotate-[20deg] origin-bottom"
-              />
-              <Image
-                src={productImage[2]}
-                width={40}
-                height={40}
-                alt="Picture of the author"
-                className="absolute top-2 left-12 transform rotate-[20deg] origin-bottom"
-              />
-            </div>
-          ) : (
-            <div className="col-span-3 relative w-full h-24 overflow-hidden">
-              <Image
-                src={productImage[0]}
-                width={40}
-                height={40}
-                alt="Picture of the author"
-                className="absolute top-2 left-12 transform origin-bottom z-10"
-              />
-            </div>
-          )}
+            ))}
+          </div>
           <div className="col-span-2 flex justify-between items-center">
-            <span className="text-xs">Go to Category</span>
+            <span className="text-xs">{gotocategory}</span>
             <span>
               <IoIosArrowForward className="text-xs" />
             </span>
+          </div>
+          <div
+            className="absolute top-2 right-2 cursor-pointer"
+            onClick={openDetailsModal}
+          >
+            <IoMdHelpCircle className="text-gray-500 text-3xl z-10" />
+          </div>
+        </div>
+      )}
+      {showDetails && (
+        <div
+          ref={modalRef}
+          className="fixed px-6 m-auto bottom-0 right-0 left-0 z-50 w-full max-w-[28rem] min-h-screen flex justify-center items-center backdrop-blur-sm"
+          onClick={closeDetailsModal} // Close the modal when clicking outside of it
+        >
+          <div
+            className="bg-white rounded-2xl shadow-[0_1px_2px_rgb(0,0,0,0.5)] border border-solid border-carpetMoss px-4 py-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex justify-end">
+              <IoMdClose
+                className="text-gray-700 text-xl cursor-pointer"
+                onClick={closeDetailsModal}
+              />
+            </div>
+            <h2 className="text-base font-medium mb-4">{prerolled}</h2>
+            {/* Add additional product details here */}
           </div>
         </div>
       )}

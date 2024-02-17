@@ -63,6 +63,8 @@ const Product = ({ product, quality, size, price, type }) => {
             height={35}
             alt="Product Image"
             className=""
+            preload
+            loading="lazy"
           />
         </motion.div>
       </div>

@@ -1,13 +1,25 @@
 {
   "products": {
     "heading": "PRODUTOS",
-    "comingsoon": "EM BREVE"
+    "comingsoon": "EM BREVE",
+    "gotocategory": "Ir para a categoria",
+    "prerolled": "Os cigarros pré-enrolados funcionam como seus bilhetes dourados para uma aventura sensorial perfeita. Enrolados com cuidado meticuloso, oferecem pequenos pacotes de relaxamento e prazer. Escolha sua preferência, acenda e mergulhe em um mundo de sabor e serenidade!"
   },
   "types": {
-    "heading": "TIPOS"
+    "heading": "TIPOS",
+    "prerolled": {
+      "sativa": "A Sativa é a amiga vibrante que inspira você a sair do sofá e dançar na luminosidade da vida. Energizante e imaginativa, é perfeita para aqueles momentos em que você deseja explorar novos reinos mentais enquanto mantém um sorriso no rosto.",
+      "indica": "Se você busca o abraço reconfortante de uma cadeira aconchegante, então a Indica é sua companheira ideal. Conhecida como a Rainha do Relaxamento, ela o envolve em um abraço que derrete as preocupações e o mergulha em uma felicidade serena.",
+      "hybrid": "As variedades híbridas são como a melhor playlist da natureza. Elas oferecem o melhor dos dois mundos: os efeitos cerebrais estimulantes da Sativa combinados com a relaxação física da Indica. É a opção versátil que permite flutuar entre as nuvens enquanto permanece ancorado na realidade."
+    }
   },
   "quality": {
-    "heading": "QUALIDADE"
+    "heading": "QUALIDADE",
+    "prerolled": {
+      "topquality": "Nossos cigarros pré-enrolados de alta qualidade são o epítome da excelência da cannabis. Cultivada em hidroponia, variedades Cali, e com uma potência superior a 30% de THC, a flor é escolhida diretamente pelo cliente. Cada flor é acompanhada por um certificado de teste que verifica o teor de THC e CBD, bem como a ausência de pesticidas, garantindo transparência e qualidade máximas.",
+      "outdoor": "Nossos cigarros pré-enrolados Outdoor oferecem os preços mais competitivos do mercado sem comprometer a qualidade. Cada produto passa por verificações manuais meticulosas, garantindo uma experiência acessível sem sacrificar segurança e satisfação. Regularmente submetemos nossos produtos a inspeções periódicas para manter os mais altos padrões de qualidade.",
+      "indoor": "Nossos cigarros pré-enrolados Indoor representam excelência com a melhor relação qualidade-preço do mercado. Cultivados em estufas fechadas com os mais altos padrões, nossos produtos proporcionam uma experiência de fumar de alta qualidade, resultado de cuidado e atenção meticulosos aos detalhes. Regularmente submetemos nossos produtos a inspeções periódicas para manter os mais altos padrões de qualidade."
+    }
   },
   "size": {
     "heading": "TAMANHO",
@@ -19,11 +31,12 @@
     "size": "Tamanho",
     "price": "Preço",
     "buymore": "Comprar Mais",
+    "buynow": "Comprar Agora",
     "totalprice": "Preço Total",
     "checkoutbtn": "FINALIZAR COMPRA"
   },
   "thankyou": {
-    "gohome": "IR PARA A PÁGINA INICIAL",
+    "gohome": "IR PARA CASA",
     "thankyoumsg": "por comprar conosco!"
   }
 }
