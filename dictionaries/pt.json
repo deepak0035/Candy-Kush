@@ -2,23 +2,23 @@
   "products": {
     "heading": "PRODUTOS",
     "comingsoon": "EM BREVE",
-    "gotocategory": "Ir para a categoria",
-    "prerolled": "Os cigarros pré-enrolados funcionam como seus bilhetes dourados para uma aventura sensorial perfeita. Enrolados com cuidado meticuloso, oferecem pequenos pacotes de relaxamento e prazer. Escolha sua preferência, acenda e mergulhe em um mundo de sabor e serenidade!"
+    "gotocategory": "Ir para a Categoria",
+    "prerolled": "Os cigarros pré-enrolados servem como seus bilhetes dourados para uma aventura sensorial perfeita. Enrolados com cuidado meticuloso, eles oferecem pequenos pacotes de relaxamento e prazer. Escolha sua preferência, acenda e mergulhe em um reino de sabor e serenidade!"
   },
   "types": {
     "heading": "TIPOS",
     "prerolled": {
-      "sativa": "A Sativa é a amiga vibrante que inspira você a sair do sofá e dançar na luminosidade da vida. Energizante e imaginativa, é perfeita para aqueles momentos em que você deseja explorar novos reinos mentais enquanto mantém um sorriso no rosto.",
-      "indica": "Se você busca o abraço reconfortante de uma cadeira aconchegante, então a Indica é sua companheira ideal. Conhecida como a Rainha do Relaxamento, ela o envolve em um abraço que derrete as preocupações e o mergulha em uma felicidade serena.",
-      "hybrid": "As variedades híbridas são como a melhor playlist da natureza. Elas oferecem o melhor dos dois mundos: os efeitos cerebrais estimulantes da Sativa combinados com a relaxação física da Indica. É a opção versátil que permite flutuar entre as nuvens enquanto permanece ancorado na realidade."
+      "Sativa": "Sativa é a amiga vibrante que te inspira a sair do sofá e dançar para a luminosidade da vida. Energizante e imaginativa, é perfeita para aqueles momentos em que você deseja explorar novos reinos mentais mantendo um sorriso no rosto.",
+      "Indica": "Se você procura o abraço reconfortante de uma cadeira aconchegante, então a Indica é sua companheira ideal. Conhecida como a Rainha do Relaxamento, ela te envolve em um abraço que derrete as preocupações e te imerge em uma felicidade serena.",
+      "Hybrid": "As cepas híbridas são como a melhor playlist da natureza. Elas oferecem o melhor dos dois mundos: os efeitos cerebrais estimulantes da Sativa combinados com a relaxação física da Indica. É a opção versátil que permite flutuar entre as nuvens enquanto permanece com os pés no chão."
     }
   },
   "quality": {
     "heading": "QUALIDADE",
     "prerolled": {
-      "topquality": "Nossos cigarros pré-enrolados de alta qualidade são o epítome da excelência da cannabis. Cultivada em hidroponia, variedades Cali, e com uma potência superior a 30% de THC, a flor é escolhida diretamente pelo cliente. Cada flor é acompanhada por um certificado de teste que verifica o teor de THC e CBD, bem como a ausência de pesticidas, garantindo transparência e qualidade máximas.",
-      "outdoor": "Nossos cigarros pré-enrolados Outdoor oferecem os preços mais competitivos do mercado sem comprometer a qualidade. Cada produto passa por verificações manuais meticulosas, garantindo uma experiência acessível sem sacrificar segurança e satisfação. Regularmente submetemos nossos produtos a inspeções periódicas para manter os mais altos padrões de qualidade.",
-      "indoor": "Nossos cigarros pré-enrolados Indoor representam excelência com a melhor relação qualidade-preço do mercado. Cultivados em estufas fechadas com os mais altos padrões, nossos produtos proporcionam uma experiência de fumar de alta qualidade, resultado de cuidado e atenção meticulosos aos detalhes. Regularmente submetemos nossos produtos a inspeções periódicas para manter os mais altos padrões de qualidade."
+      "Top": "Nossos cigarros pré-enrolados de alta qualidade são o epítome da excelência da cannabis. Cultivada hidroponicamente, variedades californianas e com uma potência superior a 30% de THC, a flor é escolhida diretamente pelo cliente. Cada flor é acompanhada de um certificado de teste que verifica os teores de THC e CBD, bem como a ausência de pesticidas, garantindo transparência máxima e qualidade.",
+      "Outdoor": "Nossos cigarros pré-enrolados ao ar livre oferecem os preços mais competitivos do mercado sem comprometer a qualidade. Cada produto passa por verificações manuais meticulosas, garantindo uma experiência acessível sem sacrificar a segurança e a satisfação. Regularmente submetemos nossos produtos a inspeções periódicas para manter os mais altos padrões de qualidade.",
+      "Indoor": "Nossos cigarros pré-enrolados internos representam excelência com a melhor relação qualidade-preço do mercado. Cultivados em estufas fechadas com os mais altos padrões, nossos produtos oferecem uma experiência de fumar de alta qualidade, resultado de cuidado e atenção aos detalhes meticulosos. Regularmente submetemos nossos produtos a inspeções periódicas para manter os mais altos padrões de qualidade."
     }
   },
   "size": {
@@ -36,7 +36,8 @@
     "checkoutbtn": "FINALIZAR COMPRA"
   },
   "thankyou": {
-    "gohome": "IR PARA CASA",
-    "thankyoumsg": "por comprar conosco!"
+    "gohome": "IR PARA PÁGINA INICIAL",
+    "thankyoumsg": "por comprar connosco!",
+    "collectyourreceipt": "Por favor, recolha o seu recibo."
   }
 }

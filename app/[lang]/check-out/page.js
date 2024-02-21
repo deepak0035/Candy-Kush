@@ -7,12 +7,14 @@ const page = async ({ params }) => {
 
   return (
     <CheckOutPage
+      
       lang={params.lang}
       quality={lang.checkout.quality}
       size={lang.checkout.size}
       price={lang.checkout.price}
       type={lang.checkout.type}
       buymore={lang.checkout.buymore}
+      buynow={lang.checkout.buynow}
       checkout={lang.checkout.checkoutbtn}
       totalprice={lang.checkout.totalprice}
     />

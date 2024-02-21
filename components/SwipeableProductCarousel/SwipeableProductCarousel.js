@@ -14,6 +14,7 @@ import {
 import { useRouter } from "next/navigation";
 import { IoMdClose, IoMdHelpCircle } from "react-icons/io";
 import { setProductType } from "@/Redux/Slices/cartSlice";
+import InfoModal from "../Popup/InfoModal";
 
 const CustomPrevArrow = ({ currentSlide, slideCount, onClick }) => (
   <div
@@ -59,53 +60,12 @@ const CustomNextArrow = ({ currentSlide, slideCount, onClick }) => (
   </div>
 );
 
-const ProductModal = ({ prerolled, closeModal , productDetail}) => {
-  const modalRef = useRef(null);
 
-  const closeDetailsModal = () => {
-    closeModal();
-  };
-
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (modalRef.current && !modalRef.current.contains(event.target)) {
-        closeDetailsModal();
-      }
-    }
-
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
-
-  return (
-    <div
-      ref={modalRef}
-      className="fixed px-6 m-auto bottom-0 right-0 left-0 z-50 w-full max-w-[28rem] min-h-screen flex justify-center items-center backdrop-blur-sm"
-      onClick={closeDetailsModal}
-    >
-      <div
-        className="bg-white rounded-2xl shadow-[0_1px_2px_rgb(0,0,0,0.5)] border border-solid border-carpetMoss px-4 py-4"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <div className="flex justify-end">
-          <IoMdClose
-            className="text-gray-700 text-xl cursor-pointer"
-            onClick={closeDetailsModal}
-          />
-        </div>
-        <h2 className="text-base font-medium mb-4">{productDetail}</h2>
-        {/* Add additional product details here */}
-      </div>
-    </div>
-  );
-};
 
 const SwipeableProductCarousel = ({ types, lang, details }) =>
 {
     const [productDetail, setProductDetail] = useState("");
+  const modalRef = useRef(null);
 
   const dispatch = useDispatch();
   const router = useRouter();
@@ -210,9 +170,12 @@ const SwipeableProductCarousel = ({ types, lang, details }) =>
         </Slider>
       </div>
 
-      {showModal && (
-        <ProductModal productDetail={productDetail} closeModal={closeModal} />
-      )}
+      <InfoModal
+        showDetails={showModal}
+        modalRef={modalRef}
+        closeDetailsModal={closeModal}
+        description={productDetail}
+      />
     </div>
   );
 };

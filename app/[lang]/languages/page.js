@@ -32,7 +32,7 @@ const handleSetLang = () => {
 };
 
   return (
-    <div className="relative bg-texture bg-no-repeat bg-cover overflow-hidden w-full max-w-lg min-h-screen space-y-4 px-4 py-8">
+    <div className="relative  overflow-hidden w-full max-w-lg min-h-screen space-y-4 px-4 py-8">
       <StepIndicator totalSteps={totalSteps} activeStep={activeStep} />
       <LogoSection cart={false} />
       <MainHeading heading={"LANGUAGES"} />

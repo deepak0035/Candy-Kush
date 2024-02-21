@@ -58,6 +58,6 @@ export function middleware(request) {
 }
 
 export const config = {
-  // Matcher ignoring `/_next/` and `/api/`
-  matcher: ["/((?!api|_next/static|_next/image).*)"], // Exclude favicon request
+  // Matcher excluding certain routes from redirection
+  matcher: ["/((?!images|_next|api|styles).*)"], // Exclude images, _next, api, and styles request
 };

@@ -9,6 +9,7 @@ const page = async ({ params }) => {
     <ThankYou
       lang={params.lang}
       thankyoumsg={lang.thankyou.thankyoumsg}
+      collectyourreceipt={lang.thankyou.collectyourreceipt}
       gohome={lang.thankyou.gohome}
     />
   );

@@ -37,6 +37,7 @@
   },
   "thankyou": {
     "gohome": "GO HOME",
-    "thankyoumsg": "for purchasing from us!"
+    "thankyoumsg": "for purchasing from us!",
+    "collectyourreceipt": "Please collect your receipt."
   }
 }

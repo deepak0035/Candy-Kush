@@ -9,7 +9,7 @@ import CurrencyFormat from "react-currency-format";
 import { useRouter } from "next/navigation";
 import { clearProductDetails } from "@/Redux/Slices/productDetailsSlice";
 
-const CheckOutPage = ({lang,type, quality,size,price, totalprice, checkout, buymore}) => {
+const CheckOutPage = ({lang,type, quality,size,price, totalprice, checkout, buymore, buynow}) => {
   const totalSteps = 6;
   const activeStep = 4;
 
@@ -44,7 +44,7 @@ const CheckOutPage = ({lang,type, quality,size,price, totalprice, checkout, buym
   }, [cartItems]);
 
   return (
-    <div className="relative bg-texture bg-no-repeat bg-cover overflow-hidden w-full max-w-md min-h-screen space-y-6 px-4 py-8">
+    <div className="relative  overflow-hidden w-screen max-w-md  min-h-screen space-y-6 px-4 py-8">
       <StepIndicator totalSteps={totalSteps} activeStep={activeStep} />
       <LogoSection cart={true} />
       <OrderList
@@ -53,6 +53,7 @@ const CheckOutPage = ({lang,type, quality,size,price, totalprice, checkout, buym
         price={price}
         type={type}
         buymore={buymore}
+        buynow={buynow}
         lang={lang}
       />
 

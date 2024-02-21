@@ -1,24 +1,24 @@
 {
   "products": {
     "heading": "PRODUITS",
-    "comingsoon": "BIENTÔT DISPONIBLE",
-    "gotocategory": "Aller à la catégorie",
-    "prerolled": "Les joints pré-roulés servent de billets d'or pour une aventure sensorielle sans faille. Roulés avec un soin méticuleux, ils offrent de petits paquets de détente et de plaisir. Sélectionnez votre préférence, allumez et plongez-vous dans un monde de saveur et de sérénité !"
+    "comingsoon": "PROCHAINEMENT",
+    "gotocategory": "Aller à la Catégorie",
+    "prerolled": "Les joints pré-roulés sont vos billets d'or pour une aventure sensorielle sans faille. Roulés avec un soin méticuleux, ils offrent de petits paquets de relaxation et de plaisir. Sélectionnez votre préférence, allumez et plongez-vous dans un monde de saveurs et de sérénité !"
   },
   "types": {
     "heading": "TYPES",
     "prerolled": {
-      "sativa": "La Sativa est l'ami vibrant qui vous inspire à quitter le canapé et à danser dans la luminosité de la vie. Revigorante et imaginative, elle est parfaite pour ces moments où vous avez envie d'explorer de nouveaux univers mentaux tout en gardant le sourire.",
-      "indica": "Si vous recherchez l'étreinte réconfortante d'un fauteuil douillet, alors l'Indica est votre compagnon idéal. Connu comme la Reine de la Détente, elle vous enveloppe dans un câlin qui fait fondre les soucis et vous plonge dans une béatitude sereine.",
-      "hybrid": "Les variétés hybrides sont comme la meilleure playlist de la nature. Elles offrent le meilleur des deux mondes : les effets cérébraux stimulants de la Sativa combinés à la relaxation physique de l'Indica. C'est l'option polyvalente qui vous permet de flotter parmi les nuages tout en restant ancré dans la réalité."
+      "Sativa": "La Sativa est l'ami vibrant qui vous inspire à quitter le canapé et à danser dans la luminosité de la vie. Énergisante et imaginative, elle est parfaite pour ces moments où vous avez envie d'explorer de nouveaux royaumes mentaux tout en gardant le sourire.",
+      "Indica": "Si vous recherchez l'étreinte réconfortante d'un fauteuil douillet, alors l'Indica est votre compagnon idéal. Connu sous le nom de Reine de la Relaxation, il vous enveloppe dans une étreinte qui fait fondre les soucis et vous plonge dans une béatitude sereine.",
+      "Hybrid": "Les variétés hybrides sont comme la meilleure playlist de la nature. Elles offrent le meilleur des deux mondes : les effets cérébraux stimulants de la Sativa combinés à la relaxation physique de l'Indica. C'est l'option polyvalente qui vous permet de flotter parmi les nuages tout en restant ancré dans la réalité."
     }
   },
   "quality": {
     "heading": "QUALITÉ",
     "prerolled": {
-      "topquality": "Nos joints pré-roulés de haute qualité sont l'incarnation de l'excellence du cannabis. Cultivée en hydroponie, des variétés Cali, et avec une puissance dépassant 30 % de THC, la fleur est choisie directement par le client. Chaque fleur est accompagnée d'un certificat de test vérifiant le contenu en THC et CBD, ainsi que l'absence de pesticides, garantissant une transparence et une qualité maximales.",
-      "outdoor": "Nos joints pré-roulés d'extérieur offrent les prix les plus compétitifs du marché sans compromettre la qualité. Chaque produit subit des vérifications manuelles méticuleuses, garantissant une expérience accessible sans sacrifier la sécurité et la satisfaction. Nous soumettons régulièrement nos produits à des inspections périodiques pour maintenir les normes de qualité les plus élevées.",
-      "indoor": "Nos joints pré-roulés d'intérieur représentent l'excellence avec le meilleur rapport qualité-prix du marché. Cultivés dans des serres fermées selon les normes les plus élevées, nos produits offrent une expérience de fumage de haute qualité, résultat d'un soin méticuleux et d'une attention portée aux détails. Nous soumettons régulièrement nos produits à des inspections périodiques pour maintenir les normes de qualité les plus élevées."
+      "Top": "Nos joints pré-roulés de la plus haute qualité sont l'incarnation de l'excellence du cannabis. Cannabis cultivé en hydroponie, variétés Cali, et avec une puissance dépassant 30 % de THC, la fleur est choisie directement par le client. Chaque fleur est accompagnée d'un certificat de test vérifiant le contenu en THC et CBD, ainsi que l'absence de pesticides, garantissant une transparence et une qualité maximales.",
+      "Outdoor": "Nos joints pré-roulés extérieurs offrent les prix les plus compétitifs du marché sans compromettre la qualité. Chaque produit fait l'objet de vérifications manuelles méticuleuses, garantissant une expérience accessible sans sacrifier la sécurité et la satisfaction. Nous soumettons régulièrement nos produits à des inspections périodiques pour maintenir les normes de qualité les plus élevées.",
+      "Indoor": "Nos joints pré-roulés intérieurs représentent l'excellence avec le meilleur rapport qualité-prix du marché. Cultivés dans des serres fermées selon les normes les plus élevées, nos produits offrent une expérience de fumage de haute qualité, résultat de soins méticuleux et d'une attention portée aux détails. Nous soumettons régulièrement nos produits à des inspections périodiques pour maintenir les normes de qualité les plus élevées."
     }
   },
   "size": {
@@ -36,7 +36,8 @@
     "checkoutbtn": "PASSER LA COMMANDE"
   },
   "thankyou": {
-    "gohome": "RETOUR À LA PAGE D'ACCUEIL",
-    "thankyoumsg": "pour votre achat chez nous !"
+    "gohome": "RETOUR À LA MAISON",
+    "thankyoumsg": "pour votre achat chez nous !",
+    "collectyourreceipt": "Veuillez récupérer votre reçu."
   }
 }

@@ -2,23 +2,23 @@
   "products": {
     "heading": "PRODUCTOS",
     "comingsoon": "PRÓXIMAMENTE",
-    "gotocategory": "Ir a la categoría",
-    "prerolled": "Los porros pre-enrollados sirven como sus boletos dorados a una aventura sensorial sin problemas. Enrollados con cuidado meticuloso, ofrecen pequeños paquetes de relajación y placer. ¡Seleccione su preferencia, enciéndalo e immerse en un reino de sabor y serenidad!"
+    "gotocategory": "Ir a Categoría",
+    "prerolled": "Los porros pre-enrollados son sus boletos de oro para una aventura sensorial sin problemas. Enrollados con cuidado meticuloso, ofrecen pequeños paquetes de relajación y placer. ¡Seleccione su preferencia, encienda y sumérjase en un mundo de sabor y serenidad!"
   },
   "types": {
     "heading": "TIPOS",
     "prerolled": {
-      "sativa": "Sativa es el amigo vibrante que te inspira a dejar el sofá y bailar hacia la luminosidad de la vida. Energizante e imaginativo, es perfecto para esos momentos en los que ansías explorar nuevos reinos mentales mientras mantienes una sonrisa en tu rostro.",
-      "indica": "Si buscas el abrazo reconfortante de una silla acogedora, entonces Indica es tu compañero ideal. Conocido como la Reina de la Relajación, te envuelve en un abrazo que disuelve las preocupaciones y te sumerge en una serena felicidad.",
-      "hybrid": "Las cepas híbridas son como la mejor lista de reproducción de la naturaleza. Ofrecen lo mejor de ambos mundos: los efectos cerebrales estimulantes de Sativa combinados con la relajación física de Indica. Es la opción versátil que te permite flotar entre las nubes mientras te mantienes conectado a la realidad."
+      "Sativa": "Sativa es el amigo vibrante que te inspira a salir del sofá y bailar hacia la luminosidad de la vida. Energizante e imaginativo, es perfecto para aquellos momentos en que deseas explorar nuevos reinos mentales mientras mantienes una sonrisa en tu rostro.",
+      "Indica": "Si buscas el abrazo reconfortante de una silla acogedora, entonces Indica es tu compañero ideal. Conocida como la Reina de la Relajación, te envuelve en un abrazo que desvanece las preocupaciones y te sumerge en una felicidad serena.",
+      "Hybrid": "Las cepas híbridas son como la mejor lista de reproducción de la naturaleza. Ofrecen lo mejor de ambos mundos: los efectos cerebrales estimulantes de Sativa combinados con la relajación física de Indica. Es la opción versátil que te permite flotar entre las nubes mientras te mantienes firme en la realidad."
     }
   },
   "quality": {
     "heading": "CALIDAD",
     "prerolled": {
-      "topquality": "Nuestros porros pre-enrollados de alta calidad son el epítome de la excelencia del cannabis. Cultivados hidropónicamente, variedades Cali, y con una potencia que supera el 30% de THC, la flor es elegida directamente por el cliente. Cada flor está acompañada de un certificado de prueba que verifica el contenido de THC y CBD, así como la ausencia de pesticidas, garantizando máxima transparencia y calidad.",
-      "outdoor": "Nuestros porros pre-enrollados al aire libre ofrecen los precios más competitivos en el mercado sin comprometer la calidad. Cada producto pasa por meticulosas verificaciones manuales, asegurando una experiencia accesible sin sacrificar la seguridad y la satisfacción. Regularmente sometemos nuestros productos a inspecciones periódicas para mantener los más altos estándares de calidad.",
-      "indoor": "Nuestros porros pre-enrollados de interior representan la excelencia con la mejor relación calidad-precio en el mercado. Cultivados en invernaderos cerrados con los más altos estándares, nuestros productos ofrecen una experiencia de fumado de alta calidad, resultado de un cuidado meticuloso y atención al detalle. Regularmente sometemos nuestros productos a inspecciones periódicas para mantener los más altos estándares de calidad."
+      "Top": "Nuestros porros pre-enrollados de la más alta calidad son el epítome de la excelencia del cannabis. Cannabis cultivado hidropónicamente, variedades Cali, y con una potencia que supera el 30% de THC, la flor es elegida directamente por el cliente. Cada flor va acompañada de un certificado de prueba que verifica el contenido de THC y CBD, así como la ausencia de pesticidas, garantizando la máxima transparencia y calidad.",
+      "Outdoor": "Nuestros porros pre-enrollados al aire libre ofrecen los precios más competitivos del mercado sin comprometer la calidad. Cada producto pasa por meticulosas verificaciones manuales, asegurando una experiencia accesible sin sacrificar la seguridad y la satisfacción. Regularmente sometemos nuestros productos a inspecciones periódicas para mantener los más altos estándares de calidad.",
+      "Indoor": "Nuestros porros pre-enrollados interiores representan la excelencia con la mejor relación calidad-precio del mercado. Cultivados en invernaderos cerrados con los más altos estándares, nuestros productos ofrecen una experiencia de fumado de alta calidad, resultado de cuidados meticulosos y atención al detalle. Regularmente sometemos nuestros productos a inspecciones periódicas para mantener los más altos estándares de calidad."
     }
   },
   "size": {
@@ -36,7 +36,8 @@
     "checkoutbtn": "PAGAR"
   },
   "thankyou": {
-    "gohome": "IR A INICIO",
-    "thankyoumsg": "¡por comprar con nosotros!"
+    "gohome": "IR A CASA",
+    "thankyoumsg": "por comprar con nosotros!",
+    "collectyourreceipt": "Por favor, recoja su recibo."
   }
 }

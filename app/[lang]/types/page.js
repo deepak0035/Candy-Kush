@@ -10,7 +10,7 @@ const page = async ({ params }) => {
   const lang = await getDictionary(params.lang);
 
   return (
-    <div className="relative bg-texture bg-no-repeat bg-cover overflow-hidden w-full max-w-md min-h-screen space-y-6 px-4 py-8">
+    <div className="relative  overflow-hidden w-screen max-w-md min-h-screen space-y-6 px-4 py-8">
       <StepIndicator totalSteps={totalSteps} activeStep={activeStep} />
       <LogoSection cart={true} />
       <SwipeableProductCarousel

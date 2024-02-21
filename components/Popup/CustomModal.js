@@ -13,34 +13,6 @@ import {
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion"; // Import motion from Framer Motion
 
-const dropIn = {
-  hidden: { y: "100vh", opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.5,
-      type: "slide",
-      damping: 25,
-      stiffness: 500,
-    },
-  },
-  exit: {
-    y: "100vh",
-    opacity: 0,
-    transition: {
-      duration: 0.8,
-      type: "slide",
-      damping: 25,
-      stiffness: 500,
-    },
-  },
-};
-
-const generateRandomId = () => {
-  return Math.random().toString(36).substr(2, 10);
-};
-
 const CustomModal = ({
   open,
   onClose,
@@ -50,6 +22,34 @@ const CustomModal = ({
   addtocart,
   lang,
 }) => {
+  const dropIn = {
+    hidden: { y: "100vh", opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.3, // Shortened duration for faster animation
+        type: "spring", // Changed type to spring for smoother animation
+        damping: 20, // Reduced damping for a less stiff motion
+        stiffness: 200, // Reduced stiffness for a more elastic motion
+      },
+    },
+    exit: {
+      y: "100vh", // Move modal up during exit animation
+      opacity: 0,
+      transition: {
+        duration: 0.5, // Keep exit duration longer for a smoother exit
+        type: "spring", // Maintain spring type for consistency
+        damping: 20,
+        stiffness: 200,
+      },
+    },
+  };
+
+  const generateRandomId = () => {
+    return Math.random().toString(36).substr(2, 10);
+  };
+
   const [selectedSize, setSelectedSize] = useState(null);
   const [productPrice, setProductPrice] = useState(null);
   const [productImage, setProductImage] = useState(null);
@@ -97,21 +97,23 @@ const CustomModal = ({
   };
 
   return (
-    <AnimatePresence wait>
+    <AnimatePresence>
       {open && (
         <motion.div
-          className={`custom-modal-overlay rounded-t-[3rem]  ${
-            open ? "visible" : ""
-          }`}
-          variants={dropIn}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
+          className="fixed m-auto bottom-0 right-0 left-0 z-50 w-full max-w-[28rem] min-h-screen flex justify-center items-end"
+          initial={{ backdropFilter: "blur(0px)" }} // Apply initial blur of 0px
+          animate={{ backdropFilter: "blur(8px)" }} // Apply blur when modal is open
+          exit={{ backdropFilter: "blur(0px)" }} // Remove blur when modal is closing
+          onClick={onClose} // Close the modal when clicking outside of it
         >
           <motion.div
             className="custom-modal flex flex-col justify-center h-full"
             style={modalStyle}
+            onClick={(e) => e.stopPropagation()}
             variants={dropIn}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
           >
             <h2 className="text-center py-3 px-4 font-bold text-3xl rounded-t-[3rem]  text-white bg-carpetMoss">
               {size}
@@ -131,10 +133,10 @@ const CustomModal = ({
                 />
               ))}
             </div>
-            <div className="flex justify-center items-center h-full bg-white">
+            <div className="flex justify-center items-center py-2 h-full bg-white">
               <button
                 onClick={handleUpdateData}
-                className="relative px-4 py-2 line-clamp-3 rounded-full bg-gradient-to-r from-carpetMoss to-carpetMoss via-green-500 text-white text-center h-12 w-4/5 md:h-16 md:w-96 font-semibold"
+                className="relative px-4 py-2  line-clamp-3 rounded-full bg-gradient-to-r from-carpetMoss to-carpetMoss via-green-500 text-white text-center h-12 w-4/5 md:h-16 md:w-96 font-semibold"
               >
                 {addtocart}
               </button>

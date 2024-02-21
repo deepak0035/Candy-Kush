@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useDispatch } from "react-redux";
 import { setProductTypes } from "@/Redux/Slices/productDetailsSlice";
 import { setProductName } from "@/Redux/Slices/cartSlice";
+import InfoModal from "@/components/Popup/InfoModal";
 
 const Product = ({ product, comingsoon, lang, gotocategory, prerolled }) => {
   const { name, productImage, types } = product;
@@ -106,27 +107,12 @@ const Product = ({ product, comingsoon, lang, gotocategory, prerolled }) => {
           </div>
         </div>
       )}
-      {showDetails && (
-        <div
-          ref={modalRef}
-          className="fixed px-6 m-auto bottom-0 right-0 left-0 z-50 w-full max-w-[28rem] min-h-screen flex justify-center items-center backdrop-blur-sm"
-          onClick={closeDetailsModal} // Close the modal when clicking outside of it
-        >
-          <div
-            className="bg-white rounded-2xl shadow-[0_1px_2px_rgb(0,0,0,0.5)] border border-solid border-carpetMoss px-4 py-4"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="flex justify-end">
-              <IoMdClose
-                className="text-gray-700 text-xl cursor-pointer"
-                onClick={closeDetailsModal}
-              />
-            </div>
-            <h2 className="text-base font-medium mb-4">{prerolled}</h2>
-            {/* Add additional product details here */}
-          </div>
-        </div>
-      )}
+      <InfoModal
+        showDetails={showDetails}
+        modalRef={modalRef}
+        closeDetailsModal={closeDetailsModal}
+        description={prerolled}
+      />
     </div>
   );
 };

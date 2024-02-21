@@ -89,7 +89,7 @@ const Product = ({ product, quality, size, price, type }) => {
         <div className="flex justify-evenly items-center space-x-3 text-base">
           <div className="flex justify-evenly items-center space-x-2">
             <motion.span
-              className="bg-white p-1 shadow-[0_1px_2px_rgb(0,0,0,0.3)] rounded-full flex justify-center items-center"
+              className="bg-white p-1 shadow-[0_1px_2px_rgb(0,0,0,0.3)] rounded-full flex justify-center items-center cursor-pointer"
               onClick={handleDecrement}
               whileTap={{ scale: 0.9 }}
             >
@@ -97,14 +97,14 @@ const Product = ({ product, quality, size, price, type }) => {
             </motion.span>
             <span>{productQuantity}</span>
             <motion.span
-              className="bg-white p-1 shadow-[0_1px_2px_rgb(0,0,0,0.3)] rounded-full flex justify-center items-center"
+              className="bg-white p-1 shadow-[0_1px_2px_rgb(0,0,0,0.3)] rounded-full flex justify-center items-center cursor-pointer"
               onClick={handleIncrement}
               whileTap={{ scale: 0.9 }}
             >
               <FaPlus className="text-lg text-carpetMoss" />
             </motion.span>
             <motion.span
-              className="bg-white p-1 shadow-[0_1px_2px_rgb(0,0,0,0.3)] rounded-full flex justify-center items-center"
+              className="bg-white p-1 shadow-[0_1px_2px_rgb(0,0,0,0.3)] rounded-full flex justify-center items-center cursor-pointer"
               onClick={handleRemoveFromCart}
               whileTap={{ scale: 0.9 }}
             >

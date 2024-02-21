@@ -1,24 +1,24 @@
 {
   "products": {
     "heading": "PRODOTTI",
-    "comingsoon": "PRESTO DISPONIBILE",
+    "comingsoon": "IN ARRIVO",
     "gotocategory": "Vai alla categoria",
-    "prerolled": "I joint pre-rolled fungono da biglietti d'oro per un'avventura sensoriale senza intoppi. Arrotolati con cura meticolosa, offrono piccoli pacchetti di relax e piacere. Seleziona la tua preferenza, accendi e immergiti in un mondo di sapore e serenità!"
+    "prerolled": "I joint prerollati fungono da biglietti d'oro per un'avventura sensoriale senza soluzione di continuità. Arrotolati con cura meticolosa, offrono piccoli pacchetti di relax e piacere. Seleziona la tua preferenza, accendi e immergiti in un mondo di sapori e serenità!"
   },
   "types": {
     "heading": "TIPI",
     "prerolled": {
-      "sativa": "La Sativa è l'amica vibrante che ti ispira a lasciare il divano e ballare nella luminosità della vita. Energizzante e fantasiosa, è perfetta per quei momenti in cui desideri esplorare nuovi mondi mentali mantenendo un sorriso sul viso.",
-      "indica": "Se cerchi l'abbraccio confortante di una poltrona accogliente, allora l'Indica è la tua compagna ideale. Conosciuta come la Regina del Relax, ti avvolge in un abbraccio che scioglie le preoccupazioni e ti immerge in una beatitudine serena.",
-      "hybrid": "Le varietà ibride sono come la migliore playlist della natura. Offrono il meglio di entrambi i mondi: gli effetti cerebrali stimolanti della Sativa combinati con il rilassamento fisico dell'Indica. È l'opzione versatile che ti permette di fluttuare tra le nuvole rimanendo ancorato alla realtà."
+      "Sativa": "La Sativa è l'amica vivace che ti ispira a lasciare il divano e a ballare nella luminosità della vita. Energizzante e fantasiosa, è perfetta per quei momenti in cui desideri esplorare nuovi regni mentali mantenendo un sorriso sul viso.",
+      "Indica": "Se cerchi l'abbraccio confortante di una poltrona accogliente, allora l'Indica è la tua compagna ideale. Conosciuta come la Regina del Relax, ti avvolge in un abbraccio che scioglie le preoccupazioni e ti immerge in una serenità beata.",
+      "Hybrid": "Gli ibridi sono come la migliore playlist della natura. Offrono il meglio di entrambi i mondi: gli effetti cerebrali stimolanti della Sativa combinati con il rilassamento fisico dell'Indica. È l'opzione versatile che ti permette di fluttuare tra le nuvole rimanendo ancorato alla realtà."
     }
   },
   "quality": {
     "heading": "QUALITÀ",
     "prerolled": {
-      "topquality": "I nostri joint pre-rolled di alta qualità sono l'epitome dell'eccellenza della cannabis. Coltivata idroponicamente, varietà Cali, e con una potenza che supera il 30% di THC, il fiore è scelto direttamente dal cliente. Ogni fiore è accompagnato da un certificato di test che verifica il contenuto di THC e CBD, così come l'assenza di pesticidi, garantendo massima trasparenza e qualità.",
-      "outdoor": "I nostri joint pre-rolled all'aperto offrono i prezzi più competitivi sul mercato senza compromettere la qualità. Ogni prodotto subisce meticolose verifiche manuali, garantendo un'esperienza accessibile senza sacrificare sicurezza e soddisfazione. Sottoponiamo regolarmente i nostri prodotti a ispezioni periodiche per mantenere gli standard di qualità più elevati.",
-      "indoor": "I nostri joint pre-rolled indoor rappresentano l'eccellenza con il miglior rapporto qualità-prezzo sul mercato. Coltivati in serre chiuse secondo gli standard più elevati, i nostri prodotti offrono un'esperienza di fumatura di alta qualità, risultato di una cura meticolosa e attenzione ai dettagli. Sottoponiamo regolarmente i nostri prodotti a ispezioni periodiche per mantenere gli standard di qualità più elevati."
+      "Top": "I nostri joint prerollati di alta qualità sono l'epitome dell'eccellenza della cannabis. Cannabis coltivata idroponicamente, varietà californiane e con una potenza superiore al 30% di THC, il fiore viene scelto direttamente dal cliente. Ogni fiore è accompagnato da un certificato di analisi che verifica il contenuto di THC e CBD, oltre all'assenza di pesticidi, garantendo massima trasparenza e qualità.",
+      "Outdoor": "I nostri joint prerollati all'aperto offrono i prezzi più competitivi sul mercato senza compromettere la qualità. Ogni prodotto viene sottoposto a meticolosi controlli manuali, garantendo un'esperienza accessibile senza sacrificare sicurezza e soddisfazione. Sottoponiamo regolarmente i nostri prodotti a ispezioni periodiche per mantenere gli standard di qualità più elevati.",
+      "Indoor": "I nostri joint prerollati indoor rappresentano l'eccellenza con il miglior rapporto qualità-prezzo sul mercato. Coltivati in serra chiusa con gli standard più elevati, i nostri prodotti offrono un'esperienza di fumatura di alta qualità, frutto di cure e attenzioni meticolose. Sottoponiamo regolarmente i nostri prodotti a ispezioni periodiche per mantenere gli standard di qualità più elevati."
     }
   },
   "size": {
@@ -30,13 +30,14 @@
     "quality": "Qualità",
     "size": "Dimensione",
     "price": "Prezzo",
-    "buymore": "Acquista di più",
-    "buynow": "Acquista ora",
-    "totalprice": "Prezzo Totale",
+    "buymore": "Compra di più",
+    "buynow": "Compra ora",
+    "totalprice": "Prezzo totale",
     "checkoutbtn": "CHECKOUT"
   },
   "thankyou": {
-    "gohome": "TORNA ALLA HOME",
-    "thankyoumsg": "per l'acquisto da noi!"
+    "gohome": "TORNA A CASA",
+    "thankyoumsg": "per l'acquisto da noi!",
+    "collectyourreceipt": "Si prega di raccogliere la ricevuta."
   }
 }

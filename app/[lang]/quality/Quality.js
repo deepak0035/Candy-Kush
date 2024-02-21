@@ -26,9 +26,7 @@ const Page = ({ lang, quality, size, addtocart, details }) => {
     <>
       <div
         onClick={handleMainDivClick}
-        className={`relative bg-texture bg-no-repeat bg-cover overflow-hidden w-full max-w-md min-h-screen space-y-6 px-4 py-8 ${
-          open ? "blur-sm transition duration-200 ease-out" : ""
-        }`}
+        className={`relative w-screen max-w-md min-h-screen space-y-6 px-4 py-8        }`}
       >
         <StepIndicator totalSteps={totalSteps} activeStep={activeStep} />
         <LogoSection cart={true} />
