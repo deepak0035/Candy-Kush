@@ -5,10 +5,8 @@ import LanguagesDropdown from "@/components/Dropdown/LanguagesDropdown";
 import MainHeading from "@/components/Headings/MainHeading";
 import { BsArrowRight } from "react-icons/bs";
 import { usePathname, useRouter } from "next/navigation"; // Import from next/router instead of next/navigation
-import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import { i18n } from "@/i18n";
-import Cookies from "js-cookie";
+
 
 
 const Page = () => {
