@@ -9,6 +9,7 @@ const ProductList = ({ type, quality, size, price, buymore, lang, buynow }) => {
   const router = useRouter();
   const cartItems = useSelector(selectCartItems);
 
+
   const handleUpdateData = () => {
     const route = `/${lang}/products`;
     router.push(route, undefined, { locale: lang });

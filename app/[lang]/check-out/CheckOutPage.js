@@ -8,8 +8,20 @@ import { useDispatch, useSelector } from "react-redux";
 import CurrencyFormat from "react-currency-format";
 import { useRouter } from "next/navigation";
 import { clearProductDetails } from "@/Redux/Slices/productDetailsSlice";
+import { postOrder } from "@/lib/helper";
+import { useQueryClient, useQuery, useMutation } from "react-query";
 
-const CheckOutPage = ({lang,type, quality,size,price, totalprice, checkout, buymore, buynow}) => {
+const CheckOutPage = ({
+  lang,
+  type,
+  quality,
+  size,
+  price,
+  totalprice,
+  checkout,
+  buymore,
+  buynow,
+}) => {
   const totalSteps = 6;
   const activeStep = 4;
 
@@ -17,11 +29,43 @@ const CheckOutPage = ({lang,type, quality,size,price, totalprice, checkout, buym
 
   const cartItems = useSelector(selectCartItems);
   const router = useRouter();
+const generateRandomId = () => {
+  const randomNumber = Math.floor(Math.random() * 10000)
+    .toString()
+    .padStart(4, "0"); // Generate random number between 0 and 9999 and pad to ensure it has 4 digits
 
-  const handleUpdateData = async() => {
+  return `ck-${randomNumber}`; // Concatenate "ck-" with the padded random numbers
+};
+
+
+
+
+  const addMutation = useMutation(postOrder, {
+    onSuccess: () => {
+      console.log("data received");
+    },
+  });
+
+  const handleUpdateData = async () => {
+    if (Object.keys(cartItems).length === 0) {
+      console.log("Don't have any data");
+    }
+
+    const model = {
+      customerNumber: generateRandomId(),
+      totalPrice: updatedTotal,
+      orderItems: cartItems,
+    };
+
+    console.log(model);
+    addMutation.mutate(model);
+
+    if (addMutation.isLoading) return console.log("loading");
+    if (addMutation.isError) return console.log("error");
+    if (addMutation.isSuccess) return console.log("success");
 
     // Push the updated route to the router
-    await router.push(`/${lang}/thankyou`)
+    await router.push(`/${lang}/thankyou`);
     dispatch(clearCart());
     dispatch(clearProductDetails());
 

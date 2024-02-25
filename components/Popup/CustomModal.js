@@ -70,10 +70,8 @@ const CustomModal = ({
   };
 
   const handleUpdateData = () => {
-    const productId = generateRandomId();
 
     const item = {
-      productId: productId,
       productName: productName,
       productType: productType,
       productQuality: productQuality,
