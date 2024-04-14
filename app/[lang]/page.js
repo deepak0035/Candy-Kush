@@ -14,11 +14,11 @@ const Page = () =>
 
 
   return (
-      <div className="w-screen min-h-screen max-w-md overflow-x-hidden flex flex-col backdrop-blur-xl bg-gray-100">
+      <div className="w-screen min-h-screen max-w-[698.7px] overflow-x-hidden flex flex-col justify-center backdrop-blur-xl bg-gray-100">
    
         <Slideshow images={productData.SlideShow} />
         <div className="flex-grow flex items-center justify-center  px-6  ">
-          <div className="grid grid-cols-6 w-full gap-x-2">
+          <div className="grid grid-cols-6 w-full gap-x-">
             <motion.div
               className="col-span-4 flex items-center justify-center"
               initial={{ x: -100, opacity: 0 }}

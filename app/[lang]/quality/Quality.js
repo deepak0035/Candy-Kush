@@ -26,7 +26,7 @@ const Page = ({ lang, quality, size, addtocart, details }) => {
     <>
       <div
         onClick={handleMainDivClick}
-        className={`relative w-screen max-w-md min-h-screen space-y-6 px-4 py-8        }`}
+        className={`relative w-screen max-w-[698.7px] min-h-screen space-y-6 px-4 py-8        }`}
       >
         <StepIndicator totalSteps={totalSteps} activeStep={activeStep} />
         <LogoSection cart={true} />
@@ -39,17 +39,16 @@ const Page = ({ lang, quality, size, addtocart, details }) => {
           />
         </div>
       </div>
- 
-        <CustomModal
-          open={open}
-          sizes={sizes}
-          onClose={onCloseModal}
-          parentWidth={"100%"}
-          lang={lang}
-          size={size}
-        addtocart={addtocart}
 
-        />
+      <CustomModal
+        open={open}
+        sizes={sizes}
+        onClose={onCloseModal}
+        parentWidth={"100%"}
+        lang={lang}
+        size={size}
+        addtocart={addtocart}
+      />
     </>
   );
 };

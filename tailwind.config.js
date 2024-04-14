@@ -34,6 +34,9 @@ module.exports = {
         smoke3: "url('/images/SmokePng/smoke3.png')",
         texture: "url('../public/images/Bg/texture.png')",
       },
+      width: {
+        kiosk: "698.7px", // Define your custom width here
+      },
     },
   },
   plugins: [],

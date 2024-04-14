@@ -37,7 +37,7 @@ const InfoModal = ({
     <AnimatePresence>
       {showDetails && (
         <motion.div
-          className="fixed px-6 m-auto bottom-0 right-0 left-0 z-50 w-full max-w-[28rem] min-h-screen flex justify-center items-center"
+          className="fixed px-6 m-auto bottom-0 right-0 left-0 z-50 w-full max-w-[698.7px] min-h-screen flex justify-center items-center"
           initial={{ backdropFilter: "blur(0px)" }} // Apply initial blur of 0px
           animate={{ backdropFilter: "blur(10px)" }} // Apply blur when modal is open
           exit={{ backdropFilter: "blur(0px)" }} // Remove blur when modal is closing

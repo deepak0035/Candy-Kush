@@ -14,7 +14,7 @@ const Page = ({ lang, thankyoumsg, gohome, collectyourreceipt }) => {
   const [scale, cycleScale] = useCycle(1, 1.2); // Using useCycle hook to cycle between 1 and 1.2 for scaling
 
   return (
-    <div className="relative  overflow-hidden w-screen max-w-md min-h-screen space-y-8 px-4 py-8">
+    <div className="relative  overflow-hidden w-screen max-w-[698.7px] min-h-screen space-y-8 px-4 py-8">
       {/* Step Indicator */}
       <StepIndicator totalSteps={totalSteps} activeStep={activeStep} />
 
@@ -79,7 +79,9 @@ const Page = ({ lang, thankyoumsg, gohome, collectyourreceipt }) => {
           </h1>
 
           {/* Thank You Message */}
-          <p className="text-lg text-center text-gray-500 font-normal">{thankyoumsg}</p>
+          <p className="text-lg text-center text-gray-500 font-normal">
+            {thankyoumsg}
+          </p>
         </div>
 
         {/* Go Home Button */}
