@@ -38,7 +38,7 @@ export default function RootLayout({ children, params }) {
         <body
           className={`${poppins.className} ${westcoast.variable}  ${westcoastline.variable}  ${krakens.variable} flex justify-center items-center`}
         >
-          <div className="min-h-screen w-full max-w-[698.7px]  flex justify-center items-center overflow-x-hidden">
+          <div className="min-h-[1920px] w-full max-w-[1080px]  flex justify-center items-center overflow-x-hidden">
             <Provider>
               {children}
               {/* Wrap children with Template */}

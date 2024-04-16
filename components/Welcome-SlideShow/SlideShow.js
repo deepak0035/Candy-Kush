@@ -22,11 +22,11 @@ const Slideshow = ({ images }) => {
     <div className="slideshow-wrapper">
       <Slider {...settings}>
         {images?.map((image, index) => (
-          <div key={index} className="slide-item">
-            <div className="slide-content">
+          <div key={index} className="slide-item ">
+            <div className="slide-content flex justify-center items-center">
               <Image
                 src={image}
-                width={500}
+                width={1000}
                 height={500}
                 className="object-fit"
                 alt={`Slide ${index + 1}`}
