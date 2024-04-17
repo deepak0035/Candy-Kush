@@ -41,7 +41,7 @@ const LogoSection = ({ cart, back }) => {
 
   return (
     <>
-      <div className="grid grid-cols-3 items-center justify-center py-2 gap-4">
+      <div className="grid grid-cols-3 items-center justify-center py-16 px-6 gap-4">
         <div
           className={`${
             !back ? "flex items-center justify-start space-x-2" : "invisible"
@@ -51,7 +51,7 @@ const LogoSection = ({ cart, back }) => {
             onClick={handleBackClick}
             className="px-2 py-2 bg-carpetMoss bg-opacity-100 rounded-xl shadow-[0_1px_2px_rgb(0,0,0,0.7)]"
           >
-            <IoIosArrowBack className="text-white text-4xl" />
+            <IoIosArrowBack className="text-white text-6xl" />
           </button>
         </div>
         <div className="col-span-1 flex items-center justify-center">
@@ -66,7 +66,7 @@ const LogoSection = ({ cart, back }) => {
               viewBox="0 0 94.62 192.14"
               enableBackground="new 0 0 94.62 192.14"
               xmlSpace="preserve"
-              className="absolute w-10 h-10 top-10 -left-2"
+              className="absolute w-20 h-20 top-20 -left-5"
             >
               <g id="Layer_1">
                 <g>
@@ -108,8 +108,8 @@ const LogoSection = ({ cart, back }) => {
             </svg>
             <Image
               src={logo}
-              width={110}
-              height={110}
+              width={220}
+              height={220}
               alt="Picture of the author"
               className="cursor-pointer object-cover"
             />
@@ -122,7 +122,7 @@ const LogoSection = ({ cart, back }) => {
             onClick={handleCartClick}
             className="px-2 py-2 bg-carpetMoss bg-opacity-100 rounded-xl shadow-[0_1px_2px_rgb(0,0,0,0.7)] relative"
           >
-            <IoCartOutline className="text-white text-4xl" />
+            <IoCartOutline className="text-white text-6xl" />
             {cartItemCount > 0 && (
               <span className="absolute -top-2 right-2 p-2 bg-yellow-300 text-carpetMoss text-sm font-semibold rounded-full w-5 h-5 flex items-center justify-center">
                 {cartItemCount}

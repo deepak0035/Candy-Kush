@@ -17,9 +17,9 @@ const Page = () =>
     <div className="w-screen min-h-[1920px] max-w-[1080px] overflow-x-hidden flex flex-col justify-center backdrop-blur-xl bg-gray-100">
       <Slideshow images={productData.SlideShow} />
       <div className="flex-grow flex items-center justify-center  px-6  ">
-        <div className="grid grid-cols-6 w-full gap-x-">
+        <div className="grid grid-cols-2 w-full place-items-center">
           <motion.div
-            className="col-span-4 flex items-center justify-center"
+            className="col-span-1 flex items-center justify-center" 
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ type: "spring", stiffness: 120, duration: 1 }}
@@ -34,18 +34,18 @@ const Page = () =>
           </motion.div>
 
           <motion.div
-            className="col-span-2 flex items-center justify-center"
+            className="col-span-1 flex items-center justify-center"
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ type: "spring", stiffness: 120, duration: 1 }}
           >
             <Link
               href={"/languages"}
-              className="flex flex-col justify-center items-center px-4 py-1 border-solid border-2 border-carpetMoss line-clamp-3 rounded-lg text-carpetMoss text-center h-24 w-72 md:h-24 md:w-96 font-semibold"
+              className="flex flex-col justify-center items-center px-4 py-1 border-solid border-2 border-carpetMoss line-clamp-3 rounded-lg text-carpetMoss text-center h-24 w-72 md:h-24 md:w-96 font-semibold text-lg"
             >
               Select Languages
               <span className="mt-1">
-                <CiGlobe className=" text-4xl md:text-3xl" />
+                <CiGlobe className=" text-4xl md:text-5xl" />
               </span>
             </Link>
           </motion.div>

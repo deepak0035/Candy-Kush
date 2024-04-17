@@ -18,7 +18,7 @@ import InfoModal from "../Popup/InfoModal";
 
 const CustomPrevArrow = ({ currentSlide, slideCount, onClick }) => (
   <div
-    className="absolute -top-1 h-8 w-full "
+    className="absolute top-1 h-8 w-full "
     style={{ animation: "moveUpDown 1.5s infinite", zIndex: 1 }}
   >
     <div
@@ -27,7 +27,7 @@ const CustomPrevArrow = ({ currentSlide, slideCount, onClick }) => (
       }`}
     >
       <FaChevronUp
-        className="absolute text-4xl opacity-30 z-10 inset-0 m-auto"
+        className="absolute text-5xl opacity-30 z-10 inset-0 m-auto"
         onClick={() => {
           if (currentSlide !== 0) {
             onClick();
@@ -40,7 +40,7 @@ const CustomPrevArrow = ({ currentSlide, slideCount, onClick }) => (
 
 const CustomNextArrow = ({ currentSlide, slideCount, onClick }) => (
   <div
-    className="absolute bottom-3 h-8 w-full "
+    className="absolute bottom-1 h-8 w-full "
     style={{ animation: "moveUpDown 1.5s infinite" }}
   >
     <div
@@ -49,7 +49,7 @@ const CustomNextArrow = ({ currentSlide, slideCount, onClick }) => (
       }`}
     >
       <FaChevronDown
-        className="absolute text-4xl opacity-30 z-10 inset-0 m-auto"
+        className="absolute text-5xl opacity-30 z-10 inset-0 m-auto"
         onClick={() => {
           if (currentSlide !== slideCount - 1) {
             onClick();
@@ -125,11 +125,11 @@ const SwipeableProductCarousel = ({ types, lang, details }) =>
   };
 
   return (
-    <div className="relative rounded-xl mx-4 shadow-[0_0px_5px_rgb(0,0,0.5,0.3)]">
-      <h2 className="text-center py-2 px-4 font-bold text-3xl rounded-t-xl bg-carpetMoss text-white">
+    <div className="relative rounded-xl mx-8 shadow-[0_0px_5px_rgb(0,0,0.5,0.3)] my-12">
+      <h2 className="text-center py-6 px-4 font-bold text-6xl rounded-t-xl bg-carpetMoss text-white">
         {types}
       </h2>
-      <div className="min-h-[33rem] max-h-[33rem] bg-gradient-to-t from-carpetMoss/40 to-white/30 bg-opacity-50 backdrop-blur-md rounded-b-xl">
+      <div className="min-h-[60rem] max-h-[33rem] bg-gradient-to-t from-carpetMoss/40 to-white/30 bg-opacity-50 backdrop-blur-md rounded-b-xl">
         <Slider {...settings} ref={sliderRef}>
           {productTypes?.map((type, index) => (
             <div
@@ -139,7 +139,7 @@ const SwipeableProductCarousel = ({ types, lang, details }) =>
               <div className="py-5" />
               <div className="absolute top-12 right-12 cursor-pointer">
                 <IoMdHelpCircle
-                  className="text-gray-500 text-3xl z-20 cursor-pointer"
+                  className="text-gray-500 text-5xl z-20 cursor-pointer"
                   onClick={() => openModal(type.type)}
                 />
               </div>
@@ -154,9 +154,9 @@ const SwipeableProductCarousel = ({ types, lang, details }) =>
                 >
                   <Image
                     src={type.typeImage}
-                    width={150}
-                    height={150}
-                    className="object-cover cursor-pointer z-10 my-2"
+                    width={280}
+                    height={240}
+                    className="object-cover cursor-pointer z-10 my-9"
                     alt={`Slide ${index + 1}`}
                     onClick={() => handleUpdateData(type)}
                     loading="lazy"

@@ -21,7 +21,7 @@ const ProductList = ({ comingsoon, lang, gotocategory, prerolled, products }) =>
   );
 
   return (
-    <div className="space-y-8 py-4 px-2">
+    <div className="space-y-12 py-12 px-2">
       {repeatedProducts.map((product, index) => (
         <motion.div
           key={index}

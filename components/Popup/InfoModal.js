@@ -37,21 +37,21 @@ const InfoModal = ({
     <AnimatePresence>
       {showDetails && (
         <motion.div
-          className="fixed px-6 m-auto bottom-0 right-0 left-0 z-50 w-full max-w-[698.7px] min-h-screen flex justify-center items-center"
+          className="fixed px-6 m-auto bottom-0 right-0 left-0 z-50 w-full max-w-[1080px] min-h-[1920px] flex justify-center items-center"
           initial={{ backdropFilter: "blur(0px)" }} // Apply initial blur of 0px
           animate={{ backdropFilter: "blur(10px)" }} // Apply blur when modal is open
           exit={{ backdropFilter: "blur(0px)" }} // Remove blur when modal is closing
           onClick={closeDetailsModal} // Close the modal when clicking outside of it
         >
           <motion.div
-            className="bg-green-50/80 rounded-2xl shadow-[0_1px_4px_rgb(0,0,0,0.8)] border px-4 py-4"
+            className="bg-green-50/80 rounded-2xl shadow-[0_1px_4px_rgb(0,0,0,0.8)] border px-4 py-6"
             onClick={(e) => e.stopPropagation()}
             variants={dropIn}
             initial="hidden"
             animate="visible"
             exit="exit"
           >
-            <div class="grid grid-cols-5 gap-4">
+            <div class="grid grid-cols-6 gap-4 pb-3">
               <div className="flex justify-end col-span-3">
                 <BsInfoCircleFill
                   className="text-carpetMoss text-3xl cursor-pointer"
@@ -59,14 +59,14 @@ const InfoModal = ({
                 />
               </div>
 
-              <div className="flex justify-end col-span-2">
+              <div className="flex justify-end col-span-3">
                 <IoMdClose
-                  className="text-gray-700 text-xl cursor-pointer"
+                  className="text-gray-700 text-2xl cursor-pointer"
                   onClick={closeDetailsModal}
                 />
               </div>
             </div>
-            <h2 className="text-[0.85rem] text-center text-black/50 my-3 px-2">
+            <h2 className="text-[1rem] text-center text-black/50 my-3 px-2">
               {description}
             </h2>
             {/* Add additional product details here */}

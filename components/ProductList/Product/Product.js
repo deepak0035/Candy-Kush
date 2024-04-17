@@ -60,28 +60,28 @@ const Product = ({ product, comingsoon, lang, gotocategory, prerolled }) => {
   return (
     <div className="relative">
       {!name ? (
-        <div className="grid grid-cols-7 text-gray-400 gap-4 bg-white rounded-2xl border-2 border-gray-300 h-24 px-4 place-items-center">
-          <h1 className="col-span-full text-2xl font-semibold tracking-widest">
+        <div className="grid grid-cols-3 text-gray-400 gap-4 bg-white rounded-2xl border-2 border-gray-300 h-36 px-4 place-items-center">
+          <h1 className="col-span-full text-4xl font-semibold tracking-widest">
             {comingsoon}
           </h1>
         </div>
       ) : (
         <div
-          className="grid grid-cols-7 text-carpetMoss gap-4 bg-white rounded-2xl shadow-xl h-24 px-4 place-items-center cursor-pointer border-2 border-carpetMoss"
+          className="grid grid-cols-3 text-carpetMoss gap-4 bg-white rounded-2xl shadow-xl h-36 px-4 place-items-center cursor-pointer border-2 border-carpetMoss"
           onClick={handleUpdateData}
         >
-          <div className="col-span-2">
-            <h2 className="text-base">{name}</h2>
+          <div className="col-span-1">
+            <h2 className="text-4xl font-medium" >{name}</h2>
           </div>
-          <div className="col-span-3 relative w-full h-24 overflow-hidden">
+          <div className="col-span-1 relative w-full h-36 overflow-hidden ">
             {productImage.map((image, index) => (
               <Image
                 key={index}
                 src={image}
-                width={40}
-                height={40}
+                width={60}
+                height={60}
                 alt={`Image ${index}`}
-                className={`absolute top-1.5 left-12 transform origin-bottom ${
+                className={`absolute top-1.5 left-32 transform origin-bottom ${
                   index === 0
                     ? "z-10"
                     : index % 2 === 0
@@ -93,17 +93,17 @@ const Product = ({ product, comingsoon, lang, gotocategory, prerolled }) => {
               />
             ))}
           </div>
-          <div className="col-span-2 flex justify-between items-center">
-            <span className="text-xs">{gotocategory}</span>
+          <div className="col-span-1 flex justify-between items-center">
+            <span className="text-2xl">{gotocategory}</span>
             <span>
-              <IoIosArrowForward className="text-xs" />
+              <IoIosArrowForward className="text-2xl" />
             </span>
           </div>
           <div
             className="absolute top-2 right-2 cursor-pointer"
             onClick={openDetailsModal}
           >
-            <IoMdHelpCircle className="text-gray-500 text-3xl z-10" />
+            <IoMdHelpCircle className="text-gray-500 text-5xl z-10" />
           </div>
         </div>
       )}

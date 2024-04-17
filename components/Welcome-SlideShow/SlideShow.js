@@ -26,8 +26,8 @@ const Slideshow = ({ images }) => {
             <div className="slide-content flex justify-center items-center">
               <Image
                 src={image}
-                width={1000}
-                height={500}
+                width={1080}
+                height={980}
                 className="object-fit"
                 alt={`Slide ${index + 1}`}
                 loading="lazy" // Adding lazy loading
