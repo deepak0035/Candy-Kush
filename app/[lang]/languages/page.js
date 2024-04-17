@@ -30,7 +30,7 @@ const handleSetLang = () => {
 };
 
   return (
-    <div className="relative  overflow-hidden w-full max-w-[698.7px] min-h-screen space-y-4 px-4 py-8">
+    <div className="relative  overflow-hidden w-full max-w-[1080px] min-h-[1920px] space-y-4 px-4 py-8">
       <StepIndicator totalSteps={totalSteps} activeStep={activeStep} />
       <LogoSection cart={false} />
       <MainHeading heading={"LANGUAGES"} />
@@ -38,11 +38,12 @@ const handleSetLang = () => {
       <div className="flex justify-center items-center py-2">
         <button
           onClick={() => handleSetLang("en")} // Change the language to "en" on button click
-          className="relative px-4 py-2 line-clamp-3 rounded-full bg-gradient-to-r from-carpetMoss to-carpetMoss via-green-500 text-white text-center h-12 w-4/5 md:h-16 md:w-96 font-semibold"
+          className="relative px-4 py-2 line-clamp-3 rounded-full bg-gradient-to-r from-carpetMoss to-carpetMoss via-green-500 text-white text-center h-24 w-4/5 
+          md:h-24 md:w-[40rem] font-semibold"
         >
-          <span className="text-2xl">Next</span>
-          <span className="absolute top-3 right-4 md:top-5">
-            <BsArrowRight className="text-2xl" />
+          <span className="text-4xl">Next</span>
+          <span className="absolute top-4.5 right-6">
+            <BsArrowRight className="text-4xl" />
           </span>
         </button>
       </div>

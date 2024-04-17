@@ -1,22 +1,4 @@
-.custom-modal-overlay {
-    display: flex;
-    position: fixed;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    margin: auto;
-    width: 100%;
-    max-width: 698.7px;
-    height: 26rem;
-    overflow-y: hidden;
-    z-index: 10;
-    justify-content: center;
-    align-items: start;
-backdrop-filter: blur(5px);
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.5s;
-}
+
 
 .custom-modal-overlay.visible {
     visibility: visible;

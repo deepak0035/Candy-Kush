@@ -60,28 +60,28 @@ const Product = ({ product, comingsoon, lang, gotocategory, prerolled }) => {
   return (
     <div className="relative">
       {!name ? (
-        <div className="grid grid-cols-3 text-gray-400 gap-4 bg-white rounded-2xl border-2 border-gray-300 h-36 px-4 place-items-center">
+        <div className="grid grid-cols-3 text-gray-400 gap-4 bg-white rounded-2xl border-2 border-gray-300 h-44 px-4 place-items-center">
           <h1 className="col-span-full text-4xl font-semibold tracking-widest">
             {comingsoon}
           </h1>
         </div>
       ) : (
         <div
-          className="grid grid-cols-3 text-carpetMoss gap-4 bg-white rounded-2xl shadow-xl h-36 px-4 place-items-center cursor-pointer border-2 border-carpetMoss"
+          className="grid grid-cols-3 text-carpetMoss gap-4 bg-white rounded-2xl shadow-xl h-44 px-4 place-items-center cursor-pointer border-2 border-carpetMoss"
           onClick={handleUpdateData}
         >
           <div className="col-span-1">
             <h2 className="text-4xl font-medium" >{name}</h2>
           </div>
-          <div className="col-span-1 relative w-full h-36 overflow-hidden ">
+          <div className="col-span-1 relative w-full h-44 overflow-hidden ">
             {productImage.map((image, index) => (
               <Image
                 key={index}
                 src={image}
-                width={60}
-                height={60}
+                width={75}
+                height={75}
                 alt={`Image ${index}`}
-                className={`absolute top-1.5 left-32 transform origin-bottom ${
+                className={`absolute top-2 left-32 transform origin-bottom ${
                   index === 0
                     ? "z-10"
                     : index % 2 === 0

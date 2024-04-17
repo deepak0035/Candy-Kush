@@ -30,7 +30,7 @@ const CustomPrevArrow = ({ currentSlide, slideCount, onClick }) => (
       }`}
     >
       <FaChevronLeft
-        className="absolute text-4xl opacity-30  inset-0 m-auto"
+        className="absolute text-5xl opacity-30  inset-0 m-auto"
         onClick={() => {
           if (currentSlide !== 0) {
             onClick();
@@ -43,7 +43,7 @@ const CustomPrevArrow = ({ currentSlide, slideCount, onClick }) => (
 
 const CustomNextArrow = ({ currentSlide, slideCount, onClick }) => (
   <div
-    className="absolute top-0 right-6 h-full w-6 "
+    className="absolute top-0 right-8 h-full w-6 "
     style={{ animation: "moveRightLeft 1.5s infinite", zIndex: 1 }}
   >
     <div
@@ -57,7 +57,7 @@ const CustomNextArrow = ({ currentSlide, slideCount, onClick }) => (
             onClick();
           }
         }}
-        className="absolute text-4xl opacity-30 inset-0 m-auto"
+        className="absolute text-5xl opacity-30 inset-0 m-auto"
       />
     </div>
   </div>
@@ -129,11 +129,11 @@ const SwipeableProductCarousel = ({ onOpen, setSizes, quality, details }) => {
   };
 
   return (
-    <div className="relative rounded-xl mx-4 shadow-[0_0px_5px_rgb(0,0,0.5,0.3)] ">
-      <h2 className=" text-center py-2 px-4 font-bold text-3xl rounded-t-xl bg-carpetMoss text-white">
+    <div className="relative rounded-xl mx-8 shadow-[0_0px_5px_rgb(0,0,0.5,0.3)] my-12">
+      <h2 className=" text-center py-6 px-4 font-bold text-6xl rounded-t-xl bg-carpetMoss text-white">
         {quality}
       </h2>
-      <div className=" min-h-[33rem] max-h-[33rem] bg-gradient-to-t from-carpetMoss/40 to-white/30 bg-opacity-50 backdrop-blur-md rounded-b-xl">
+      <div className=" min-h-[60rem] max-h-[33rem] bg-gradient-to-t from-carpetMoss/40 to-white/30 bg-opacity-50 backdrop-blur-md rounded-b-xl">
         <Slider {...settings} ref={sliderRef}>
           {productQuality.map((quality, index) => (
             <div
@@ -143,7 +143,7 @@ const SwipeableProductCarousel = ({ onOpen, setSizes, quality, details }) => {
               <div className="py-5" />
               <div className="absolute top-12 right-12 cursor-pointer">
                 <IoMdHelpCircle
-                  className="text-gray-500 text-3xl z-20 cursor-pointer"
+                  className="text-gray-500 text-6xl z-40 cursor-pointer"
                   onClick={() => openModal(quality.quality)}
                 />
               </div>
@@ -158,8 +158,8 @@ const SwipeableProductCarousel = ({ onOpen, setSizes, quality, details }) => {
                 >
                   <Image
                     src={quality.qualityImage}
-                    width={150}
-                    height={150}
+                    width={280}
+                    height={280}
                     className="object-cover cursor-pointer z-10 my-2"
                     onClick={() => handleUpdateData(quality)}
                     alt={`Slide ${index + 1}`}

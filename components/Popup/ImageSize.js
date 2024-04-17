@@ -10,14 +10,14 @@ const ImageSize = ({ image, name, price, size, handleSetData, isSelected }) => {
 
   // Set width and height based on the size
   if (size === "Small") {
-    width = 60;
-    height = 60;
+    width = 90;
+    height = 80;
   } else if (size === "Normal") {
-    width = 65;
-    height = 65;
+    width = 110;
+    height = 175;
   } else if (size === "King") {
-    width = 70;
-    height = 70;
+    width = 140;
+    height = 200;
   }
 
   const handleClick = () => {
@@ -26,13 +26,13 @@ const ImageSize = ({ image, name, price, size, handleSetData, isSelected }) => {
 
   return (
     <motion.div
-      className={`relative h-64 w-32 flex justify-center items-end`}
+      className={`relative h-[38rem] w-56 flex justify-center items-end py-12`}
       animate={{ scale: isSelected ? 1.05 : 1 }} // Apply scale animation when selected
     >
       {isSelected && (
-        <div className="absolute top-0 right-0 p-2 z-10">
+        <div className="absolute top-10 right-0 p-2 z-10">
           <div className="bg-white border-solid border-4  p-1  rounded-full flex justify-center items-center">
-            <HiCheck className="text-2xl font-bold text-carpetMoss " />
+            <HiCheck className="text-4xl font-bold text-carpetMoss " />
           </div>
         </div>
       )}
@@ -40,7 +40,7 @@ const ImageSize = ({ image, name, price, size, handleSetData, isSelected }) => {
       <motion.div
         className={`flex flex-col items-center justify-end ${
           isSelected
-            ? "w-full h-full rounded-xl border-solid border-2 border-opacity-50 border-carpetMoss backdrop-blur-md "
+            ? "w-full h-full p-1  rounded-xl border-solid border-2 border-opacity-50 border-carpetMoss backdrop-blur-md "
             : ""
         }`}
         animate={{ scale: isSelected ? 1.05 : 1 }} // Apply scale animation when selected
@@ -55,7 +55,7 @@ const ImageSize = ({ image, name, price, size, handleSetData, isSelected }) => {
           loading="lazy"
         />
         <h2
-          className={`text-center px-4 pt-1 text-carpetMoss ${
+          className={`text-center text-3xl px-4 pt-1 text-carpetMoss ${
             isSelected ? "text-black font-medium" : ""
           }`}
         >
@@ -66,7 +66,7 @@ const ImageSize = ({ image, name, price, size, handleSetData, isSelected }) => {
           displayType={"text"}
           thousandSeparator={true}
           prefix={"฿"}
-          className="text-pottBlack px-1 font-medium"
+          className="text-pottBlack text-3xl px-1 font-medium"
         />
       </motion.div>
     </motion.div>

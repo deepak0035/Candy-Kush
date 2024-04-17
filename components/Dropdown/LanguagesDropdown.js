@@ -35,19 +35,19 @@ const options = [
   };
 
   return (
-    <div className="flex justify-center items-center py-4">
+    <div className="flex justify-center items-center py-12">
       <div className="inline-block text-left">
         <div>
-          <span className="rounded-xl w-96 text-lg font-medium  border shadow-md bg-white px-8 py-4 inline-flex justify-between items-center relative">
+          <span className="rounded-xl w-[60rem] text-3xl font-medium  border shadow-md bg-white px-8 py-8 inline-flex justify-between items-center relative">
             Select Language
           </span>
         </div>
 
-        <div className="mt-2 max-h-[19.5rem] shadow-lg overflow-y-auto overflow-x-hidden backdrop-blur-xl bg-blurred rounded-xl">
+        <div className="mt-2 max-h-[44rem] shadow-lg overflow-y-auto overflow-x-hidden backdrop-blur-xl bg-blurred rounded-xl">
           {options.map((option) => (
             <motion.div
               key={option.language}
-              className={`block px-4 py-2 cursor-pointer text-lg  ${
+              className={`block px-8 py-4 cursor-pointer text-lg  ${
                 selectedOption === option.language ? "bg-selected " : ""
               }`}
               onClick={() => handleOptionClick(option)}
@@ -55,10 +55,10 @@ const options = [
               animate={{ scale: selectedOption === option.language ? 1.12 : 1 }}
             >
               <div className={`flex justify-between items-center py-2 px-2
-              ${selectedOption === option.language ? "px-3 py-3 " : ""}
+              ${selectedOption === option.language ? "px-12 py-6 " : ""}
               `}>
-                <div className="flex items-center px-2">
-                  <div className={`relative overflow-hidden rounded-full h-7 w-7`}>
+                <div className="flex items-center px-4">
+                  <div className={`relative overflow-hidden rounded-full h-16 w-16`}>
                     <Image
                       src={`http://purecatamphetamine.github.io/country-flag-icons/3x2/${option.flag}.svg`}
                       width={150}
@@ -67,11 +67,11 @@ const options = [
                       alt={option.country}
                     />
                   </div>
-                  <div className="ml-4">{option.language}</div>
+                  <div className="ml-6 text-3xl">{option.language}</div>
                 </div>
 
                 {selectedOption === option.language && (
-                  <HiCheck className=" text-xl md:text-xl" />
+                  <HiCheck className=" text-3xl md:text-3xl" />
                 )}
               </div>
             </motion.div>

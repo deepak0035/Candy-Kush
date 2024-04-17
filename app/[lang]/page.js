@@ -26,10 +26,10 @@ const Page = () =>
           >
             <Link
               href={"/products"}
-              className="flex flex-col justify-center items-center px-4 py-1 line-clamp-3 rounded-lg bg-gradient-to-r from-carpetMoss to-carpetMoss via-green-500 text-white text-center h-24 w-72 md:h-24 md:w-96 font-semibold"
+              className="flex flex-col justify-center items-center px-4 py-1 line-clamp-3 rounded-lg bg-gradient-to-r from-carpetMoss to-carpetMoss via-green-500 text-white text-center h-24 w-72 md:h-36 md:w-[30rem] font-semibold"
             >
-              <span className="text-lg">Click here to</span>
-              <span className="text-2xl">BUY NOW!</span>
+              <span className="text-3xl">Click here to</span>
+              <span className="text-4xl">BUY NOW!</span>
             </Link>
           </motion.div>
 
@@ -41,11 +41,11 @@ const Page = () =>
           >
             <Link
               href={"/languages"}
-              className="flex flex-col justify-center items-center px-4 py-1 border-solid border-2 border-carpetMoss line-clamp-3 rounded-lg text-carpetMoss text-center h-24 w-72 md:h-24 md:w-96 font-semibold text-lg"
+              className="flex flex-col justify-center items-center px-4 py-1 border-solid border-2 border-carpetMoss line-clamp-3 rounded-lg text-carpetMoss text-center h-24 w-72 md:h-36 md:w-[30rem] font-semibold text-3xl"
             >
               Select Languages
               <span className="mt-1">
-                <CiGlobe className=" text-4xl md:text-5xl" />
+                <CiGlobe className=" text-4xl md:text-6xl" />
               </span>
             </Link>
           </motion.div>

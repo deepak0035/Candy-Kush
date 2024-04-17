@@ -98,14 +98,14 @@ const CustomModal = ({
     <AnimatePresence>
       {open && (
         <motion.div
-          className="fixed m-auto bottom-0 right-0 left-0 z-50 w-full max-w-[698.7px] min-h-screen flex justify-center items-end"
+          className="fixed m-auto bottom-0 right-0 left-0 z-50 w-full max-w-[1080px] min-h-[1920px] flex justify-center items-end"
           initial={{ backdropFilter: "blur(0px)" }} // Apply initial blur of 0px
           animate={{ backdropFilter: "blur(8px)" }} // Apply blur when modal is open
           exit={{ backdropFilter: "blur(0px)" }} // Remove blur when modal is closing
           onClick={onClose} // Close the modal when clicking outside of it
         >
           <motion.div
-            className="custom-modal flex flex-col justify-center h-full"
+            className="custom-modal flex flex-col justify-center h-[56rem]"
             style={modalStyle}
             onClick={(e) => e.stopPropagation()}
             variants={dropIn}
@@ -113,10 +113,10 @@ const CustomModal = ({
             animate="visible"
             exit="exit"
           >
-            <h2 className="text-center py-3 px-4 font-bold text-3xl rounded-t-[3rem]  text-white bg-carpetMoss">
+            <h2 className="text-center py-6 px-4 font-bold text-6xl rounded-t-[3rem]  text-white bg-carpetMoss">
               {size}
             </h2>
-            <div className="bg-white flex justify-evenly items-end pt-4">
+            <div className="bg-white flex justify-evenly items-end h-full pt-4">
               {sizes.map(({ i, imgUrl, width, height, name, price, size }) => (
                 <ImageSize
                   key={i}
@@ -134,7 +134,7 @@ const CustomModal = ({
             <div className="flex justify-center items-center py-2 h-full bg-white">
               <button
                 onClick={handleUpdateData}
-                className="relative px-4 py-2  line-clamp-3 rounded-full bg-gradient-to-r from-carpetMoss to-carpetMoss via-green-500 text-white text-center h-12 w-4/5 md:h-16 md:w-96 font-semibold"
+                className="relative px-4 py-2  line-clamp-3 text-4xl rounded-full bg-gradient-to-r from-carpetMoss to-carpetMoss via-green-500 text-white text-center h-12 w-4/5 md:h-24 md:w-[40rem] font-semibold"
               >
                 {addtocart}
               </button>

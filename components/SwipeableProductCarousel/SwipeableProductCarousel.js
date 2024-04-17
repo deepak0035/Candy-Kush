@@ -139,7 +139,7 @@ const SwipeableProductCarousel = ({ types, lang, details }) =>
               <div className="py-5" />
               <div className="absolute top-12 right-12 cursor-pointer">
                 <IoMdHelpCircle
-                  className="text-gray-500 text-5xl z-20 cursor-pointer"
+                  className="text-gray-500 text-6xl z-20 cursor-pointer"
                   onClick={() => openModal(type.type)}
                 />
               </div>
