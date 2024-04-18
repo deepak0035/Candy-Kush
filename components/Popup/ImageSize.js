@@ -26,7 +26,7 @@ const ImageSize = ({ image, name, price, size, handleSetData, isSelected }) => {
 
   return (
     <motion.div
-      className={`relative h-[38rem] w-56 flex justify-center items-end py-12`}
+      className={`relative h-[36rem] w-56 flex justify-center items-end py-12`}
       animate={{ scale: isSelected ? 1.05 : 1 }} // Apply scale animation when selected
     >
       {isSelected && (
@@ -40,7 +40,7 @@ const ImageSize = ({ image, name, price, size, handleSetData, isSelected }) => {
       <motion.div
         className={`flex flex-col items-center justify-end ${
           isSelected
-            ? "w-full h-full p-1  rounded-xl border-solid border-2 border-opacity-50 border-carpetMoss backdrop-blur-md "
+            ? "w-full h-full  rounded-xl border-solid border-2 border-opacity-50 border-carpetMoss backdrop-blur-md "
             : ""
         }`}
         animate={{ scale: isSelected ? 1.05 : 1 }} // Apply scale animation when selected
@@ -55,7 +55,7 @@ const ImageSize = ({ image, name, price, size, handleSetData, isSelected }) => {
           loading="lazy"
         />
         <h2
-          className={`text-center text-3xl px-4 pt-1 text-carpetMoss ${
+          className={`text-center text-3xl px-4 pt-2 text-carpetMoss ${
             isSelected ? "text-black font-medium" : ""
           }`}
         >
@@ -66,7 +66,7 @@ const ImageSize = ({ image, name, price, size, handleSetData, isSelected }) => {
           displayType={"text"}
           thousandSeparator={true}
           prefix={"฿"}
-          className="text-pottBlack text-3xl px-1 font-medium"
+          className="text-pottBlack text-3xl pt-1 px-1 font-medium"
         />
       </motion.div>
     </motion.div>

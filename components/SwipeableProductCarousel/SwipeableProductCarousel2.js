@@ -160,7 +160,7 @@ const SwipeableProductCarousel = ({ onOpen, setSizes, quality, details }) => {
                     src={quality.qualityImage}
                     width={280}
                     height={280}
-                    className="object-cover cursor-pointer z-10 my-2"
+                    className="object-cover cursor-pointer z-10 my-9"
                     onClick={() => handleUpdateData(quality)}
                     alt={`Slide ${index + 1}`}
                     loading="lazy" // Adding lazy loading

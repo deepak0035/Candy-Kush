@@ -69,6 +69,8 @@ const CustomModal = ({
     setSelectedSize(size); // Update the selectedSize in the modal
   };
 
+
+
   const handleUpdateData = () => {
 
     const item = {
@@ -79,6 +81,7 @@ const CustomModal = ({
       productSize: productSize,
       productImage: productImage,
       productQuantity: 1,
+      productId: generateRandomId(),
     };
     dispatch(addToCart(item));
 
@@ -105,7 +108,7 @@ const CustomModal = ({
           onClick={onClose} // Close the modal when clicking outside of it
         >
           <motion.div
-            className="custom-modal flex flex-col justify-center h-[56rem]"
+            className="custom-modal flex flex-col justify-center h-[52rem]"
             style={modalStyle}
             onClick={(e) => e.stopPropagation()}
             variants={dropIn}

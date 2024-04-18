@@ -55,7 +55,7 @@ const options = [
               animate={{ scale: selectedOption === option.language ? 1.12 : 1 }}
             >
               <div className={`flex justify-between items-center py-2 px-2
-              ${selectedOption === option.language ? "px-12 py-6 " : ""}
+              ${selectedOption === option.language ? "px-16 py-6 " : ""}
               `}>
                 <div className="flex items-center px-4">
                   <div className={`relative overflow-hidden rounded-full h-16 w-16`}>

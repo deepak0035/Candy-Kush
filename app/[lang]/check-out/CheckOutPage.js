@@ -95,7 +95,7 @@ const CheckOutPage = ({
 
   return (
     <>
-      <div className="relative  overflow-hidden w-screen max-w-[698.7px]  min-h-screen space-y-6 px-4 py-8">
+      <div className="relative  overflow-hidden w-screen max-w-[1080px]  min-h-[1920px] space-y-6 px-8 py-12">
         <StepIndicator totalSteps={totalSteps} activeStep={activeStep} />
         <LogoSection cart={true} />
         <OrderList
@@ -108,9 +108,9 @@ const CheckOutPage = ({
           lang={lang}
         />
 
-        <div className="fixed bottom-6 left-0 right-0 flex flex-col justify-center items-center py-2">
-          <p className="text-gray-500 text-lg ">
-            {totalprice}:{" "}
+        <div className="fixed bottom-6 left-0 right-0 flex flex-col justify-center items-center py-2 space-y-2">
+          <p className="text-gray-500 text-4xl ">
+            {totalprice}:
             <CurrencyFormat
               value={updatedTotal}
               displayType={"text"}
@@ -126,7 +126,7 @@ const CheckOutPage = ({
               cartItems.length === 0
                 ? "bg-gray-300 text-gray-600 cursor-not-allowed"
                 : "bg-gradient-to-r from-carpetMoss to-carpetMoss via-green-500 text-white cursor-pointer"
-            } text-center h-12 w-4/5 md:h-16 md:w-96 font-semibold`}
+            } text-center text-3xl h-12 w-4/5 md:h-24 md:w-[40rem] font-semibold`}
             disabled={cartItems.length === 0}
           >
             {checkout}

@@ -29,7 +29,8 @@ const Product = ({ product, quality, size, price, type }) => {
     dispatch(removeFromCart(productId));
   };
 
-  const handleIncrement = () => {
+  const handleIncrement = () =>
+  {
     dispatch(incrementQuantity(productId));
   };
 
@@ -59,7 +60,7 @@ const Product = ({ product, quality, size, price, type }) => {
         >
           <Image
             src={productImage}
-            width={35}
+            width={65}
             height={35}
             alt="Product Image"
             className=""
@@ -68,11 +69,13 @@ const Product = ({ product, quality, size, price, type }) => {
           />
         </motion.div>
       </div>
-      <div className="col-span-4 flex flex-col justify-start items-start space-y-2">
+      <div className="col-span-4 flex flex-col justify-center items-start space-y-4">
         <div>
-          <h2 className="text-xl font-medium text-carpetMoss">{productName}</h2>
+          <h2 className="text-4xl font-medium text-carpetMoss">
+            {productName}
+          </h2>
         </div>
-        <div className="flex justify-evenly space-x-1 items-center text-xs">
+        <div className="flex justify-evenly space-x-1 items-center text-2xl">
           <p className="text-gray-500">
             {type}: <span className="text-pottBlack">{productType}</span>
           </p>
@@ -87,31 +90,31 @@ const Product = ({ product, quality, size, price, type }) => {
           </p>
         </div>
         <div className="flex justify-evenly items-center space-x-3 text-base">
-          <div className="flex justify-evenly items-center space-x-2">
+          <div className="flex justify-evenly items-center space-x-4">
             <motion.span
-              className="bg-white p-1 shadow-[0_1px_2px_rgb(0,0,0,0.3)] rounded-full flex justify-center items-center cursor-pointer"
+              className="bg-white p-1 shadow-[0_1px_5px_rgb(0,0,0,0.3)] rounded-full flex justify-center items-center cursor-pointer"
               onClick={handleDecrement}
               whileTap={{ scale: 0.9 }}
             >
-              <FaMinus className="text-lg text-carpetMoss" />
+              <FaMinus className="text-3xl text-carpetMoss" />
             </motion.span>
-            <span>{productQuantity}</span>
+            <span className="text-3xl">{productQuantity}</span>
             <motion.span
-              className="bg-white p-1 shadow-[0_1px_2px_rgb(0,0,0,0.3)] rounded-full flex justify-center items-center cursor-pointer"
-              onClick={handleIncrement}
+              className="bg-white p-1 shadow-[0_1px_5px_rgb(0,0,0,0.3)] rounded-full flex justify-center items-center cursor-pointer"
               whileTap={{ scale: 0.9 }}
+              onClick={handleIncrement}
             >
-              <FaPlus className="text-lg text-carpetMoss" />
+              <FaPlus className="text-3xl text-carpetMoss" />
             </motion.span>
             <motion.span
-              className="bg-white p-1 shadow-[0_1px_2px_rgb(0,0,0,0.3)] rounded-full flex justify-center items-center cursor-pointer"
+              className="bg-white p-1 shadow-[0_1px_5px_rgb(0,0,0,0.3)] rounded-full flex justify-center items-center cursor-pointer"
               onClick={handleRemoveFromCart}
               whileTap={{ scale: 0.9 }}
             >
-              <MdDeleteOutline className="text-lg text-red-700" />
+              <MdDeleteOutline className="text-3xl text-red-700" />
             </motion.span>
           </div>
-          <p className="text-gray-500">
+          <p className="text-gray-500 text-3xl ">
             {price}:
             <CurrencyFormat
               value={totalPrice}
