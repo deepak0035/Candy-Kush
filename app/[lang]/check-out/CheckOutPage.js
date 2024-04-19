@@ -46,14 +46,14 @@ const CheckOutPage = ({
     },
   });
   const receiptRef = useRef();
-  const user = {
-    thermalWidth: "80mm",
-    thermalHeight: "276mm",
-  };
+
   const printReceipt = useReactToPrint({
     content: () => receiptRef.current,
-    pageStyle: `@page { size: ${user.thermalWidth} ${user.thermalHeight}; }`,
-
+    pageStyle: `@media print {
+      @page {
+        size: 80mm ;
+        margin: 0;
+      }`,
     onBeforeGetContent: async () => {},
   });
 
@@ -141,7 +141,7 @@ const CheckOutPage = ({
       </div>
       <div style={{ display: "none" }}>
         <div ref={receiptRef}>
-          <Invoice/>
+          <Invoice />
         </div>
       </div>
     </>
