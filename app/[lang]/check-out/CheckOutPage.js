@@ -12,6 +12,7 @@ import { postOrder } from "@/lib/helper";
 import { useReactToPrint } from "react-to-print";
 
 import { useQueryClient, useQuery, useMutation } from "react-query";
+import Invoice from "@/components/Invoice/Invoice";
 
 const CheckOutPage = ({
   lang,
@@ -135,7 +136,7 @@ const CheckOutPage = ({
       </div>
       <div style={{ display: "none" }}>
         <div ref={receiptRef}>
-          <div>Printing test</div>
+          <Invoice/>
         </div>
       </div>
     </>

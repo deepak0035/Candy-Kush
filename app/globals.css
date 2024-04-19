@@ -84,3 +84,7 @@ filter {
 .logo-3d>div {
     transform: rotateY(15deg) rotateX(15deg);
 }
+
+#invoice-POS{
+    width: 80mm !important;
+}
