@@ -46,9 +46,14 @@ const CheckOutPage = ({
     },
   });
   const receiptRef = useRef();
-
+  const user = {
+    thermalWidth: "80mm",
+    thermalHeight: "276mm",
+  };
   const printReceipt = useReactToPrint({
     content: () => receiptRef.current,
+    pageStyle: `@page { size: ${user.thermalWidth} ${user.thermalHeight}; }`,
+
     onBeforeGetContent: async () => {},
   });
 
