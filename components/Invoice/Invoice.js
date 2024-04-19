@@ -61,6 +61,42 @@ const Invoice = () => {
               </td>
             </tr>
 
+            <tr className="service">
+              <td className="tableitem">
+                <p className="itemtext">Pre-rolled</p>
+              </td>
+              <td className="tableitem">
+                <p className="itemtext">3</p>
+              </td>
+              <td className="tableitem">
+                <p className="itemtext">$75.00</p>
+              </td>
+            </tr>
+
+            <tr className="service">
+              <td className="tableitem">
+                <p className="itemtext">Pre-rolled</p>
+              </td>
+              <td className="tableitem">
+                <p className="itemtext">3</p>
+              </td>
+              <td className="tableitem">
+                <p className="itemtext">$75.00</p>
+              </td>
+            </tr>
+
+            <tr className="service">
+              <td className="tableitem">
+                <p className="itemtext">Pre-rolled</p>
+              </td>
+              <td className="tableitem">
+                <p className="itemtext">3</p>
+              </td>
+              <td className="tableitem">
+                <p className="itemtext">$75.00</p>
+              </td>
+            </tr>
+
             <tr className="tabletitle">
               <td></td>
               <td className="Rate">
