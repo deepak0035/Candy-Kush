@@ -49,11 +49,16 @@ const CheckOutPage = ({
 
   const printReceipt = useReactToPrint({
     content: () => receiptRef.current,
-    pageStyle: `@media print {
-      @page {
-        size: 80mm ;
-        margin: 0;
-      }`,
+  pageStyle: `@media print {
+  @page {
+    size: 80mm 100%;
+    margin: 0;
+  }
+  body {
+    margin: 0;
+  }
+
+}`,
     onBeforeGetContent: async () => {},
   });
 
