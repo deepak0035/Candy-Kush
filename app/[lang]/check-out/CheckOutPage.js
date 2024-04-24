@@ -1,4 +1,4 @@
-"use client";
+'use client'
 import { useState, useEffect, useRef } from "react";
 import LogoSection from "@/components/logoSection/LogoSection";
 import StepIndicator from "@/components/Indicators/StepIndicator";
@@ -24,6 +24,7 @@ const CheckOutPage = ({
   checkout,
   buymore,
   buynow,
+  customerNumber,
 }) => {
   const totalSteps = 6;
   const activeStep = 4;
@@ -32,14 +33,7 @@ const CheckOutPage = ({
 
   const cartItems = useSelector(selectCartItems);
   const router = useRouter();
-  const generateRandomId = () => {
-    const randomNumber = Math.floor(Math.random() * 10000)
-      .toString()
-      .padStart(4, "0"); // Generate random number between 0 and 9999 and pad to ensure it has 4 digits
-
-    return `ck-${randomNumber}`; // Concatenate "ck-" with the padded random numbers
-  };
-
+ 
   const addMutation = useMutation(postOrder, {
     onSuccess: () => {
       console.log("data received");
@@ -49,7 +43,7 @@ const CheckOutPage = ({
 
   const printReceipt = useReactToPrint({
     content: () => receiptRef.current,
-  pageStyle: `@media print {
+    pageStyle: `@media print {
   @page {
     size: 80mm 100%;
     margin: 0;
@@ -57,23 +51,24 @@ const CheckOutPage = ({
   body {
     margin: 0;
   }
-
 }`,
     onBeforeGetContent: async () => {},
   });
 
+
   const handleUpdateData = async () => {
     if (Object.keys(cartItems).length === 0) {
       console.log("Don't have any data");
+      return;
     }
 
     const model = {
-      customerNumber: generateRandomId(),
-      totalPrice: updatedTotal,
+      customerNumber: customerNumber,
+      totalPrice: calculateUpdatedTotal(),
       orderItems: cartItems,
     };
-    await printReceipt();
 
+    await printReceipt();
     console.log(model);
     addMutation.mutate(model);
 
@@ -81,12 +76,9 @@ const CheckOutPage = ({
     if (addMutation.isError) return console.log("error");
     if (addMutation.isSuccess) return console.log("success");
 
-    // Push the updated route to the router
     await router.push(`/${lang}/thankyou`);
     dispatch(clearCart());
     dispatch(clearProductDetails());
-
-    // Redirect to "/types" after updating the reducers
   };
 
   // Function to calculate the updated total based on cart items
@@ -98,11 +90,11 @@ const CheckOutPage = ({
     return updatedTotal;
   };
 
-  const [updatedTotal, setUpdatedTotal] = useState(calculateUpdatedTotal());
-
   useEffect(() => {
-    setUpdatedTotal(calculateUpdatedTotal());
+    calculateUpdatedTotal();
   }, [cartItems]);
+
+
 
   return (
     <>
@@ -123,7 +115,7 @@ const CheckOutPage = ({
           <p className="text-gray-500 text-4xl ">
             {totalprice}:
             <CurrencyFormat
-              value={updatedTotal}
+              value={calculateUpdatedTotal()}
               displayType={"text"}
               thousandSeparator={true}
               prefix={"฿"}
@@ -146,7 +138,7 @@ const CheckOutPage = ({
       </div>
       <div style={{ display: "none" }}>
         <div ref={receiptRef}>
-          <Invoice cartItems={cartItems} />
+          <Invoice cartItems={cartItems} customerNumber={customerNumber} />
         </div>
       </div>
     </>
