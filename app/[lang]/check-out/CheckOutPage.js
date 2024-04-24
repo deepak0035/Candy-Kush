@@ -146,7 +146,7 @@ const CheckOutPage = ({
       </div>
       <div style={{ display: "none" }}>
         <div ref={receiptRef}>
-          <Invoice />
+          <Invoice cartItems={cartItems} />
         </div>
       </div>
     </>
