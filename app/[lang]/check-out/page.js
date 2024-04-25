@@ -9,7 +9,7 @@ const page = async ({ params }) => {
       .toString()
       .padStart(4, "0"); // Generate random number between 0 and 9999 and pad to ensure it has 4 digits
 
-    return `ck-${randomNumber}`; // Concatenate "ck-" with the padded random numbers
+    return `CK-${randomNumber}`; // Concatenate "ck-" with the padded random numbers
   };
   return (
     <CheckOutPage
