@@ -52,7 +52,6 @@ const CheckOutPage = ({
     margin: 0;
   }
 }`,
-    onBeforeGetContent: async () => {},
   });
 
 
