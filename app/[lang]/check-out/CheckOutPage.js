@@ -68,7 +68,6 @@ const CheckOutPage = ({
     };
 
     await printReceipt();
-    console.log(model);
     addMutation.mutate(model);
 
     if (addMutation.isLoading) return console.log("loading");

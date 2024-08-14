@@ -1,4 +1,6 @@
 "use client";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { motion, useCycle } from "framer-motion";
 import LogoSection from "@/components/logoSection/LogoSection";
 import StepIndicator from "@/components/Indicators/StepIndicator";
@@ -12,7 +14,16 @@ const Page = ({ lang, thankyoumsg, gohome, collectyourreceipt }) => {
 
   const [rotation, cycleRotation] = useCycle(0, 360); // Using useCycle hook to cycle between 0 and 360 degrees
   const [scale, cycleScale] = useCycle(1, 1.2); // Using useCycle hook to cycle between 1 and 1.2 for scaling
+ const router = useRouter();
 
+ useEffect(() => {
+   const timer = setTimeout(() => {
+     router.push("/"); // Redirect to the home page after 10 seconds
+   }, 10000); // 10000 milliseconds = 10 seconds
+
+   // Cleanup timer if the component unmounts before the timeout completes
+   return () => clearTimeout(timer);
+ }, [router]);
   return (
     <div className="relative  overflow-hidden w-screen max-w-[1080pxpx] min-h-[1920px] space-y-8 px-8 py-8">
       {/* Step Indicator */}
